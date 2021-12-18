@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <script
+    src="https://kit.fontawesome.com/49e440d78e.js"
+    crossorigin="anonymous"
+  ></script>
+
+    <style>
+      body {
+        background-color: #f7f8fa;
+      }
+
+      .main {
+        display: flex;
+        width: 80%;
+        margin: auto;
+        background-color: #f7f8fa;
+      }
+      .con {
+        width: 65%;
+        margin-right: 20px;
+      }
+      .con > div {
+        display: flex;
+        box-sizing: border-box;
+        padding: 10px;
+        background-color: white;
+        border-bottom: 1px solid rgb(187, 183, 183);
+      }
+      .con > div > div {
+        margin-left: 10px;
+      }
+      .right {
+        width: 35%;
+        margin-right: 20px;
+        box-sizing: border-box;
+        /* padding: 20px; */
+        /* height: 300px; */
+      }
+      .r1 {
+        background-color: white;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+      }
+      img {
+        width: 120px;
+      }
+      .amt {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+      }
+      .btn {
+        color: white;
+        background-color: black;
+        font-weight: 900;
+        font-size: 20px;
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: none;
+      }
+      .coupon {
+        color: #b0b0b0;
+        text-align: center;
+      }
+      .del {
+        /* margin-left: -290px; */
+        /* margin-top: 130px; */
+      }
+      .credit {
+        width: 100%;
+      }
+
+      /* ///////////////////////header/////////////////////// */
+
+      .nav1 {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f7f8fa;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+        color: #8f9091;
+      }
+      .nav1 > div {
+        display: flex;
+        /* width: 33.33%; */
+        flex-wrap: wrap;
+      }
+
+      .nav1 > div > a {
+        text-decoration: none;
+        margin: 10px;
+        font-size: 18px;
+        color: #8f9091;
+      }
+      .nav1 > div > a:hover {
+        color: black;
+      }
+      .n3 > a > img {
+        width: 17px;
+        margin: 10px;
+      }
+      .n3 > a:hover {
+        color: black;
+        background-color: white;
+      }
+      .n2 {
+        font-weight: bold;
+        font-size: 40px;
+        font-family: "Mulish', sans-serif";
+        justify-content: center;
+      }
+     
+      .logo {
+        color: black;
+      }
+      .n4 {
+        font-size: 12px;
+        color: red;
+      }
+      .nav21 > p:hover {
+        border-bottom: 2px solid black;
+      }
+      .grey {
+        color: #8f9091;
+        margin-left: 5px;
+      }
+      .nav2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+        margin: auto;
+        padding: 15px;
+        flex-wrap: wrap;
+        background-color: white;
+        margin-bottom: 50px;
+      }
+      .nav21 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .nav21 > p {
+        margin: 10px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      #i {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        height: 100%;
+      }
+      input {
+        padding: 8px 10px 7px 10px;
+        margin-right: 0px;
+        border: none;
+      }
+      .nav212 {
+        align-items: center;
+        margin-top: 5px;
+        border: 1px solid gray;
+        padding: 0px;
+        margin-right: 20px;
+      }
+      .red {
+        color: red;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      @media screen and (max-width: 700px) {
+        .nav1 > div,
+        .nav21,
+        .nav212 {
+          justify-content: center;
+          text-align: center;
+          /* width: 33.33%; */
+        }
+        .logo,
+        .n4,
+        .n3,
+        .nav21 {
+          width: 100%;
+          text-align: center;
+        }
+        .nav212 {
+          display: flex;
+          justify-content: center;
+          margin: auto;
+        }
+      }
+
+      /* //////////////////////header end///////////////////// */
+      @media screen and (min-width: 0px) and (max-width: 928px) {
+        .main {
+          flex-wrap: wrap;
+        }
+        .right {
+          width: 100%;
+        }
+        .con {
+          width: 100%;
+        }
+
+        .con > div {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .con > div > div > p {
+          width: 100px;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .del {
+          /* margin-left: -100px; */
+          /* margin-top: 50px; */
+        }
+      }
+
+      #abc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+    
+    </style>
+  </head>
+  <body>
+    <div class="nav1">
+      <div class="n1">
+        <a href="mainpage.html">WOMEN</a>
+        <a href="">CURVE + PLUS</a>
+        <a href="">KIDS</a>
+        <a href="mainpage.html">MEN</a>
+        <a href="beauty.html">BEAUTY</a>
+        <a href="mainpage.html">HOME</a>
+      </div>
+      <div class="n2 logo">SHEIN</div>
+      <div class="n4">
+        Free Standard Shipping <span class="grey">on order over US$49.00</span>
+      </div>
+      <div class="n3 rightlogo">
+        <a href="newlogin.html"
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/709/709579.png"
+            alt=""
+        /></a>
+        <a id="abc" href="bag.html"
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/687/687259.png"
+            alt=""
+        /><span id="bagcount"></span></a>
+        <a href="">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/1077/1077035.png"
+            alt=""
+        /></a>
+        <a href=""
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/862/862909.png"
+            alt=""
+        /></a>
+        <a href=""
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/1006/1006771.png"
+            alt=""
+        /></a>
+      </div>
+    </div>
+
+    <div class="nav2">
+      <div class="nav21">
+        <p><a href="mensection.html"> NEW IN</a></p>
+        <p><a href="womensection.html">TREND</a></p>
+        <p class="colred"><a href="">SALE</a></p>
+        <p class="colred"><SHEIN href="">SHEIN X DESIGNER</a></p>
+        <p><CLOTHING href="">CLOTHING</a></p>
+        <p><DRESSES href="">DRESSES</a></p>
+        <p><TOPS href="">TOPS</a></p>
+        <p><LINGERIE href="">LINGERIE & LOUNGE</a></p>
+        <p><ACTIVEWEAR href="">ACTIVEWEAR</a></p>
+        <p><SHOES href="">SHOES $ ACCS</a></p>
+        <p><EXPLORE href="">EXPLORE</a></p>
+      </div>
+      <div class="nav212">
+        <input type="text" />
+
+        <a href=""><i class="fas fa-search" id="i"></i></a>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="con"></div>
+      <div class="right">
+        <div class="r1">
+          <h2>Order Summary</h2>
+          <div class="amt">
+            <p>Subtotal</p>
+            <h2 class="total"></h2>
+          </div>
+          <button class="btn">CHECKOUT SECURELY NOW</button>
+          <p class="coupon">
+            Apply a Coupon Code, SHEIN Points on the next step.
+          </p>
+        </div>
+        <div class="cre">
+          <h2>We Accept</h2>
+          <img
+            class="credit"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh9UeFGSLTzKD3iAFl8aMwpJv3hprnMzz67g&usqp=CAU"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  var arr2 = JSON.parse(localStorage.getItem("bagitm"));
+
+  arr2.map(function (elem, index) {
+    var img = document.createElement("img");
+    var name = document.createElement("p");
+    var price = document.createElement("h4");
+    var div = document.createElement("div");
+    var div1 = document.createElement("div");
+    var div2 = document.createElement("div");
+    var div3 = document.createElement("div");
+    var del = document.createElement("h4");
+    del.textContent = "Delete";
+    img.setAttribute("src", elem.imgUrl);
+    name.textContent = elem.name;
+    price.textContent = "USD$" + elem.price;
+    div1.append(name, price, del);
+    div2.append(img);
+    del.classList.add("del");
+
+    del.addEventListener("click", function () {
+      event.target.parentNode.remove();
+      delfun(elem);
+    });
+    div.append(div2, div1);
+    document.querySelector(".con").append(div);
+  });
+
+  function delfun(index) {
+    arr2.splice(index, 1);
+    localStorage.setItem("bagitm", JSON.stringify(arr2));
+  }
+
+  console.log(arr2);
+  var total = 0;
+  for (i = 0; i < arr2.length; i++) {
+    total = total + arr2[i].price;
+  }
+
+  function amt() {
+    document.querySelector(".total").textContent = "US$" + total + ".00";
+  }
+  amt();
+
+  localStorage.setItem("totalamount", JSON.stringify(total));
+
+  document.querySelector(".btn").addEventListener("click", fun1)
+  function fun1(){
+    window.location.href="newlogin.html"
+  }
+
+
+  document.querySelector("#bagcount").textContent=arr2.length
+</script>
