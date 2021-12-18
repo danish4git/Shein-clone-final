@@ -1,0 +1,2899 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/49e440d78e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .con {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 85%;
+        height: 100vh;
+        overflow: scroll;
+        overflow-x: hidden;
+      }
+      .con > div {
+        width: 280px;
+        margin: 10px;
+      }
+      .con > div > img {
+        width: 280px;
+      }
+      .con > div > p {
+        color: #a39fa0;
+        font-size: 12px;
+        margin-bottom: 0px;
+        /* font-weight: bold; */
+      }
+      .con > div > h4 {
+        margin-top: 2px;
+      }
+      .main {
+        display: flex;
+        box-sizing: border-box;
+      }
+      .side {
+        height: 100vh;
+
+        width: 15%;
+        position: sticky;
+        box-sizing: border-box;
+        padding-left: 40px;
+        overflow-y: scroll;
+      }
+      .side > input {
+        border-radius: 50%;
+        border: 1px solid red;
+        background-color: aqua;
+      }
+      .red {
+        background-color: red;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .black {
+        background-color: rgb(7, 7, 7);
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .green {
+        background-color: green;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .grey {
+        background-color: grey;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .yellow {
+        background-color: rgb(225, 236, 65);
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .orange {
+        background-color: orange;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .khaki {
+        background-color: khaki;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .blue {
+        background-color: blue;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .brown {
+        background-color: brown;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .filterdiv {
+        width: 91%;
+        padding: 20px;
+        background-color: #f6f6f6;
+        margin-bottom: 20px;
+        margin-left: 40px;
+        padding-top: 10px;
+      }
+      .trend > button {
+        background-color: white;
+        border: 1px solid #dfdfdf;
+        color: #666666;
+        margin-right: 10px;
+
+        padding: 5px 10px;
+      }
+      .trend > button:hover {
+        border: 1px solid #666666;
+      }
+
+      .length {
+        color: #666666;
+        font-size: 12px;
+      }
+      label {
+        color: #666666;
+        font-size: 14px;
+      }
+
+      /* ///////////////////// */
+
+      #jeans,
+      #shirts,
+      #shorts {
+        margin-left: 30px;
+      }
+      /* ///////////////////// */
+
+      /* ///////////////////////header/////////////////////// */
+
+      .nav1 {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f7f8fa;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+        color: #8f9091;
+      }
+      .nav1 > div {
+        display: flex;
+        /* width: 33.33%; */
+        flex-wrap: wrap;
+      }
+
+      .nav1 > div > a {
+        text-decoration: none;
+        margin: 10px;
+        font-size: 18px;
+        color: #8f9091;
+      }
+      .nav1 > div > a:hover {
+        color: black;
+      }
+      .n3 > a > img {
+        width: 17px;
+        margin: 10px;
+      }
+      .n3 > a:hover {
+        color: black;
+        background-color: white;
+      }
+      .n2 {
+        font-weight: bold;
+        font-size: 40px;
+        font-family: "Mulish', sans-serif";
+        justify-content: center;
+       
+      }
+      .rightlog {
+        /* margin-right: 0px; */
+      }
+      .logo {
+        color: black;
+      }
+      .n4 {
+        font-size: 12px;
+        color: red;
+      }
+      .colgrey {
+        color: #8f9091;
+        margin-left: 5px;
+      }
+      .nav2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+        margin: auto;
+        padding: 15px;
+        flex-wrap: wrap;
+        background-color: white;
+        /* margin-bottom: 50px; */
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .nav21 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .nav21 > p {
+        margin: 10px;
+        font-size: 12px;
+        font-weight: 600;
+        padding-bottom: 10px;
+      }
+      i {
+        background-color: black;
+        color: white;
+        padding: 11px;
+        height: 100%;
+      }
+      input {
+        padding: 8px 10px 7px 10px;
+        margin-right: 0px;
+        border: none;
+      }
+      .nav212 {
+        align-items: center;
+        margin-top: 5px;
+        border: 1px solid gray;
+        padding: 0px;
+        margin-right: 20px;
+      }
+      .nav21 > p:hover {
+        border-bottom: 2px solid black;
+      }
+      .colred {
+        color: red;
+      }
+      @media screen and (max-width: 700px) {
+        .nav1 > div,
+        .nav21,
+        .nav212 {
+          justify-content: center;
+          text-align: center;
+          /* width: 33.33%; */
+        }
+        .logo,
+        .n4,
+        .n3,
+        .nav21 {
+          width: 100%;
+          text-align: center;
+        }
+        .nav212 {
+          display: flex;
+          justify-content: center;
+          margin: auto;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      /* //////////////////////header end///////////////////// */
+      
+
+      @media screen and (min-width: 1001px) and (max-width: 1200px) {
+        .side {
+          width: 20%;
+        }
+        .con {
+          width: 80%;
+        }
+      }
+      @media screen and (min-width: 601px) and (max-width: 1000px) {
+        .side {
+          width: 30%;
+        }
+        .con {
+          width: 70%;
+        }
+        .filterdiv {
+          margin-left: 0px;
+          width: 100%;
+        }
+      }
+      @media screen and (min-width: 0px) and (max-width: 600px) {
+        .side {
+          display: none;
+        }
+        .con {
+          width: 100%;
+        }
+        .filterdiv {
+          margin-left: 0px;
+          width: 100%;
+        }
+      }
+
+      /* //////////////////////////////////footer/////////////////////////////// */
+       /* -------------------------footer----------------------------------- */
+       footer .main_div{
+            width: 99.8%;
+            height: 470px;
+            /* border: 1px solid green; */
+            background-color: #fafafa;
+            display: flex;
+            justify-content: space-evenly;
+            box-sizing: border-box;
+            padding-top: 4.5%;
+            padding-bottom: 2.5%;
+        }
+
+        .main_div > .left{
+            width: 35%;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .main_div > .right{
+            width: 40%;
+            /* border: 1px solid black; */
+        }
+        .main_div > .left > .upper{
+            /* border: 1px solid red; */
+            height: 45%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .main_div > .left > .lower{
+            /* border: 1px solid red; */
+            height: 35%;
+        }
+        .main_div > .left > .upper > *{
+            width: 25%;
+            /* border: 1px solid green; */
+        }
+        .main_div > .left > .upper > * > *{
+            /* border: 1px solid black; */
+            margin-bottom: 0.8%;
+        }
+        .main_div > .left > .upper > * > div > a{
+            text-decoration: none;
+            color: grey;
+            font-size: 75%;
+        }
+        .main_div > .left > .lower{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .main_div > .left > .lower > div{
+            color: grey;
+            font-size: 75%;
+            margin-bottom: 1.1%;
+        }
+        .main_div > .left > .lower > div > a{
+            color: grey;
+            border-right: 1px solid grey;
+            padding-right: 2%;
+        }
+        .not_first{
+            margin-left: 2%;
+        }
+        .main_div > .left > .lower > div:last-child{
+            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+            margin-bottom: 0px;
+        }
+        .main_div > .left > .lower > div:last-child > img{
+            width: 2%;
+            /* border: 1px solid red; */
+        }
+        .main_div > .left > .lower > div:last-child > span{
+            /* border: 1px solid red; */
+            text-decoration: underline;
+        }
+
+        .main_div > .right > .top{
+            /* border: 1px solid green; */
+            display: flex;
+            justify-content: space-between;
+        }
+        .main_div > .right > .top > .left{
+            /* border: 1px solid red; */
+            width: 55%;
+        }
+        .main_div > .right > .top >.left > div img{
+            width: 8%;
+            margin-top: 6%;
+            margin-right: 5%;
+        }
+        .main_div > .right > .top > .right{
+            /* border: 1px solid red; */
+            width: 30%;
+        }
+        .main_div > .right > .top > .right > div img{
+            width: 15%;
+            margin-top: 11%;
+            margin-right: 7%;
+            /* border: 1px solid red; */
+        }
+        .main_div > .right > .center{
+            /* border: 1px solid green; */
+            height: 25%;
+            margin-top: 3%;
+        }
+        .main_div > .right > .center > div{
+            /* border: 1px solid black; */
+            display: flex;
+            margin-top: 1.1%;
+        }
+        .main_div > .right > .center > div > input{
+            width: 75%;
+            padding: 1.3%;
+            border: 1px solid rgb(192, 189, 189);
+            font-size: 85%;
+        }
+        .main_div > .right > .center > div > input:hover{
+            border: 1px solid rgb(136, 135, 135);
+        }
+        .main_div > .right > .center > div > button{
+            width: 25%;
+            border: none;
+            background-color: black;
+            color: white;
+            font-size: 100%;
+            box-sizing: border-box;
+        }
+        .main_div > .right > .center > div > button:hover{
+            background-color:rgb(100, 90, 90);
+        }
+        .main_div > .right > .center > div > button:active{
+            border: 2px solid grey;
+            background-color: black;
+            border-radius: 3px;
+        }
+        .main_div > .right > .bottom{
+            /* border: 1px solid black; */
+        }
+        .main_div > .right > .bottom > div{
+            /* border: 1px solid red; */
+            margin-top: 2%;
+        }
+        .main_div > .right > .bottom > div img{
+            width: 6%;
+            margin-right: 1.8%;
+        }
+
+ /* -------------responsive design for footer------------- */
+
+        /* ------------medium size--------- */
+        @media only screen and (min-width : 0px) and (max-width : 1000px){
+            footer .main_div{
+                height: auto;
+                /* border: 1px solid green; */
+                box-sizing: border-box;
+                /* width: 90%; */
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(2,minmax(300px, auto));
+                grid-template-areas: 
+                "right"
+                "left";
+                /* align-content: flex-start; */
+                /* justify-content: center; */
+                align-items: center;
+                justify-items: center;
+                grid-row-gap: 45px;
+            }
+            footer .main_div > div.left{
+                grid-area: left;
+                width: 95%;
+            }
+            footer .main_div > div.right{
+                grid-area: right;
+                width: 95%;
+            }
+            footer > .main_div > div.right > div.bottom{
+                margin-top: 4%;
+            }
+            footer > .main_div > div.left > div.lower{
+                margin-top: 9%;
+            }
+        }
+
+        /* ------------for small size screen------------------------------------------- */
+        @media only screen and (max-width : 499px){
+            footer .main_div{
+                height: auto;
+                /* border: 1px solid green; */
+                box-sizing: border-box;
+                /* width: 90%; */
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(2,minmax(300px, auto));
+                grid-template-areas: 
+                "right"
+                "left";
+                /* align-content: flex-start; */
+                /* justify-content: center; */
+                align-items: center;
+                justify-items: center;
+                grid-row-gap: 45px;
+            }
+            footer .main_div > div.left{
+                grid-area: left;
+                width: 95%;
+            }
+            footer .main_div > div.right{
+                grid-area: right;
+                width: 95%;
+            }
+            footer > div.main_div > div.left > div.upper{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            } 
+            footer > div.main_div > div.left > div.upper > div{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 4%;
+            }
+
+            footer > div.main_div > div.right > div.top{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            footer > div.main_div > div.right > div.top > div.left{
+                width: 100%;
+            }
+            footer > div.main_div > div.right > div.top > div.left > div img{
+                margin-top: 4%;
+                /* border: 1px solid black; */
+            }
+            footer > div.main_div > div.right > div.top > div.right {
+                width: 100%;
+                margin: 6% 0%;
+            }
+            footer > div.main_div > div.right > div.top > div.right > div{
+                width: 100%;
+                /* border: 1px solid green; */
+            }
+            footer > div.main_div > div.right > div.top > div.right > div img{
+                margin-top: 4%;
+                width: 8%;
+                margin-right: 4%;
+            }
+            footer > div.main_div > div.right > div.center{
+                margin-bottom: 6%;
+            }
+            footer > div.main_div > div.right > div.center > div{
+                display: flex;
+                flex-direction: column;
+            }
+            footer > div.main_div > div.right > div.center > div > *{
+                width: 100%;
+                box-sizing: border-box;
+                height: 30px;
+                margin-top: 3%;
+            }
+
+        }
+        #abc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .classy{
+        width: 100%;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <img class="classy" src="head.png" alt="">
+    <div class="nav1">
+      <div class="n1">
+        <a href="mainpage.html">WOMEN</a>
+        <a href="mainpage.html">CURVE + PLUS</a>
+        <a href="mainpage.html">KIDS</a>
+        <a href="mainpage.html">MEN</a>
+        <a href="beauty.html">BEAUTY</a>
+        <a href="mainpage.html">HOME</a>
+      </div>
+      <div class="n2 logo">SHEIN</div>
+      <div class="n4">
+        Free Standard Shipping
+        <span class="colgrey">on order over US$49.00</span>
+      </div>
+      <div class="n3 rightlogo">
+        <a href="newlogin.html"
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/709/709579.png"
+            alt=""
+        /></a>
+        <a id="abc" href="bag.html"
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/687/687259.png"
+            alt=""
+        /><span id="bagcount"></span></a>
+        <a href="">
+        <a href="">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/1077/1077035.png"
+            alt=""
+        /></a>
+        <a href=""
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/862/862909.png"
+            alt=""
+        /></a>
+        <a href=""
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/1006/1006771.png"
+            alt=""
+        /></a>
+      </div>
+    </div>
+
+    <div class="nav2">
+      <div class="nav21">
+        <p><a href="mensection.html"> NEW IN</a></p>
+        <p><a href="womensection.html">TREND</a></p>
+        <p class="colred"><a href="">SALE</a></p>
+        <p class="colred"><SHEIN href="">SHEIN X DESIGNER</a></p>
+        <p><CLOTHING href="">CLOTHING</a></p>
+        <p><DRESSES href="">DRESSES</a></p>
+        <p><TOPS href="">TOPS</a></p>
+        <p><LINGERIE href="">LINGERIE & LOUNGE</a></p>
+        <p><ACTIVEWEAR href="">ACTIVEWEAR</a></p>
+        <p><SHOES href="">SHOES $ ACCS</a></p>
+        <p><EXPLORE href="">EXPLORE</a></p>
+      </div>
+      <div class="nav212">
+        <input type="text" />
+
+        <a href=""><i class="fas fa-search"></i></a>
+      </div>
+    </div>
+    <div class="filterdiv">
+      <h3>New in Trends <span class="length"></span></h3>
+      <div class="trend">
+        <button onclick="black()">Black</button
+        ><button onclick="plain()">Plain</button
+        ><button onclick="khaki()">Khaki</button
+        ><button onclick="block()">ColorBlock</button
+        ><button onclick="denim()">Denim</button>
+        <button onclick="cotton()">Cotton</button>
+        <button onclick="orange()">Orange</button>
+      </div>
+    </div>
+    <div class="main">
+      <div class="side">
+        <h3>Category</h3>
+        <input type="checkbox" id="men" onchange="men()" />
+        <label for="">Men Clothes</label><br />
+
+        <!-- /////////////////////////////// -->
+        <input type="checkbox" id="jeans" onchange="jeans()" />
+        <label for="">Jeans</label><br />
+        <input type="checkbox" id="shirts" onchange="shirts()" />
+        <label for="">Shirts</label><br />
+        <input type="checkbox" id="shorts" onchange="shorts()" />
+        <label for="">Shorts</label><br />
+
+        <!-- //////////////////////////// -->
+
+        <input type="checkbox" id="women" onchange="women()" />
+        <label for="">Women Clothes</label><br />
+        <input type="checkbox" id="kids" onchange="kids()" />
+        <label for="">Kids Clothes</label><br />
+
+        <h3>Size</h3>
+        <input type="checkbox" id="xs" onchange="changexs()" />
+        <label for="">XS</label>
+        <input type="checkbox" id="s" onchange="changes()" />
+        <label for="">S</label><br />
+        <input type="checkbox" id="m" onchange="changem()" />
+        <label for="">M</label>
+        <input type="checkbox" id="l" onchange="changel()" />
+        <label for="">L</label><br />
+        <input type="checkbox" id="xl" onchange="changexl()" />
+        <label for="">XL</label>
+        <input type="checkbox" id="xll" onchange="changexxl()" />
+        <label for="">XXL</label>
+
+        <h3>Color</h3>
+        <button class="red"></button>
+        <button class="blue"></button>
+        <button class="black"></button>
+        <button class="orange"></button>
+        <button class="green"></button>
+        <button class="khaki"></button>
+        <button class="brown"></button>
+        <button class="yellow"></button>
+        <button class="grey"></button>
+
+        <h3>Pattern Type</h3>
+        <input type="checkbox" id="plain" onchange="plain()" />
+        <label for="">Plain</label><br />
+        <input type="checkbox" id="letter" onchange="letter()" />
+        <label for="">Letter</label><br />
+        <input type="checkbox" id="plaid" onchange="plaid()" />
+        <label for="">Plaid</label><br />
+        <input type="checkbox" id="block" onchange="block()" />
+        <label for="">ColorBlock</label>
+
+        <h3>Material</h3>
+        <input type="checkbox" id="polyster" onchange="polyster()" />
+        <label for="">Polyster</label><br />
+        <input type="checkbox" id="cotton" onchange="cotton()" />
+        <label for="">Cotton</label><br />
+        <input type="checkbox" id="denim" onchange="denim()" />
+        <label for="">Denim</label><br />
+        <input type="checkbox" id="silk" onchange="silk()" />
+        <label for="">Silk</label><br />
+        <h3>Price Range</h3>
+        <input type="checkbox" id="low" onchange="low()" />
+        <label for="">Low to High</label><br />
+        <input type="checkbox" id="high" onchange="high()" />
+        <label for="">High to Low</label><br />
+      </div>
+
+      <div class="con"></div>
+    </div>
+    <footer>
+      <div class="main_div">
+          <!-- left container -->
+          <div class="left">
+              <div class="upper">
+                  <div class="start">
+                      <h5>COMPANY INFO</h5>
+                      <div><a href="#">About SHEIN</a></div>
+                      <div><a href="#">Social Responsibility</a></div>
+                      <div><a href="#">Affiliate</a></div>
+                      <div><a href="#">Fashion Blogger</a></div>
+                      <div><a href="#">Supply Chain</a></div>
+                  </div>
+                  <div class="center">
+                      <h5>HELP & SUPPORT</h5>
+                      <div><a href="#">Shipping Info</a></div>
+                      <div><a href="#">Returns</a></div>
+                      <div><a href="#">How To Order</a></div>
+                      <div><a href="#">How To Track</a></div>
+                      <div><a href="#">Size Guide</a></div>
+                  </div>
+                  <div class="end">
+                      <h5>CUSTOMER CARE</h5>
+                      <div><a href="#">Contact Us</a></div>
+                      <div><a href="#">Payment & Tax</a></div>
+                      <div><a href="#">Bonus Point</a></div>
+                      <div><a href="#">Klarna</a></div>
+                      <div><a href="#">Afterpay</a></div>
+                      <div><a href="#">Zip</a></div>
+                      <div><a href="#">Recall Notice</a></div>
+                  </div>
+              </div>
+              <div class="lower">
+                  <div>
+                      2009-2021 SHEIN All Rights Reserved
+                  </div>
+                  <div>
+                      <a href="#">Privacy Center</a>
+                      <a class="not_first" href="#">Privacy & Cookie Policy</a>
+                  </div>
+                  <div>
+                      <a href="#">Manage Cookies / Do Not Sell My Personal Information</a>
+                      <a class="not_first" href="">Terms & Conditions</a>
+                  </div>
+                  <div>
+                      <a href="#">Do Not Sell My Personal Information</a>
+                      <a class="not_first" href="#">Copyright Notice</a>
+                      <a class="not_first" href="#">Accessibility</a>
+                      <a class="not_first" href="#">Imprint</a>
+                  </div>
+                  <div class="cursor_pointer">
+                      <img src="https://cdn-icons-png.flaticon.com/128/484/484167.png" alt="">
+                      <span>United States</span>
+                  </div>
+              </div>
+          </div>
+
+          <!-- right container  -->
+          <div class="right">
+              <div class="top">
+                  <div class="left">
+                      <h5>FIND US ON</h5>
+                      <div>
+                          <a href="#"><img src="https://cdn-icons.flaticon.com/png/128/3128/premium/3128208.png?token=exp=1639558341~hmac=2029758bfc97cead7da597279170092f" alt=""></a>
+                          <a href="#"><img src="https://cdn-icons.flaticon.com/png/128/717/premium/717392.png?token=exp=1639558418~hmac=a4ca4f3bc2b75037e7e78d2bb58a771e" alt=""></a>
+                          <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/733/733635.png" alt=""></a>
+                          <a href="#"><img src="https://cdn-icons.flaticon.com/png/128/717/premium/717426.png?token=exp=1639558477~hmac=164232d5c37c896c18c44dacaeb0aff1" alt=""></a>
+                          <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/2111/2111601.png" alt=""></a>
+                          <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/2111/2111678.png" alt=""></a>
+                          <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/3046/3046120.png" alt=""></a>
+                      </div>
+                  </div>
+                  <div class="right">
+                      <h5>
+                          DOWNLOAD SHEIN APP TO SAVE MORE!
+                      </h5>
+                      <div>
+                          <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/731/731985.png" alt=""></a>
+                          <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/154/154871.png" alt=""></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="center">
+                  <h5>SIGN UP FOR SHEIN STYLE NEWS</h5>
+                  <div>
+                      <input type="email" name="" id="" placeholder="Your Email Address">
+                      <button>SUBSCRIBE</button>
+                  </div>
+              </div>
+              <div class="bottom">
+                  <h5>WE ACCEPT</h5>
+                  <div>
+                      <img src="https://cdn-icons-png.flaticon.com/128/196/196565.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/5968/5968299.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/825/825464.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/217/217424.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/196/196548.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/825/825454.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/6124/6124998.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/174/174861.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/61/61537.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/196/196550.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/217/217445.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/39/39200.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/5968/5968140.png" alt="">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  </body>
+</html>
+<script>
+  var data = [
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/20/16374021206e48225a04344170d00bf22b70f69e3f_thumbnail_405x552.webp",
+      name: "Men 1pc Letter & Checker Print Bomber Jacket",
+      price: 27.0,
+      color: "black",
+      size: "M",
+      category: "jacket",
+      pattern: "checker",
+      gender: "male",
+
+      material: "polyster",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/20/1637402117d9fd5b06d44b9ee8fa393c748988fc44_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/20/16374021206e48225a04344170d00bf22b70f69e3f_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/20/1637402125e63a9150cab997486a67126a17e31609_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/20/163740212901599d54322ec0b30af1fe362594d4a3_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/20/1637402131705c17101c3a52027662df60843a315a_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/23/1637662413abdd096dfe47e64e2a2325a57bbc7443_thumbnail_900x.webp",
+      name: "Men Plaid Panel Corduroy Shirt Without Tee",
+      price: 18.0,
+      color: "brown",
+      size: "XL",
+      category: "shirt",
+      pattern: "plaid",
+      gender: "male",
+
+      material: "cotton",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/23/1637662428f0c687a13bfa4799256a16e3e7d7f571_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/23/1637662418345af26636ea99d1d0ad251b2304d56f_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/23/16376624226c761954e33c137c7bfc3489a870857e_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/23/1637662428f0c687a13bfa4799256a16e3e7d7f571_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/23/1637662425044ca845e0f04328e70bf200fcdfae40_thumbnail_900x.webp",
+    },
+    ////////////////////////jeans////////////////////
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/10/19/163461266409b5fdc15acd390130fad2f66c5244ee_thumbnail_405x552.webp",
+      name: "Men Letter Graphic Ripped Jeans",
+      price: 31.0,
+      color: "black",
+      size: 30,
+      category: "jeans",
+      pattern: "letter",
+      gender: "male",
+
+      material: "denim",
+      type: "skinny",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/20/163470634898ed2313ad2ac9ea504e02a9d9337f7c_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/19/163461266409b5fdc15acd390130fad2f66c5244ee_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/20/16347063507dc48e9a5797668aa5f488f55a6bee7a_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/20/1634706352b18236d78e1940096954b2f437869111_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/20/163470635440f0ac06b041c5c3ced045e28920b87a_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/09/163645765788b7f0a273407186387076dbcc0d97a3_thumbnail_900x.webp",
+      name: "Men Snow Washed Ripped Skinny Jeans",
+      price: 31.0,
+      color: "blue",
+      size: "32",
+      category: "jeans",
+      pattern: "block",
+      gender: "male",
+
+      material: "denim",
+      type: "skinny",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/09/1636457658353ad2e9f3fdf64bb355218ea4e7a6f7_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/09/1636457659235688d99dbc8c7d17510bc241c99317_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/09/163645766122997e7b0be43765e02117c71a37870d_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/09/16364576646523a01ee7b51234fc8c0fa163c7189a_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/09/1636457665f4ab243a9d8a49de7788108023a4e5cb_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/08/16389272354cafaef1cdf7e2fa9e84866427eb3a35_thumbnail_900x.webp",
+      name: "Men Zipper Fly Solid Tapered Jeans",
+      price: 27.0,
+      color: "brown",
+      size: "32",
+      category: "jeans",
+      pattern: "plain",
+      gender: "male",
+
+      material: "denim",
+      type: "tapered",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/08/16389272354cafaef1cdf7e2fa9e84866427eb3a35_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/08/16389272393819a4f1fb1fd5ed0e5c0e8ce1faf551_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638927244336ef7d0a048870ae8264c8cbd3b1276_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/08/16389272460156e23b90143ad1b23c433bf7b1f134_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638927249c79ae3677a10940888549e60b0b6315c_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/08/163895703443d97a93f46ef25170066fbd2df38137_thumbnail_900x.webp",
+      name: "SHEIN Men Contrast Panel Raw Trim Straight Leg Jeans",
+      price: 30.0,
+      color: "blue",
+      size: "32",
+      category: "jeans",
+      pattern: "plain",
+      gender: "male",
+
+      material: "denim",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/08/163895703443d97a93f46ef25170066fbd2df38137_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/08/16389570355a36713f845611c81fb1e5b213530aa7_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638957037021e1081e34b472f9e6cef1159352da9_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/08/163895703818786de636d17d649b23e903cb576725_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638957037021e1081e34b472f9e6cef1159352da9_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638957074fa1aeecad09dbad2009ef2e05fcc0fef_thumbnail_900x.webp",
+      name: "SHEIN Men Slant Pockets Straight Leg Jeans",
+      price: 29.0,
+      color: "black",
+      size: "30",
+      category: "jeans",
+      pattern: "plain",
+      gender: "male",
+
+      material: "denim",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638957074fa1aeecad09dbad2009ef2e05fcc0fef_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/08/163895707562045a029c58010b630e9033636fcace_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638957077c661d46739a2df96a4acc411e4f0e015_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638957078f6182e1e2f9621baf3d1597a7592b664_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638957080e3639db706ac5b1f0df959990c8af816_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/09/16390169103bcd27569842673ae2794eb8dde6bce9_thumbnail_900x.webp",
+      name: "SHEIN Men High Waist Jeans",
+      price: 31.0,
+      color: "blue",
+      size: "32",
+      category: "jeans",
+      pattern: "plain",
+      gender: "male",
+
+      material: "denim",
+      type: "tapered",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/09/16390169103bcd27569842673ae2794eb8dde6bce9_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/09/163901691238ef0288bc2d73fad8b9f55662307cc8_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639016915e6d4e3e811da8af21c0d2711d665e6b1_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/09/16390169186a665e9625bab651483f0d43289622d2_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639016915e6d4e3e811da8af21c0d2711d665e6b1_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639015592bc910030efda1c2cda09bf8ea13450a9_thumbnail_900x.webp",
+      name: "Men Plaid Pocket Detail Jeans",
+      price: 30.0,
+      color: "blue",
+      size: "32",
+      category: "jeans",
+      pattern: "plaid",
+      gender: "male",
+
+      material: "denim",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639015595ffd26b835ef363de8ee0bdb06d8deb8f_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639015597888880caf3e45d5ba19f64b6c03699fb_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/09/16390155995e9c0844a25c5a1a77995a0be6dec2e9_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639015601dc588573b73ccdf69bd18a5a53d3ff7c_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639015606f5901be4813e94a2fb08ec0b979cba79_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638948281c16f37e4d6c088dde13f685ad9d35de7_thumbnail_900x.webp",
+      name: "SHEIN Men High Stretch Fitted Jeans",
+      price: 30.0,
+      color: "grey",
+      size: "30",
+      category: "jeans",
+      pattern: "plain",
+      gender: "male",
+
+      material: "denim",
+      type: "skinny",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/08/163894828471b7dd895daba38ede892c76eab86d16_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/08/163894828471b7dd895daba38ede892c76eab86d16_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638948288f5f59a2f5e40dd518b970ccfcf02800a_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/08/16389482924003426c18ab99204b9108b3643a6419_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638948295990d0b6d8d8dab40b4ac9649a72dafa1_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/19/163730106336b0bf347c52aa571aaae0ab3bdc8459_thumbnail_900x.webp",
+      name: "SHEIN Men Ripped Roll Up Hem Ombre Jeans",
+      price: 28.0,
+      color: "black",
+      size: "32",
+      category: "jeans",
+      pattern: "plaid",
+      gender: "male",
+
+      material: "denim",
+      type: "skinny",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/19/163730106336b0bf347c52aa571aaae0ab3bdc8459_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/19/1637301065bd373925e9dcfc8ca2d306048d3e70ac_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/19/1637301067340fb153cb849076e820f70d6a033026_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/19/1637301069832584e5d882d701aa8ac9d0af135671_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/19/1637301072f0add6aa232a5a07ef31e51deb8439ee_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/10/22/1634892193bea5fd66a0033d446b3ad2f4d282c1ae_thumbnail_900x.webp",
+      name: "Men Heart Pattern Slant Pocket Jeans",
+      price: 32.0,
+      color: "blue",
+      size: "32",
+      category: "jeans",
+      pattern: "plain",
+      gender: "male",
+
+      material: "denim",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/22/16348921997560a03780fb90123ad07e0c68e65eff_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/22/1634892207e9d59df401d985c531ea1bf1e996df12_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/22/1634892212a6feabfdbf0e623f6fd210cc8eb67355_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/22/1634892221eb2657e8da507fc000d65113b28e3942_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/22/163489222413a17aa6ea2c4898a4cc16e34d7c7d2a_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/02/1638432882689a6d32fbfbf741dfc2c5f50335169c_thumbnail_900x.webp",
+      name: "Men Slant Pocket Checked Jeans",
+      price: 30.0,
+      color: "blue",
+      size: "32",
+      category: "jeans",
+      pattern: "plaid",
+      gender: "male",
+
+      material: "denim",
+      type: "tapered",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/02/16384328875b237209169e550e02d96a6eff9025d3_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/02/16384328913b8fb1859d5371bf0c69628c270e3146_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/02/16384328958aa17d79683a30db959b0a61b9ad2609_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/02/163843290373901bd1f7746889cac71f0761726b95_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/02/1638432906db53353748d2f5757734989234c14172_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/04/1636000309703c14e9d490c22b183f60ecef5eb8ca_thumbnail_900x.webp",
+      name: "Men Colorblock Letter Patched Detail Flap Pocket Raw Trim Jeans",
+      price: 36.0,
+      color: "black",
+      size: "30",
+      category: "jeans",
+      pattern: "letter",
+      gender: "male",
+
+      material: "denim",
+      type: "tapered",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/04/1636000311236e04e57bffe40394c1ec1a0fb8002b_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/04/1636000312254261becfe0b2fe184ac8f80ded528d_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/04/16360003144cf76ee283341af4dba13d5bc7d66b97_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/04/1636000316b141d067e6e893ebd0e3388ea0ee3a5b_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/04/16360003190b6278ae1bbef846009616d85c34ac7f_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/18/16372032341c0dfb16f26c7680bfb3dc24f344e4d0_thumbnail_900x.webp",
+      name: "Men Slant Pocket Ripped Jeans",
+      price: 30.0,
+      color: "grey",
+      size: "30",
+      category: "jeans",
+      pattern: "plain",
+      gender: "male",
+
+      material: "denim",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/18/16372032341c0dfb16f26c7680bfb3dc24f344e4d0_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/18/16372032354c1b0fb4a3c7066c3ea51b263abe1cf7_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/18/16372032376fb3961d6b2b32979ad4abdecd26c6cf_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/18/163720324075bfd89766cd777731dc363833f5deb1_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/18/16372032354c1b0fb4a3c7066c3ea51b263abe1cf7_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/26/163262135657143844d88d8acf5a40c02fa0d13463_thumbnail_900x.webp",
+      name: "Men Ripped Frayed Rag Stitching Splash Ink Tapered Jeans",
+      price: 32.0,
+      color: "blue",
+      size: "30",
+      category: "jeans",
+      pattern: "plain",
+      gender: "male",
+
+      material: "denim",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/26/163262135657143844d88d8acf5a40c02fa0d13463_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/26/1632621359fe76404c9c614d09f1c8d6688a2fff1e_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/26/1632621361bc60c4ad2281273b403d3a125d480771_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/26/163262136576dd833fae2ee693b767d6d28d91b93f_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/26/16326213771b945d524d38b4904708f98946478d61_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/10/19/163461266409b5fdc15acd390130fad2f66c5244ee_thumbnail_405x552.webp",
+      name: "Men Letter Graphic Ripped Jeans",
+      price: 31.0,
+      color: "black",
+      size: 30,
+      category: "jeans",
+      pattern: "letter",
+      gender: "male",
+
+      material: "denim",
+      type: "skinny",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/20/163470634898ed2313ad2ac9ea504e02a9d9337f7c_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/19/163461266409b5fdc15acd390130fad2f66c5244ee_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/20/16347063507dc48e9a5797668aa5f488f55a6bee7a_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/20/1634706352b18236d78e1940096954b2f437869111_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/20/163470635440f0ac06b041c5c3ced045e28920b87a_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/09/163645765788b7f0a273407186387076dbcc0d97a3_thumbnail_900x.webp",
+      name: "Men Snow Washed Ripped Skinny Jeans",
+      price: 31.0,
+      color: "blue",
+      size: "32",
+      category: "jeans",
+      pattern: "block",
+      gender: "male",
+
+      material: "denim",
+      type: "skinny",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/09/1636457658353ad2e9f3fdf64bb355218ea4e7a6f7_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/09/1636457659235688d99dbc8c7d17510bc241c99317_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/09/163645766122997e7b0be43765e02117c71a37870d_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/09/16364576646523a01ee7b51234fc8c0fa163c7189a_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/09/1636457665f4ab243a9d8a49de7788108023a4e5cb_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/08/16389272354cafaef1cdf7e2fa9e84866427eb3a35_thumbnail_900x.webp",
+      name: "Men Zipper Fly Solid Tapered Jeans",
+      price: 27.0,
+      color: "brown",
+      size: "32",
+      category: "jeans",
+      pattern: "plain",
+      gender: "male",
+
+      material: "denim",
+      type: "tapered",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/08/16389272354cafaef1cdf7e2fa9e84866427eb3a35_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/08/16389272393819a4f1fb1fd5ed0e5c0e8ce1faf551_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638927244336ef7d0a048870ae8264c8cbd3b1276_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/08/16389272460156e23b90143ad1b23c433bf7b1f134_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638927249c79ae3677a10940888549e60b0b6315c_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/08/163895703443d97a93f46ef25170066fbd2df38137_thumbnail_900x.webp",
+      name: "SHEIN Men Contrast Panel Raw Trim Straight Leg Jeans",
+      price: 30.0,
+      color: "blue",
+      size: "32",
+      category: "jeans",
+      pattern: "plain",
+      gender: "male",
+
+      material: "denim",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/08/163895703443d97a93f46ef25170066fbd2df38137_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/08/16389570355a36713f845611c81fb1e5b213530aa7_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638957037021e1081e34b472f9e6cef1159352da9_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/08/163895703818786de636d17d649b23e903cb576725_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638957037021e1081e34b472f9e6cef1159352da9_thumbnail_900x.webp",
+    },
+    {
+      imgUrl: "",
+      name: "SHEIN Men Slant Pockets Straight Leg Jeans",
+      price: 29.0,
+      color: "black",
+      size: "30",
+      category: "jeans",
+      pattern: "plain",
+      gender: "male",
+
+      material: "denim",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638957074fa1aeecad09dbad2009ef2e05fcc0fef_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/08/163895707562045a029c58010b630e9033636fcace_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638957077c661d46739a2df96a4acc411e4f0e015_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638957078f6182e1e2f9621baf3d1597a7592b664_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638957080e3639db706ac5b1f0df959990c8af816_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/09/16390169103bcd27569842673ae2794eb8dde6bce9_thumbnail_900x.webp",
+      name: "SHEIN Men High Waist Jeans",
+      price: 31.0,
+      color: "blue",
+      size: "32",
+      category: "jeans",
+      pattern: "plain",
+      gender: "male",
+
+      material: "denim",
+      type: "tapered",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/09/16390169103bcd27569842673ae2794eb8dde6bce9_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/09/163901691238ef0288bc2d73fad8b9f55662307cc8_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639016915e6d4e3e811da8af21c0d2711d665e6b1_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/09/16390169186a665e9625bab651483f0d43289622d2_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639016915e6d4e3e811da8af21c0d2711d665e6b1_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639015592bc910030efda1c2cda09bf8ea13450a9_thumbnail_900x.webp",
+      name: "Men Plaid Pocket Detail Jeans",
+      price: 30.0,
+      color: "blue",
+      size: "32",
+      category: "jeans",
+      pattern: "plaid",
+      gender: "male",
+
+      material: "denim",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639015595ffd26b835ef363de8ee0bdb06d8deb8f_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639015597888880caf3e45d5ba19f64b6c03699fb_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/09/16390155995e9c0844a25c5a1a77995a0be6dec2e9_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639015601dc588573b73ccdf69bd18a5a53d3ff7c_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639015606f5901be4813e94a2fb08ec0b979cba79_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638948281c16f37e4d6c088dde13f685ad9d35de7_thumbnail_900x.webp",
+      name: "SHEIN Men High Stretch Fitted Jeans",
+      price: 30.0,
+      color: "grey",
+      size: "30",
+      category: "jeans",
+      pattern: "plain",
+      gender: "male",
+
+      material: "denim",
+      type: "skinny",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/08/163894828471b7dd895daba38ede892c76eab86d16_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/08/163894828471b7dd895daba38ede892c76eab86d16_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638948288f5f59a2f5e40dd518b970ccfcf02800a_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/08/16389482924003426c18ab99204b9108b3643a6419_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638948295990d0b6d8d8dab40b4ac9649a72dafa1_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/19/163730106336b0bf347c52aa571aaae0ab3bdc8459_thumbnail_900x.webp",
+      name: "SHEIN Men Ripped Roll Up Hem Ombre Jeans",
+      price: 28.0,
+      color: "black",
+      size: "32",
+      category: "jeans",
+      pattern: "plaid",
+      gender: "male",
+
+      material: "denim",
+      type: "skinny",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/19/163730106336b0bf347c52aa571aaae0ab3bdc8459_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/19/1637301065bd373925e9dcfc8ca2d306048d3e70ac_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/19/1637301067340fb153cb849076e820f70d6a033026_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/19/1637301069832584e5d882d701aa8ac9d0af135671_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/19/1637301072f0add6aa232a5a07ef31e51deb8439ee_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/10/22/1634892193bea5fd66a0033d446b3ad2f4d282c1ae_thumbnail_900x.webp",
+      name: "Men Heart Pattern Slant Pocket Jeans",
+      price: 32.0,
+      color: "blue",
+      size: "32",
+      category: "jeans",
+      pattern: "plain",
+      gender: "male",
+
+      material: "denim",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/22/16348921997560a03780fb90123ad07e0c68e65eff_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/22/1634892207e9d59df401d985c531ea1bf1e996df12_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/22/1634892212a6feabfdbf0e623f6fd210cc8eb67355_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/22/1634892221eb2657e8da507fc000d65113b28e3942_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/22/163489222413a17aa6ea2c4898a4cc16e34d7c7d2a_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/02/1638432882689a6d32fbfbf741dfc2c5f50335169c_thumbnail_900x.webp",
+      name: "Men Slant Pocket Checked Jeans",
+      price: 30.0,
+      color: "blue",
+      size: "32",
+      category: "jeans",
+      pattern: "plaid",
+      gender: "male",
+
+      material: "denim",
+      type: "tapered",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/02/16384328875b237209169e550e02d96a6eff9025d3_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/02/16384328913b8fb1859d5371bf0c69628c270e3146_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/02/16384328958aa17d79683a30db959b0a61b9ad2609_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/02/163843290373901bd1f7746889cac71f0761726b95_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/02/1638432906db53353748d2f5757734989234c14172_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/04/1636000309703c14e9d490c22b183f60ecef5eb8ca_thumbnail_900x.webp",
+      name: "Men Colorblock Letter Patched Detail Flap Pocket Raw Trim Jeans",
+      price: 36.0,
+      color: "black",
+      size: "30",
+      category: "jeans",
+      pattern: "letter",
+      gender: "male",
+
+      material: "denim",
+      type: "tapered",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/04/1636000311236e04e57bffe40394c1ec1a0fb8002b_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/04/1636000312254261becfe0b2fe184ac8f80ded528d_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/04/16360003144cf76ee283341af4dba13d5bc7d66b97_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/04/1636000316b141d067e6e893ebd0e3388ea0ee3a5b_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/04/16360003190b6278ae1bbef846009616d85c34ac7f_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/18/16372032341c0dfb16f26c7680bfb3dc24f344e4d0_thumbnail_900x.webp",
+      name: "Men Slant Pocket Ripped Jeans",
+      price: 30.0,
+      color: "grey",
+      size: "30",
+      category: "jeans",
+      pattern: "plain",
+      gender: "male",
+
+      material: "denim",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/18/16372032341c0dfb16f26c7680bfb3dc24f344e4d0_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/18/16372032354c1b0fb4a3c7066c3ea51b263abe1cf7_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/18/16372032376fb3961d6b2b32979ad4abdecd26c6cf_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/18/163720324075bfd89766cd777731dc363833f5deb1_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/18/16372032354c1b0fb4a3c7066c3ea51b263abe1cf7_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/26/163262135657143844d88d8acf5a40c02fa0d13463_thumbnail_900x.webp",
+      name: "Men Ripped Frayed Rag Stitching Splash Ink Tapered Jeans",
+      price: 32.0,
+      color: "blue",
+      size: "30",
+      category: "jeans",
+      pattern: "plain",
+      gender: "male",
+
+      material: "denim",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/26/163262135657143844d88d8acf5a40c02fa0d13463_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/26/1632621359fe76404c9c614d09f1c8d6688a2fff1e_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/26/1632621361bc60c4ad2281273b403d3a125d480771_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/26/163262136576dd833fae2ee693b767d6d28d91b93f_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/26/16326213771b945d524d38b4904708f98946478d61_thumbnail_900x.webp",
+    },
+    ///////////////////////////shorts//////////////
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/04/16385855561fcddc7507f4e061c123ca8f1d6f1624_thumbnail_900x.webp",
+      name: "SHEIN Men Neon Orange Letter Embroidery Striped Tape Shorts",
+      price: 16.0,
+      color: "orange",
+      size: "M",
+      category: "shorts",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/04/16385855561fcddc7507f4e061c123ca8f1d6f1624_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/04/163858555753dc9751bc9371258a69dfbdf0a54532_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/04/16385855595ab05ec7e1bc61ffb8af420634da8c27_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/04/1638585562e23c2cf5aa08004880d2771436665d7c_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/04/1638585564cf77c6428d953939d8af32353878ff67_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/17/16371417843c953cc2ba1cefd95f9f24cf8f4db77e_thumbnail_900x.webp",
+      name: "Men Japanese Letter & Chinese Dragon Graphic Drawstring Waist Shorts",
+      price: 12.0,
+      color: "black",
+      size: "L",
+      category: "shorts",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/17/16371417843c953cc2ba1cefd95f9f24cf8f4db77e_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/17/1637141787a9e86f7d9a8caa96ad86ed0d893417a3_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/17/1637141789d9e25e93eab57ed3b5082542dc655170_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/17/1637141800105461ff050040412cb5ae0d8c6545e7_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/17/16371417843c953cc2ba1cefd95f9f24cf8f4db77e_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638321591f4c52077ed4b4fb26b5543c06c0d2e37_thumbnail_900x.webp",
+      name: "SHEIN Men Buckle Strap Pocket Patched Letter Graphic Shorts",
+      price: 22.0,
+      color: "blue",
+      size: "S",
+      category: "shorts",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638321591f4c52077ed4b4fb26b5543c06c0d2e37_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638321593d77c3b8cf384d221252f31361082de2f_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/01/163832159710793d63f8ba38c6450bb2dab3e045c4_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638321602e0f2703bdffba18c06dec1353698e335_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638321591f4c52077ed4b4fb26b5543c06c0d2e37_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/09/163901353520e65ade553330abe3fc18ae98095acc_thumbnail_900x.webp",
+      name: "SHEIN Men Letter Graphic Contrast Trim Drawstring Shorts",
+      price: 16.0,
+      color: "khaki",
+      size: "M",
+      category: "shorts",
+      pattern: "letter",
+      gender: "male",
+
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/09/163901353520e65ade553330abe3fc18ae98095acc_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/09/163901353699478045c92a304e823ff87e4a71f4b1_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/09/16390135391172e109fbef9b62390ad465ac0fa340_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639013540b51a636e33ba16e5e5a75c36249d39bd_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/09/16390135391172e109fbef9b62390ad465ac0fa340_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/16/1637026023feea5580e9b8aaf2a760569838476387_thumbnail_900x.webp",
+      name: "Men Geo Print Drawstring Waist Shorts",
+      price: 13.0,
+      color: "black",
+      size: "L",
+      category: "shorts",
+      pattern: "plain",
+      gender: "male",
+
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/16/1637026023feea5580e9b8aaf2a760569838476387_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/16/1637026024e884fbb55c1764453bb6aa9ce6afbc3d_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/16/1637026023feea5580e9b8aaf2a760569838476387_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/13/163679752138a0f7d7c1f044aef3e0f6aea92b2d80_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/16/1637026024e884fbb55c1764453bb6aa9ce6afbc3d_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/06/16387693956f70340b2966a0c6d67adf19da44824e_thumbnail_900x.webp",
+      name: "Men Letter Patched Flap Pockets Drawstring Waist Shorts",
+      price: 11.0,
+      color: "khaki",
+      size: "M",
+      category: "shorts",
+      pattern: "letter",
+      gender: "male",
+
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/06/16387693956f70340b2966a0c6d67adf19da44824e_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/06/1638769397c577bc107cf46485310d94dba0f65f62_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/06/1638769399b13fe74f538ba47f50cdddd10af47907_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/06/1638769402359a81fc50d696949a67f6b54fcf471e_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/06/16387694040d9e3c2d194b3b199582360cc5dce678_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/13/163677214752ae030a844daf6e9fe46c19e06552e9_thumbnail_900x.webp",
+      name: "Men Letter Graphic Patch Detail Knot Shorts",
+      price: 14.0,
+      color: "green",
+      size: "L",
+      category: "shorts",
+      pattern: "letter",
+      gender: "male",
+
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/13/163677214752ae030a844daf6e9fe46c19e06552e9_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/13/1636772148c4395efe382ad5c3cdf97c35c9fa968f_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/13/1636772150c959b9bf2162b84f62e0c9e78e813132_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/13/16367721558698f749a3211e00339bf08a14e81dbc_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/13/163677215710b02c8fafadf5142049208f04a06dfe_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639013486ce568ea14fe4718ab8edc9f24f62a43a_thumbnail_900x.webp",
+      name: "SHEIN Men Contrast Tape Mesh Shorts",
+      price: 16.0,
+      color: "yellow",
+      size: "L",
+      category: "shorts",
+      pattern: "",
+      gender: "male",
+
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639013486ce568ea14fe4718ab8edc9f24f62a43a_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/09/163901348715f9a9f2de1e073037d7b06ebeca6acb_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639013489186bfe9edf6472861032a4510354baec_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639013492b4c31e2453cd4fe4d31f18df554f7a90_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639013489186bfe9edf6472861032a4510354baec_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/01/16383506674c1e379818a8e8d5013e6150b01217f3_thumbnail_900x.webp",
+      name: "SHEIN Men Letter Embroidery Striped Tape Shorts",
+      price: 16.0,
+      color: "blue",
+      size: "S",
+      category: "shorts",
+      pattern: "letter",
+      gender: "male",
+
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/01/16383506674c1e379818a8e8d5013e6150b01217f3_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/01/16383506695ed7a07caa2c239ad664bb7603e0ecf8_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/01/16383506729c2d6dfe065496565b84c3cab6832e3b_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/01/16383506741d42e24de75fd9aaf09affc1588d9f73_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/01/16383506729c2d6dfe065496565b84c3cab6832e3b_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638933005b8ca280a648e366a52b2a32a294adf9c_thumbnail_900x.webp",
+      name: "SHEIN Men Geo Print Drawstring Waist Shorts",
+      price: 13.0,
+      color: "brown",
+      size: "XL",
+      category: "shorts",
+      pattern: "",
+      gender: "male",
+
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638933005b8ca280a648e366a52b2a32a294adf9c_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638933007283567501a40c4185f893addb40abfef_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638933010a27f7f4e65155d2c37fbd0b37a58099e_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638933005b8ca280a648e366a52b2a32a294adf9c_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638933007283567501a40c4185f893addb40abfef_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/01/16383213736a4adb9a236cf29139d6cb6f5f9bfddf_thumbnail_900x.webp",
+      name: "SHEIN Men Slogan & Basketball Graphic Track Shorts",
+      price: 19.0,
+      color: "black",
+      size: "XL",
+      category: "shorts",
+      pattern: "letter",
+      gender: "male",
+
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/01/16383213736a4adb9a236cf29139d6cb6f5f9bfddf_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638321375fec6256fb8664c064ad950af5f3abde5_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638321376e5a934d3e2c78bb9726b15f527a99ad2_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638321378e57700940b8c4ac585edb532fee7f99a_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638321375fec6256fb8664c064ad950af5f3abde5_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/04/16385855561fcddc7507f4e061c123ca8f1d6f1624_thumbnail_900x.webp",
+      name: "SHEIN Men Neon Orange Letter Embroidery Striped Tape Shorts",
+      price: 16.0,
+      color: "orange",
+      size: "M",
+      category: "shorts",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/04/16385855561fcddc7507f4e061c123ca8f1d6f1624_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/04/163858555753dc9751bc9371258a69dfbdf0a54532_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/04/16385855595ab05ec7e1bc61ffb8af420634da8c27_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/04/1638585562e23c2cf5aa08004880d2771436665d7c_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/04/1638585564cf77c6428d953939d8af32353878ff67_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/17/16371417843c953cc2ba1cefd95f9f24cf8f4db77e_thumbnail_900x.webp",
+      name: "Men Japanese Letter & Chinese Dragon Graphic Drawstring Waist Shorts",
+      price: 12.0,
+      color: "black",
+      size: "L",
+      category: "shorts",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/17/16371417843c953cc2ba1cefd95f9f24cf8f4db77e_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/17/1637141787a9e86f7d9a8caa96ad86ed0d893417a3_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/17/1637141789d9e25e93eab57ed3b5082542dc655170_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/17/1637141800105461ff050040412cb5ae0d8c6545e7_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/17/16371417843c953cc2ba1cefd95f9f24cf8f4db77e_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638321591f4c52077ed4b4fb26b5543c06c0d2e37_thumbnail_900x.webp",
+      name: "SHEIN Men Buckle Strap Pocket Patched Letter Graphic Shorts",
+      price: 22.0,
+      color: "blue",
+      size: "S",
+      category: "shorts",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638321591f4c52077ed4b4fb26b5543c06c0d2e37_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638321593d77c3b8cf384d221252f31361082de2f_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/01/163832159710793d63f8ba38c6450bb2dab3e045c4_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638321602e0f2703bdffba18c06dec1353698e335_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638321591f4c52077ed4b4fb26b5543c06c0d2e37_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/09/163901353520e65ade553330abe3fc18ae98095acc_thumbnail_900x.webp",
+      name: "SHEIN Men Letter Graphic Contrast Trim Drawstring Shorts",
+      price: 16.0,
+      color: "khaki",
+      size: "M",
+      category: "shorts",
+      pattern: "letter",
+      gender: "male",
+
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/09/163901353520e65ade553330abe3fc18ae98095acc_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/09/163901353699478045c92a304e823ff87e4a71f4b1_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/09/16390135391172e109fbef9b62390ad465ac0fa340_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639013540b51a636e33ba16e5e5a75c36249d39bd_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/09/16390135391172e109fbef9b62390ad465ac0fa340_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/16/1637026023feea5580e9b8aaf2a760569838476387_thumbnail_900x.webp",
+      name: "Men Geo Print Drawstring Waist Shorts",
+      price: 13.0,
+      color: "black",
+      size: "L",
+      category: "shorts",
+      pattern: "plain",
+      gender: "male",
+
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/16/1637026023feea5580e9b8aaf2a760569838476387_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/16/1637026024e884fbb55c1764453bb6aa9ce6afbc3d_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/16/1637026023feea5580e9b8aaf2a760569838476387_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/13/163679752138a0f7d7c1f044aef3e0f6aea92b2d80_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/16/1637026024e884fbb55c1764453bb6aa9ce6afbc3d_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/06/16387693956f70340b2966a0c6d67adf19da44824e_thumbnail_900x.webp",
+      name: "Men Letter Patched Flap Pockets Drawstring Waist Shorts",
+      price: 11.0,
+      color: "khaki",
+      size: "M",
+      category: "shorts",
+      pattern: "letter",
+      gender: "male",
+
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/06/16387693956f70340b2966a0c6d67adf19da44824e_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/06/1638769397c577bc107cf46485310d94dba0f65f62_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/06/1638769399b13fe74f538ba47f50cdddd10af47907_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/06/1638769402359a81fc50d696949a67f6b54fcf471e_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/06/16387694040d9e3c2d194b3b199582360cc5dce678_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/13/163677214752ae030a844daf6e9fe46c19e06552e9_thumbnail_900x.webp",
+      name: "Men Letter Graphic Patch Detail Knot Shorts",
+      price: 14.0,
+      color: "green",
+      size: "L",
+      category: "shorts",
+      pattern: "letter",
+      gender: "male",
+
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/13/163677214752ae030a844daf6e9fe46c19e06552e9_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/13/1636772148c4395efe382ad5c3cdf97c35c9fa968f_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/13/1636772150c959b9bf2162b84f62e0c9e78e813132_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/13/16367721558698f749a3211e00339bf08a14e81dbc_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/13/163677215710b02c8fafadf5142049208f04a06dfe_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639013486ce568ea14fe4718ab8edc9f24f62a43a_thumbnail_900x.webp",
+      name: "SHEIN Men Contrast Tape Mesh Shorts",
+      price: 16.0,
+      color: "yellow",
+      size: "L",
+      category: "shorts",
+      pattern: "",
+      gender: "male",
+
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639013486ce568ea14fe4718ab8edc9f24f62a43a_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/09/163901348715f9a9f2de1e073037d7b06ebeca6acb_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639013489186bfe9edf6472861032a4510354baec_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639013492b4c31e2453cd4fe4d31f18df554f7a90_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/09/1639013489186bfe9edf6472861032a4510354baec_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/01/16383506674c1e379818a8e8d5013e6150b01217f3_thumbnail_900x.webp",
+      name: "SHEIN Men Letter Embroidery Striped Tape Shorts",
+      price: 16.0,
+      color: "blue",
+      size: "S",
+      category: "shorts",
+      pattern: "letter",
+      gender: "male",
+
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/01/16383506674c1e379818a8e8d5013e6150b01217f3_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/01/16383506695ed7a07caa2c239ad664bb7603e0ecf8_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/01/16383506729c2d6dfe065496565b84c3cab6832e3b_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/01/16383506741d42e24de75fd9aaf09affc1588d9f73_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/01/16383506729c2d6dfe065496565b84c3cab6832e3b_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638933005b8ca280a648e366a52b2a32a294adf9c_thumbnail_900x.webp",
+      name: "SHEIN Men Geo Print Drawstring Waist Shorts",
+      price: 13.0,
+      color: "brown",
+      size: "XL",
+      category: "shorts",
+      pattern: "",
+      gender: "male",
+
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638933005b8ca280a648e366a52b2a32a294adf9c_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638933007283567501a40c4185f893addb40abfef_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638933010a27f7f4e65155d2c37fbd0b37a58099e_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638933005b8ca280a648e366a52b2a32a294adf9c_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638933007283567501a40c4185f893addb40abfef_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/01/16383213736a4adb9a236cf29139d6cb6f5f9bfddf_thumbnail_900x.webp",
+      name: "SHEIN Men Slogan & Basketball Graphic Track Shorts",
+      price: 19.0,
+      color: "black",
+      size: "XL",
+      category: "shorts",
+      pattern: "letter",
+      gender: "male",
+
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/01/16383213736a4adb9a236cf29139d6cb6f5f9bfddf_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638321375fec6256fb8664c064ad950af5f3abde5_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638321376e5a934d3e2c78bb9726b15f527a99ad2_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638321378e57700940b8c4ac585edb532fee7f99a_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638321375fec6256fb8664c064ad950af5f3abde5_thumbnail_900x.webp",
+    },
+    ///////////////////////monu//////////////////////////////////////////////////////
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/16/16317576442b436c6c1807ea9c4c24f376dd06cba8_thumbnail_900x.webp",
+      name: "Men 1pc Letter Graphic Baseball Collar Shirt",
+      price: 16.0,
+      color: "white",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "silk",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/16/16317576451ab613e072fb79799479c658ba03f68e_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/16/163175765383f843e744aed47977eea611c61f7e45_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/16/1631757655234963f57dce5b77f518cf3dc790d510_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/16/1631757658025cce36f9f2c771a9401e2c58253f47_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/16/1631757662d2c547d904cd31fb3f49cac3737a43ba_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/10/08/16336632590d14dafdb7257d2eb370da6b587ee827_thumbnail_900x.webp",
+      name: "Men Quarter Zip Contrast Gingham Polo Shirt",
+      price: 17.0,
+      color: "red",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/08/1633663262ab0301d803afd901d3b35dc0ae134da6_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/08/16336632644fd39dc4c0741a29101dccc2dd4c2ee4_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/08/163366326708db03d2e1896c41fbc6229415be7df7_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/08/16336632702e8f812258b1677701932309dd9e87ba_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/08/163366327605ab7931281ac32c679d6a6f807ceba0_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/07/01/1625103876f9693daad357d024174f7353dbad7f7f_thumbnail_900x.webp",
+      name: "Men Striped Print Shirt",
+      price: 14.0,
+      color: "white",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/07/01/16251038783654dc46ee457cfe3ed243c7b50bc2f4_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/07/01/16251038800446efd3a3565f5f63798b491f105b99_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/07/01/16251038817ed75a52035c697c977dcaeac2677050_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/07/01/1625103882de7d2e7d6840b7c97845ee2b9f181b23_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/07/01/1625103886c5ac8181cce748ad5fd957a24dea96e7_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/22/1632279470c385dd0fed71ec125c1a4ab73ad41ff2_thumbnail_900x.webp",
+      name: "Men Plaid Print Shirt Without Tee",
+      price: 19.0,
+      color: "red",
+      size: "XL",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/22/16322794730f4d9dccc4a9b1686230d29d1f856f44_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/22/16322794768c0d19de3ba769ed22986934efa63ca3_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/22/16322794786aa9cebbd01e6b8f5ccff41f2d7844f4_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/22/16322794786aa9cebbd01e6b8f5ccff41f2d7844f4_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/22/16322794786aa9cebbd01e6b8f5ccff41f2d7844f4_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/10/27/163530654392b543b1b748b23e32010b6439d2da59_thumbnail_900x.webp",
+      name: "Men Gingham Print Button Front Shirt Without Tee",
+      price: 17.0,
+      color: "green",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "silk",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/27/16353065450e635659faa2935f67f1275d708e933a_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/27/163530654655e5b4c55318a748d74d3848ab972029_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/27/16353065481e0e214d102750ba131e6d3940e184f5_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/27/1635306551924210d27b9fd3fb6b7f68c1b7d657da_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/27/1635306553dceca4ce20a993013dcbc3f99d3bf529_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/07/02/1625224348b8d9466f24b68756312ebcb0f5c65836_thumbnail_900x.webp",
+      name: "Men All Over Print Button Front Shirt",
+      price: 15.0,
+      color: "red",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/07/02/16252243513076b676b6d99471577b29714ea2a85e_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/07/02/16252243540398460984d97bce508a8c2fed8d4d80_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/07/02/1625224357dfd1aa869b84dd7662f0d13b2b591823_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/07/02/162522435936fc64df2d0ae0ade29bb15ee0073ccf_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/07/02/162522435936fc64df2d0ae0ade29bb15ee0073ccf_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/05/25/1621941536644a999d4185d83e19a021e63653262c_thumbnail_900x.webp",
+      name: "Men Baroque Print Button Through Shirt",
+      price: 20.0,
+      color: "white",
+      size: "XL",
+      category: "shirt",
+      pattern: "plain",
+      material: "silk",
+      gender: "male",
+      img1: "Men Baroque Print Button Through Shirt",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/05/25/16219415423b9e33432dc515ff16aa262136318d1c_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/05/25/16219415423b9e33432dc515ff16aa262136318d1c_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/05/25/1621941545445d0a679190b0f924eba0d542514d17_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/05/25/1621941548030e1ab8dcb5c830691bd258e5ff34ea_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/08/17/16291667964e88d8575541515e7818049fa3a8646e_thumbnail_900x.webp",
+      name: "Men Two Tone Pocket Patched Shirt Without Tee",
+      price: 19.0,
+      color: "blue",
+      size: "XL",
+      category: "shirt",
+      pattern: "plain",
+      material: "silk",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/08/17/16291667994948130f7f1cf0a7f64af95e38e27ecf_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/08/17/162916680064b7acd87a943dccb963b0cb97d90df3_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/08/17/1629166802862655adb52ff3313dbe68164faa9185_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/08/17/1629166802862655adb52ff3313dbe68164faa9185_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/08/17/1629166802862655adb52ff3313dbe68164faa9185_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2020/12/07/1607304351042f5e61f812a3e16c34c113347cb535_thumbnail_900x.webp",
+      name: "Men Two Tone Button Up Shirt",
+      price: 18.0,
+      color: "blue",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2020/12/07/1607304353106d7a14bb43c978b43ac7d954289df8_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2020/12/07/1607304356433ac5376421a793cbea9fcc42e446be_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2020/12/07/1607304356433ac5376421a793cbea9fcc42e446be_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2020/12/07/16073043584cfb162054cc776fb3d706cb1b5e14bf_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2020/12/07/16073043584cfb162054cc776fb3d706cb1b5e14bf_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2020/12/07/16073043584cfb162054cc776fb3d706cb1b5e14bf_thumbnail_900x.webp",
+      name: "SHEIN Men Letter Graphic Contrast Tape Shirt",
+      price: 17.0,
+      color: "black",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/07/07/1625634818044de95c8da7069dcab31dbdbc3801d4_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/07/07/1625634818044de95c8da7069dcab31dbdbc3801d4_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/07/07/1625634818044de95c8da7069dcab31dbdbc3801d4_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/07/07/162563482496be51143cd94dcd4368a66e1487a435_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/07/07/1625634818044de95c8da7069dcab31dbdbc3801d4_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/07/02/1625191993e5089b029032d55cf162deabeac68b3e_thumbnail_900x.webp",
+      name: "Men Two Tone Button Through Shir",
+      price: 15.0,
+      color: "black",
+      size: "XL",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/07/02/1625191995a1123738be303b5357937453e692153a_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/07/02/162519199713496be37d4cf030b5ba2b9bb8e1738a_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/07/02/1625192000db3f0adca84907194af6fb51fb020ace_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/07/02/1625192000db3f0adca84907194af6fb51fb020ace_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/07/02/1625192000db3f0adca84907194af6fb51fb020ace_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/06/10/1623316097601bbfe921a8f97ad6ee80c90a1335a9.webp",
+      name: "Men Contrast Binding Polo Shirt",
+      price: 17.0,
+      color: "black",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/06/10/162331609961e0d724821610dbda9011fafb242d2d_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/06/10/16233161021860b68107c95a10dfb2a481bee83bf2_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/06/10/16233161049f70a9867162b3dd24f3559a9d57ec51_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/06/10/162331610781f2da19ce24ee8ba7012253326a629c_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/06/10/162331611085b57ad6611b3c427a9b78daa0b58cf4_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/03/16/1615888979594d1bf3d324761af63a61cd681d6a04_thumbnail_900x.webp",
+      name: "Men Color Block Polo Shirt",
+      price: 17.0,
+      color: "red",
+      size: "XL",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/03/16/161588898215423c12145f7eb93dba9ab879643ee8_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/03/16/16158889874c3ddea14fc9774a837027d00b9624f7_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/03/16/16158889907267d6cbf8ef87844aea7103f325da2a_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/03/16/16158890004edabd64283e8c79577bf5b97ea4ab40_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/03/16/161588900948b42c2efb92db532f69acee2bd4664e_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/03/09/1615280263bebe29c2e37dfe4ebc4bb0654cf2d10e_thumbnail_900x.webp",
+      name: "SHEIN Men Mock Neck Embroidery Eagle Shirt",
+      price: 12.0,
+      color: "red",
+      size: "XL",
+      category: "shirt",
+      pattern: "plain",
+      material: "silk",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/03/09/16152802686de74df9078fea0a0c160ab2631a1de2_thumbnail_900x.webphttps://img.ltwebstatic.com/images3_pi/2021/03/09/16152802686de74df9078fea0a0c160ab2631a1de2_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/03/09/16152802686de74df9078fea0a0c160ab2631a1de2_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/03/09/1615280272a6bd89eff92e042669c48be6c5453c12_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/03/09/1615280272a6bd89eff92e042669c48be6c5453c12_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/03/09/1615280272a6bd89eff92e042669c48be6c5453c12_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/08/16/1629079458ccce7cb3455f3a9f4890eef9b13292c8_thumbnail_900x.webp",
+      name: "SHEIN Men Holographic Sheer Mesh Shirt",
+      price: 16.0,
+      color: "black",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "polyster",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/08/16/16290794607ff51afba76bc4b35746986ea657b195_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/08/16/1629079463975e4ac1985ab36fbfdf31436a14389f_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/08/16/1629079467b7adf80d68ea76e2eaad28c34fe0ee72_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/08/16/16290794695ab7720d2ab46129e12bce80e285bfbe_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/08/16/16290794695ab7720d2ab46129e12bce80e285bfbe_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/04/06/1617699494ccd0b884d54fea50890eb0bf2bfdd5cf_thumbnail_900x.webp",
+      name: "Men Floral Button Up Shirt Without Tee",
+      price: 14.0,
+      color: "white",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/04/06/16176994970c14bea574bfe6710c025ea5589f128c_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/04/06/1617699500fcf64a2e1208c693791ce9352ea7d6ff_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/04/06/1617699503c4556cb3c99f324332083c55ce69b6f4_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/04/06/1617699503c4556cb3c99f324332083c55ce69b6f4_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/04/06/1617699503c4556cb3c99f324332083c55ce69b6f4_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images2_pi/2019/05/27/15589388413655033062_thumbnail_900x1199.webp",
+      name: "Men Cut And Sew Polo Shirt",
+      price: 15.0,
+      color: "black",
+      size: "XL",
+      category: "shirt",
+      pattern: "plain",
+      material: "silk",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images2_pi/2019/05/27/1558938841157875919_thumbnail_900x1199.webp",
+      img2: "https://img.ltwebstatic.com/images2_pi/2019/05/27/15589396661494453808_thumbnail_900x1199.webp",
+      img3: "https://img.ltwebstatic.com/images2_pi/2019/05/27/15589396671329339197_thumbnail_900x1199.webp",
+      img4: "https://img.ltwebstatic.com/images2_pi/2019/05/27/15589396671329339197_thumbnail_900x1199.webp",
+      img5: "https://img.ltwebstatic.com/images2_pi/2019/05/27/15589396671329339197_thumbnail_900x1199.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/10/08/1633663043970fcf31f9b4ac7fd1475812b6b2426d_thumbnail_900x.webp",
+      name: "Men Solid Button Through Shirt",
+      price: 7.49,
+      color: "white",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "silk",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/08/16336630456c92e864e36bfc124809be6d4a4ad149_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/08/163366304703ffd53c8ca6215736d114b604ff02e7_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/08/163366304703ffd53c8ca6215736d114b604ff02e7_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/08/163366304703ffd53c8ca6215736d114b604ff02e7_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/08/163366304703ffd53c8ca6215736d114b604ff02e7_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/05/16360764608884d5e2234593415edfb9a0c741a755_thumbnail_900x.webp",
+      name: "SHEIN Men Floral Print Polo Shirt",
+      price: 13.0,
+      color: "white",
+      size: "XL",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/05/1636076462f3b857cc56a7d3af6601389369f4e452_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/05/1636076463574078d88524f05875051a2957ded440_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/05/1636076463574078d88524f05875051a2957ded440_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/05/1636076466070227b0423f774d971f6b8edf739d13_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/05/1636076466070227b0423f774d971f6b8edf739d13_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/01/26/161162660523483daccb93eb55972b3c2bc0cc2b43_thumbnail_900x.webp",
+      name: "SHEIN Men 3 Pack Embroidery Detail Striped Trim Polo Shirt",
+      price: 36.0,
+      color: "white",
+      size: "XL",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/01/26/161162660783a8d296debf5ee6bc0855251aa4ab45_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/01/26/1611626609c8263c017b62c1035a8cfc408f92e1d3_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/01/26/16116266128c09ab68dff996061e32da50cd34ff2e_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/01/26/16116266155c96038abc04d54887b15eaa4964c8c3_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/01/26/16116266155c96038abc04d54887b15eaa4964c8c3_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/10/08/1633681121a54c63742ff95c60632c04fa3d98357a_thumbnail_900x.webp",
+      name: "Men Paisley Print Shirt",
+      price: 17.0,
+      color: "black",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/29/16328878015032c4d63a7d8f9b0836952002b06cd2_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/29/163288780403a446849bfbcb9d1c200ad1b9273e7b_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/29/1632887807278769572b1b88f4740d4d161ad79441_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/29/1632887809edf2d554ec1153d8f850f811a2dc97ff_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/29/1632887809edf2d554ec1153d8f850f811a2dc97ff_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/29/1632889618eab7b73455caab2479454edc75971538_thumbnail_900x.webp",
+      name: "Men Argyle Print Shirt",
+      price: 17.0,
+      color: "red",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/29/1632889621ddc8780907e556c8de3d4b98f2d38659_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/29/16328896245403ebbed83653182185ff8492f092ed_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/29/1632889626c3f142f5d279a54b44e00b168bc2586b_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/29/163288963263d99edbb1bcbf0a2d3c93a47106e9ce_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/29/16328896343108d868bed63428bc1d3b6f4529eca4_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/08/19/1629340233af751b2c439be402ad20c40aa5f3a120_thumbnail_900x.webp",
+      name: "Men Horse And Figure Print Polo Shirt",
+      price: 13.0,
+      color: "black",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "silk",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/06/20/1624199694b26830f19b4daa44ff920bda2394dac4_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/08/19/162934023476700b81d2ab42e53addd6491a49b81a_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/06/20/16241997063137f27b1204087bd965e7c41907242e_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/06/20/16241997047a73f9527d5dbe3eb6cef9ace4ded70a_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/06/20/1624199698094620286edc696c38b5d6816dc43950_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/23/1632395510ce4e6314dc05a72b3f2d500913400ee5_thumbnail_900x.webp",
+      name: "Men Cut And Sew Quarter Zip Slogan Graphic Polo Shirt",
+      price: 17.0,
+      color: "red",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "silk",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/23/16323605464eec4bc0d3e5357c94b5d42a6b143920_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/23/16323955123e0deda24048b450eed3fc693c88c050_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/23/1632395515252501efb22d19af6dab23a8f5dbfecd_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/23/16323955173e2753334d77e3d35200a9543332680c_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/23/1632395518bc3741100754deb266da82df41c2b73a_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/07/16/16263998195dde927a90f294ea2fb6f110c79da0f7_thumbnail_900x.webp",
+      name: "Men Color Block Graphic Embroidery Polo Shirt",
+      price: 17.0,
+      color: "blue",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "silk",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/07/16/162639982102290ee4d82d251d2a9970330661d9b7_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/07/16/1626399823b9777789dd898dc104a8c8e4ccac57b3_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/07/16/1626399824035e7d9057c976c601b473a10db99c87_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/07/16/162639982692b4e8099eb04cce98fc88746becdb06_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/07/16/16263998276f8f5dbaafcf9f0aca81aa264b589c30_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/06/23/1624411228bf3ad541a74c210c75aa02c2919f8d8c.webp",
+      name: "SHEIN Men Floral Print Contrast Collar Polo Shirt",
+      price: 13.0,
+      color: "black",
+      size: "XL",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/06/23/1624411230512039d64e8cf1665fd542edd5d18283_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/06/23/1624411232d1c84cd8051484ba8af1b46649f299ba_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/06/23/1624411235e78a9f6b74f0515371f1939931b483c6_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/06/23/1624411237b6da860acc872560ebc1bb3c6a4508a1_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/06/23/1624411237b6da860acc872560ebc1bb3c6a4508a1_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2020/08/07/15967792578cee43e0c85bc13a5082dccb1adff2ae.webp",
+      name: "Men Baroque Print Button Front Shirt",
+      price: 25.0,
+      color: "black",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "silk",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2020/08/07/1596779261b546871aed4a65f09dc2a8a7953736bc_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2020/08/07/1596779261b546871aed4a65f09dc2a8a7953736bc_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2020/08/07/159677926680d0edb7cd4955ea78b767d9af7c8d2f_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2020/08/07/159677926680d0edb7cd4955ea78b767d9af7c8d2f_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2020/08/07/159677926680d0edb7cd4955ea78b767d9af7c8d2f_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/11/1636607319adfa9454a8e503bfb26d20e51da3c5f9_thumbnail_900x.webp",
+      name: "SHEIN Men Striped Polo Shirt",
+      price: 10.0,
+      color: "white",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/11/163660732233322b1fa19fc3ff3db63d020ed84440_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/11/1636607323d6c6262901ab764ab255801fb9d1ba3c_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/11/163660732495ff838c8d1c4797efaa3502df67660d_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/11/163660732495ff838c8d1c4797efaa3502df67660d_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/11/163660732495ff838c8d1c4797efaa3502df67660d_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2020/12/10/16075621848590afff1b1aa5f31ad31621ce5ff9e9_thumbnail_900x.webp",
+      name: "SHEIN Men Patch Detail Contrast Collar Polo Shirt",
+      price: 14.99,
+      color: "red",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "silk",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2020/12/10/1607562187f5c901494a7ff8704cedc359770b9768_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2020/12/10/1607562189a3a38f41fd891670b2c234ae3b9c7d77_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2020/12/10/1607562189a3a38f41fd891670b2c234ae3b9c7d77_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2020/12/10/16075621928b6e49fdf828ffc35c09995bb69a4c91_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2020/12/10/16075621928b6e49fdf828ffc35c09995bb69a4c91_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2020/10/16/1602810356e88730d9e1b6b9aeb58bafcf33af7793_thumbnail_900x.webp",
+      name: "SHEIN Men Letter Embroidery Two Tone Polo Shirt",
+      price: 18.0,
+      color: "green",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2020/10/16/1602810358368df15f15207d7088f7dc291af2661d_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2020/10/16/16028103603eee3854301a50124bdb9aa3561e3373_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2020/10/16/1602810362f3a993ad461754032adee4914fcba9cb_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2020/10/16/1602810362f3a993ad461754032adee4914fcba9cb_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2020/10/16/1602810362f3a993ad461754032adee4914fcba9cb_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/10/19/16346313982fa98042c3163cd7657f8c7ce1fcc0ac_thumbnail_900x.webp",
+      name: "Men Baroque Print Polo Shirt",
+      price: 17.0,
+      color: "black",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/19/163463140259589b1ced4cb18114b468d8652fd3c4_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/19/16346314085877899a7374bce2975275a4aa34d1f2_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/19/163463141659d9629dd66034bdf6dc16408aad644f_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/19/163463141659d9629dd66034bdf6dc16408aad644f_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/19/163463141659d9629dd66034bdf6dc16408aad644f_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/12/1636683672fd9ea8973c64f52ff31dc48711087a6e_thumbnail_900x.webp",
+      name: "SHEIN UNISEX Men Contrast Collar Polo Shirt",
+      price: 23.0,
+      color: "red",
+      size: "XL",
+      category: "shirt",
+      pattern: "plain",
+      material: "silk",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/12/16366836740ff4fdcfcadce47cad53c228a834f338_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/12/16366836762cec317702f51990c9fdb35bc2b1d483_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/12/16366836762cec317702f51990c9fdb35bc2b1d483_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/12/16366836762cec317702f51990c9fdb35bc2b1d483_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/12/1636683678118f0537bc7f980fc28884e00dd2e04c_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/15/1631703915cd7342ac6b879114e171509727a2e2d0_thumbnail_900x.webp",
+      name: "Men Striped Trim Polo Shirt",
+      price: 17.0,
+      color: "blue",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "silk",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/15/1631703916e7ad96eef2ca1d43b400bfb80f0dde66_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/15/1631703919d8634dd9f9141d65d498746e9cb150ae_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/15/1631703922c4eba38a0880991b61fce25eb379ce8b_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/15/1631703924947139d39ca96b3301cc4de1e5ca82f3_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/15/1631703924947139d39ca96b3301cc4de1e5ca82f3_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/17/163712022724ab13bb77154d0676621e8e733f6f86_thumbnail_900x.webp",
+      name: "Men Chain Print Shirt",
+      price: 16.0,
+      color: "black",
+      size: "XL",
+      category: "shirt",
+      pattern: "plain",
+      material: "silk",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/17/163712022940330bd879b81117a9116445f898352b_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/06/23/16244352777e00f66cc1dd1316ff1655b429102410_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/06/23/16244352777e00f66cc1dd1316ff1655b429102410_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/06/23/16244352790f9eb10e566869c9c10b19ad70177946_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/06/23/16244352790f9eb10e566869c9c10b19ad70177946_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/29/16328895827b0a6aa5f19d5ef40de33ca20519454a_thumbnail_900x.webp",
+      name: "Men Allover Print Shirt",
+      price: 17.0,
+      color: "red",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "silk",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/29/163288958764642e16036384d2d193034e24dd66b7_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/29/1632889589db5208807f6a09ebc23f55777d47b4d6_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/29/1632889589db5208807f6a09ebc23f55777d47b4d6_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/29/16328895933da00fb15b51464bba0b899ec4072ec6_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/29/1632889596b7cc709ac4eb533eb0f39efa2dffc964_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/05/26/162203705450ae37d2b919a7825c7cd50e72484744_thumbnail_900x.webp",
+      name: "Men Floral Button Up Shirt Without Tee",
+      price: 14.0,
+      color: "red",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/05/26/1622037057ceec68164ea3be064a9c394690305210_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/05/26/162203706017126d6a71a3d2042085e90e983ab679_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/05/26/1622037063e2faf13451032b297886512416f9589d_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/05/26/16220370661e0e5c99c95d0b5375e943f130ae6041_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/05/26/16220370661e0e5c99c95d0b5375e943f130ae6041_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/10/1631243103909b55d8beaf39f7d58234e5c7df9881_thumbnail_900x.webp",
+      name: "Men Map Print Shirt Without Tee",
+      price: 12.0,
+      color: "red",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/10/16312431057646d4491a18cb654f0fda83744b23fd_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/10/1631243107c57f2c4daaece2a82ca2198bf7f69b9d_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/10/1631243109b683fb427710caf3793000bdb87e1ced_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/10/16312431128c0c1fd1685d8d1e4083ad92347a44e7_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/10/1631243113d73d820f393cadb88ca2a74f14158f2d_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/10/08/16336586510e542a82491bebff2a3b17647710aff1_thumbnail_900x.webp",
+      name: "Men 1pc Plaid Button Through Shirt",
+      price: 15.99,
+      color: "red",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "silk",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/08/16336586803826b7316ba79478b81b0b0635529417_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/08/1633658726a6044bd891fa4d1d45e36bbe3c9416b0_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/08/1633658738786176a0a44a96ddbf15592072009b9a_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/08/1633658754b72913fda9bd79c229432bbcb193b2e3_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/08/1633658693f36760dcffe9750a57017ceae6f0078b_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/29/16328895827b0a6aa5f19d5ef40de33ca20519454a_thumbnail_900x.webp",
+      name: "Men Allover Print Shirt",
+      price: 17.0,
+      color: "red",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "silk",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/29/163288958764642e16036384d2d193034e24dd66b7_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/29/1632889589db5208807f6a09ebc23f55777d47b4d6_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/29/1632889589db5208807f6a09ebc23f55777d47b4d6_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/29/16328895933da00fb15b51464bba0b899ec4072ec6_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/29/1632889596b7cc709ac4eb533eb0f39efa2dffc964_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/05/26/162203705450ae37d2b919a7825c7cd50e72484744_thumbnail_900x.webp",
+      name: "Men Floral Button Up Shirt Without Tee",
+      price: 14.0,
+      color: "red",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/05/26/1622037057ceec68164ea3be064a9c394690305210_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/05/26/162203706017126d6a71a3d2042085e90e983ab679_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/05/26/1622037063e2faf13451032b297886512416f9589d_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/05/26/16220370661e0e5c99c95d0b5375e943f130ae6041_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/05/26/16220370661e0e5c99c95d0b5375e943f130ae6041_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/05/26/162203705450ae37d2b919a7825c7cd50e72484744_thumbnail_900x.webp",
+      name: "Men Floral Button Up Shirt Without Tee",
+      price: 14.0,
+      color: "red",
+      size: "M",
+      category: "shirt",
+      pattern: "plain",
+      material: "cotton",
+      gender: "male",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/05/26/1622037057ceec68164ea3be064a9c394690305210_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/05/26/162203706017126d6a71a3d2042085e90e983ab679_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/05/26/1622037063e2faf13451032b297886512416f9589d_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/05/26/16220370661e0e5c99c95d0b5375e943f130ae6041_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/05/26/16220370661e0e5c99c95d0b5375e943f130ae6041_thumbnail_900x.webp",
+    },
+    //   {
+    //       imgUrl:"",
+    //       name:"",
+    //       price:,
+    //       color:"",
+    //       size:"",
+    //       category:"shorts",
+    //       pattern:"",
+    //
+    //       gender:"male",
+    //       material:"polyster",
+    //       type:"straight",
+    //       img1:"",
+    //       img2:"",
+    //       img3:"",
+    //       img4:"",
+    //       img5:"",
+    //   },
+  ];
+
+  ////////////////////////-------TRIAL----------////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  function local() {
+    var alldata = JSON.parse(localStorage.getItem("alldata")) || [];
+    data.map(function (elem) {
+      alldata.push(elem);
+
+      localStorage.setItem("alldata", JSON.stringify(alldata));
+    });
+  }
+  local();
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  var arr = JSON.parse(localStorage.getItem("carddata")) || [];
+  function displayitem(data) {
+    document.querySelector(".con").textContent = "";
+    data.map(function (elem) {
+      var img = document.createElement("img");
+      var name = document.createElement("p");
+      var price = document.createElement("h4");
+      var div = document.createElement("div");
+
+      img.setAttribute("src", elem.imgUrl);
+      img.addEventListener("click", function () {
+        localStorage.setItem("carddata", JSON.stringify(elem));
+        window.location.href = "exactcarddata.html";
+      });
+      name.textContent = elem.name;
+      price.textContent = "USD$" + elem.price;
+
+      div.append(img, name, price);
+      document.querySelector(".con").append(div);
+    });
+  }
+
+  displayitem(data);
+  ////////////////////////////////////////////////size function////////////////////////////////////////////////////////////
+  document.querySelector("#m").addEventListener("click", changexs);
+  function changexs() {
+    var data1 = data.filter(function (elem) {
+      return elem.size == "XS";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#m").addEventListener("click", changes);
+  function changes() {
+    var data1 = data.filter(function (elem) {
+      return elem.size == "S";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#m").addEventListener("click", changel);
+  function changel() {
+    var data1 = data.filter(function (elem) {
+      return elem.size == "L";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#m").addEventListener("click", changem);
+  function changem() {
+    var data1 = data.filter(function (elem) {
+      return elem.size == "M";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#m").addEventListener("click", changexl);
+  function changexl() {
+    var data1 = data.filter(function (elem) {
+      return elem.size == "XL";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#m").addEventListener("click", changexxl);
+  function changexxl() {
+    var data1 = data.filter(function (elem) {
+      return elem.size == "XXL";
+    });
+
+    displayitem(data1);
+  }
+  /////////////////////////////////////////// material filter////////////////////////////////////////////////////////////////////////
+
+  document.querySelector("#polyster").addEventListener("click", polyster);
+  function polyster() {
+    var data1 = data.filter(function (elem) {
+      return elem.material == "polyster";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#cotton").addEventListener("click", cotton);
+  function cotton() {
+    var data1 = data.filter(function (elem) {
+      return elem.material == "cotton";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#denim").addEventListener("click", denim);
+  function denim() {
+    var data1 = data.filter(function (elem) {
+      return elem.material == "denim";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#silk").addEventListener("click", silk);
+  function silk() {
+    var data1 = data.filter(function (elem) {
+      return elem.material == "silk";
+    });
+
+    displayitem(data1);
+  }
+
+  //////////////////////////////////color//////////////////
+
+  document.querySelector(".black").addEventListener("click", black);
+  function black() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "black";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".grey").addEventListener("click", grey);
+  function grey() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "grey";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".khaki").addEventListener("click", khaki);
+  function khaki() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "khaki";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".orange").addEventListener("click", orange);
+  function orange() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "orange";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".red").addEventListener("click", red);
+  function red() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "red";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".yellow").addEventListener("click", yellow);
+  function yellow() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "yellow";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".brown").addEventListener("click", brown);
+  function brown() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "brown";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".blue").addEventListener("click", blue);
+  function blue() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "blue";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".green").addEventListener("click", green);
+  function green() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "green";
+    });
+
+    displayitem(data1);
+  }
+
+  ///////////////////pattern ///////////////////////
+
+  document.querySelector("#plain").addEventListener("click", plain);
+  function plain() {
+    var data1 = data.filter(function (elem) {
+      return elem.pattern == "plain";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#plaid").addEventListener("click", plaid);
+  function plaid() {
+    var data1 = data.filter(function (elem) {
+      return elem.pattern == "plaid";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#letter").addEventListener("click", letter);
+  function letter() {
+    var data1 = data.filter(function (elem) {
+      return elem.pattern == "letter";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#block").addEventListener("click", block);
+  function block() {
+    var data1 = data.filter(function (elem) {
+      return elem.pattern == "block";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".length").textContent = data.length + " Product's";
+
+  //////////////price///////////////////////////////////////
+  document.querySelector("#high").addEventListener("click", low);
+  function high() {
+    data.sort(function (a, b) {
+      return b.price - a.price;
+    });
+    displayitem(data);
+  }
+
+  document.querySelector("#low").addEventListener("click", low);
+  function low() {
+    data.sort(function (a, b) {
+      return a.price - b.price;
+    });
+    displayitem(data);
+  }
+
+  ///////////////jeans shirts shorts/////////////////
+
+  document.querySelector("#jeans").addEventListener("click", jeans);
+  function jeans() {
+    var data1 = data.filter(function (elem) {
+      return elem.category == "jeans";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#shirts").addEventListener("click", shirts);
+  function shirts() {
+    var data1 = data.filter(function (elem) {
+      return elem.category == "shirt";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#shorts").addEventListener("click", shorts);
+  function shorts() {
+    var data1 = data.filter(function (elem) {
+      return elem.category == "shorts";
+    });
+
+    displayitem(data1);
+  }
+
+  //////////////////////category/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  document.querySelector("#men").addEventListener("click", men);
+  function men() {
+    window.location.href = "mensection.html";
+  }
+
+  document.querySelector("#women").addEventListener("click", women);
+  function women() {
+    window.location.href = "womensection.html";
+  }
+
+  document.querySelector("#kids").addEventListener("click", kids);
+  function kids() {
+    window.location.href = "kids.html";
+  }
+  var arr2 = JSON.parse(localStorage.getItem("bagitm"));
+  document.querySelector("#bagcount").textContent=arr2.length
+</script>

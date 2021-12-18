@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/49e440d78e.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        margin: 0px;
+      }
+      #container {
+        display: flex;
+        border: 1px solid lightgrey;
+        width: 100%;
+        height: 50px;
+        flex-wrap: wrap;
+      }
+      #text {
+        padding-left: 130px;
+        line-height: 10px;
+      }
+      #slice {
+        font-size: 50px;
+        line-height: 50px;
+        font-weight: 30;
+        margin-left: 3px;
+      }
+      #icon {
+        margin-top: 10px;
+        margin-left: 5px;
+      }
+      #text1 {
+        font-size: 15px;
+        color: #b1cfbd;
+        padding-left: 10px;
+        font-weight: 400;
+      }
+      #shopping {
+        margin-left: 750px;
+        margin-top: 13px;
+        font-weight: 400;
+      }
+      #add {
+        display: flex;
+        border: 1px solid red;
+        width: 100%;
+        height: 800px;
+        margin-top: 6%;
+        border: none;
+      }
+      #left {
+        border: 1px solid gold;
+        width: 50%;
+        margin-left: 150px;
+        border: none;
+      }
+      #code {
+        border: 1px solid gray;
+        width: 95%;
+        height: 40px;
+        margin-top: 20px;
+        padding-left: 10px;
+      }
+      #right {
+        border-left: 1px solid gray;
+        margin-left: 40px;
+        width: 40%;
+        height: 500px;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      #country {
+        padding: 12px 190px;
+        text-align: left;
+        padding-left: 0%;
+      }
+      #first {
+        padding: 12px 190px;
+        margin-top: 20px;
+        padding-left: 0%;
+      }
+      #last {
+        padding: 12px 160px;
+        margin-top: 20px;
+        margin-left: 20px;
+        padding-left: 0%;
+      }
+      #num {
+        padding: 12px;
+
+        border: 1px solid gray;
+        border-right: none;
+        border-top: none;
+        border-bottom: none;
+        margin-left: 20px;
+      }
+      i {
+        margin-top: 1px;
+        background-color: #87b7a0;
+        color: black;
+        height: 12px;
+        border-radius: 60%;
+        padding: 12px;
+        color: white;
+        margin-top: 5px;
+      }
+      #address {
+        padding: 12px 545px;
+        margin-top: 20px;
+        padding-left: 0%;
+      }
+      #man {
+        color: #66abdb;
+        font-size: 14px;
+        line-height: 2px;
+      }
+      #gen {
+        display: flex;
+        color: #a49a8e;
+        text-align: end;
+        margin-top: -2%;
+        margin-right: 22px;
+        text-decoration: underline;
+        justify-content: end;
+      }
+      #save {
+        margin: 10px 270px;
+        background-color: white;
+        color: black;
+        padding: 15px 60px;
+        border: 1px solid black;
+      }
+      #save:hover {
+        color: white;
+        background-color: black;
+      }
+      .customcb {
+        width: 17px;
+        height: 17px;
+        margin: 2px 0 2px 0;
+        background: #ddd;
+        border-radius: 100%;
+        position: relative;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+        margin-top: 60px;
+      }
+      .customcb label.inner {
+        display: block;
+        width: 12.75px;
+        height: 12.75px;
+        border-radius: 100px;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        cursor: pointer;
+        position: absolute;
+        top: 2.125px;
+        left: 2.125px;
+        z-index: 1;
+        background: #eee;
+        -webkit-box-shadow: inset 0 1px 1px rgba(110, 87, 87, 0.5);
+        -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
+      }
+
+      .customcb label.outer {
+        margin-left: 25px;
+      }
+      .customcb [type="checkbox"] {
+        display: none;
+      }
+      .red.customcb input[type="checkbox"]:checked + label.inner {
+        background: rgb(43, 40, 40);
+      }
+      .orange.customcb input[type="checkbox"]:checked + label.inner {
+        background: #d61;
+      }
+      .green.customcb input[type="checkbox"]:checked + label.inner {
+        background: green;
+      }
+
+      #order {
+        padding-left: 38px;
+      }
+      #hr {
+        width: 85%;
+      }
+      #total {
+        padding-left: 38px;
+      }
+      #coupon {
+        padding-left: 38px;
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 40px;
+      }
+      #couponcode {
+        padding: 5px 80px;
+        margin-left: 40px;
+      }
+      #check {
+        padding-left: 38px;
+        color: gray;
+        font-size: 15px;
+        line-height: 0px;
+      }
+      #apply {
+        padding-left: 38px;
+        color: black;
+        font-size: 15px;
+      }
+      .apply1 {
+        background-color: white;
+        padding: 3px 57px;
+        padding-bottom: 6px;
+        margin-left: 8px;
+        color: black;
+
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+      .button1 {
+        background-color: white;
+        color: black;
+        border: 1px solid gray;
+      }
+
+      .button1:hover {
+        background-color: black;
+        color: white;
+      }
+      .place {
+        padding: 20px 195px;
+        margin-left: 38px;
+        margin-top: 30px;
+        color: black;
+        background-color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+      .button2 {
+        background-color: white;
+        color: black;
+        border: 1px solid gray;
+      }
+
+      .button2:hover {
+        background-color: black;
+        color: white;
+      }
+      .tot {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #abc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="text">SHEIN</h1>
+      <p1 id="slice">/</p1>
+      <i class="fas fa-lock"></i>
+      <p id="text1">SECURE CHECKOUT</p>
+      <a id="shopping" href="mainpage.html">CONTINUE SHOPPING</a>
+    </div>
+    <div id="add">
+      <div id="left">
+        <h1>Shopping Address</h1>
+        <hr />
+        <br />
+        <input id="country" placeholder="*Country/Region" /><br />
+        <input id="first" placeholder="*First Name" />
+        <input id="last" placeholder="*Last Name" /><br />
+        <div id="code">US+1 <input id="num" type="tel" /></div>
+        <br />
+        <input
+          id="address"
+          type="text"
+          placeholder="ADDRESS FINDER Searchby postcode street or address"
+        /><br />
+        <p id="man">Enter Address Manually</p>
+        <input id="default" type="checkbox" /><label>Make Default</label>
+        <p id="gen">General Address Tips Privacy & Cookie Policy</p>
+        <button id="save">SAVE</button>
+        <h2>Payment Method</h2>
+        <hr />
+
+        <div class="red customcb" style="display: flex">
+          <input type="checkbox" value="1" id="customcb1" name="" />
+          <label class="inner" for="customcb1"></label>
+          <label
+            class="outer"
+            for="customcb1"
+            style="display: flex; align-items: center"
+            ><img
+              src="https://img.ltwebstatic.com/images2_pi/2018/06/06/1528271145618709979.png"
+              alt="atm"
+              width="80px"
+              height="50px"
+              style="margin: 10px"
+            />Credit/Debit Card </label
+          ><br />
+        </div>
+
+        <div class="orange customcb" style="display: flex">
+          <input type="checkbox" value="1" id="customcb2" name="" />
+          <label class="inner" for="customcb2"></label>
+          <label
+            class="outer"
+            for="customcb2"
+            style="display: flex; align-items: center"
+            ><img
+              src="https://img.ltwebstatic.com/images3_pi/2021/01/15/161070013946787d853eab3ad3de55a71eb86b0919.png
+            "
+              alt=""
+              width="80px"
+              height="50px"
+              style="margin: 10px"
+            />
+            Gpay</label
+          >
+        </div>
+
+        <div class="green customcb" style="display: flex">
+          <input type="checkbox" value="1" id="customcb3" name="" />
+          <label class="inner" for="customcb3"></label>
+          <label
+            class="outer"
+            for="customcb3"
+            style="display: flex; align-items: center"
+            ><img
+              src="https://img.ltwebstatic.com/images2_pi/2018/06/06/15282719811871317559.png
+            "
+              alt=""
+              width="80px"
+              height="50px"
+              style="margin: 10px"
+            />
+            Paypal</label
+          >
+        </div>
+      </div>
+
+      <div id="right">
+        <h1 id="order">Order Summary</h1>
+        <hr id="hr" />
+        <div class="tot">
+          <p id="total">Subtotal</p>
+          <h3 id="total2">abc</h3>
+        </div>
+
+        <hr id="hr" />
+        <label id="coupon">Coupon Code ?</label><br />
+        <input id="couponcode" type="text" /><button class="apply1 button1">
+          Apply
+        </button>
+        <p id="check">check out My Coupans</p>
+        <p id="apply">Apply code shev10 to get 10% off for your first order.</p>
+        <label id="coupon">Shein Points ?</label><br />
+        <input id="couponcode" type="text" /><button class="apply1 button1">
+          Apply</button
+        ><br />
+        <label id="coupon">Wallet Credit ?</label><br />
+        <input id="couponcode" type="text" /><button class="apply1 button1">
+          Apply</button
+        ><br />
+        <button class="place button2">PLACE ORDER</button>
+        <img
+          src="img222.png"
+          alt=""
+          width="500px"
+          style="margin-top: 50px; margin-left: 45px"
+        />
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  var total = JSON.parse(localStorage.getItem("totalamount"));
+  total = Number(total);
+
+  document.querySelector("#total2").textContent = "US$" + total + ".00";
+
+  document.querySelector(".place").addEventListener("click", fun);
+
+  function fun() {
+    window.location.href = "payment.html";
+  }
+  var arr2 = JSON.parse(localStorage.getItem("bagitm"));
+  document.querySelector("#bagcount").textContent = arr2.length;
+</script>

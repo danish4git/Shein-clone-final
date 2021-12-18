@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+    src="https://kit.fontawesome.com/49e440d78e.js"
+    crossorigin="anonymous"
+  ></script>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .con {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      #leftimg {
+        display: flex;
+        margin-right: 5px;
+        flex-direction: column;
+      }
+
+      #center > img {
+        width: 700px;
+      }
+      #right {
+        padding-left: 20px;
+      }
+      #leftimg > img {
+        width: 50px;
+        margin: 2px;
+        padding: 2px;
+      }
+      #leftimg > img:hover {
+        border: 2px solid grey;
+      }
+      .btn > button {
+        color: rgb(56, 55, 55);
+        background-color: white;
+        border: 1px solid #dadada;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-weight: 500;
+        font-size: 15px;
+        margin-right: 20px;
+      }
+      .btn > button:hover {
+        border: 1px solid black;
+      }
+      .btn {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .addbag {
+        color: white;
+        background-color: #222222;
+        padding: 15px 100px;
+        font-weight: bolder;
+        font-size: 20px;
+        border: transparent;
+        margin-top: 40px;
+      }
+      .description {
+        display: flex;
+        font-size: 12px;
+        color: #848484;
+      }
+      .desright {
+        padding-left: 30px;
+        font-weight: 200;
+      }
+      .relateddata {
+        display: flex;
+        justify-content: center;
+        width: 93%;
+        margin: auto;
+        flex-wrap: wrap;
+      }
+      .relateddata > div > img {
+        width: 220px;
+      }
+      .relateddata > div {
+        margin: 10px 10px 0px 10px;
+      }
+      .cv {
+        width: 78.7%;
+        margin: auto;
+        margin-top: 100px;
+        font-weight: 800;
+      }
+       /* ///////////////////////header/////////////////////// */
+
+       .nav1 {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f7f8fa;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+        color: #8f9091;
+      }
+      .nav1 > div {
+        display: flex;
+        /* width: 33.33%; */
+        flex-wrap: wrap;
+      }
+
+      .nav1 > div > a {
+        text-decoration: none;
+        margin: 10px;
+        font-size: 18px;
+        color: #8f9091;
+      }
+      .nav1 > div > a:hover {
+        color: black;
+      }
+      .n3 > a > img {
+        width: 17px;
+        margin: 10px;
+      }
+      .n3 > a:hover {
+        color: black;
+        background-color: white;
+      }
+      .n2 {
+        font-weight: bold;
+        font-size: 40px;
+        font-family: "Mulish', sans-serif";
+        justify-content: center;
+       
+      }
+      .rightlog {
+        /* margin-right: 0px; */
+      }
+      .logo {
+        color: black;
+      }
+      .n4 {
+        font-size: 12px;
+        color: red;
+      }
+      .colgrey {
+        color: #8f9091;
+        margin-left: 5px;
+      }
+      .nav2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+        margin: auto;
+        padding: 15px;
+        flex-wrap: wrap;
+        background-color: white;
+        /* margin-bottom: 50px; */
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .nav21 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .nav21 > p {
+        margin: 10px;
+        font-size: 12px;
+        font-weight: 600;
+        padding-bottom: 10px;
+      }
+      i {
+        background-color: black;
+        color: white;
+        padding: 11px;
+        height: 100%;
+      }
+      input {
+        padding: 8px 10px 7px 10px;
+        margin-right: 0px;
+        border: none;
+      }
+      .nav212 {
+        align-items: center;
+        margin-top: 5px;
+        border: 1px solid gray;
+        padding: 0px;
+        margin-right: 20px;
+      }
+      .nav21 > p:hover {
+        border-bottom: 2px solid black;
+      }
+      .colred {
+        color: red;
+      }
+      @media screen and (max-width: 700px) {
+        .nav1 > div,
+        .nav21,
+        .nav212 {
+          justify-content: center;
+          text-align: center;
+          /* width: 33.33%; */
+        }
+        .logo,
+        .n4,
+        .n3,
+        .nav21 {
+          width: 100%;
+          text-align: center;
+        }
+        .nav212 {
+          display: flex;
+          justify-content: center;
+          margin: auto;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      /* //////////////////////header end///////////////////// */
+
+      @media screen and (min-width: 0px) and (max-width: 780px) {
+        #leftimg {
+          display: flex;
+          flex-direction: row;
+        }
+        #center > img {
+          width: 100%;
+        }
+      }
+      #abc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .classy{
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <img class="classy" src="head.png" alt="">
+    <div class="nav1">
+      <div class="n1">
+        <a href="mainpage.html">WOMEN</a>
+        <a href="mainpage.html">CURVE + PLUS</a>
+        <a href="mainpage.html">KIDS</a>
+        <a href="mainpage.html">MEN</a>
+        <a href="beauty.html">BEAUTY</a>
+        <a href="mainpage.html">HOME</a>
+      </div>
+      <div class="n2 logo">SHEIN</div>
+      <div class="n4">
+        Free Standard Shipping
+        <span class="colgrey">on order over US$49.00</span>
+      </div>
+      <div class="n3 rightlogo">
+        <a href="newlogin.html"
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/709/709579.png"
+            alt=""
+        /></a>
+        <a id="abc" href="bag.html"
+        ><img
+          src="https://cdn-icons-png.flaticon.com/128/687/687259.png"
+          alt=""
+      /><span id="bagcount"></span></a>
+        <a href="">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/1077/1077035.png"
+            alt=""
+        /></a>
+        <a href=""
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/862/862909.png"
+            alt=""
+        /></a>
+        <a href=""
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/1006/1006771.png"
+            alt=""
+        /></a>
+      </div>
+    </div>
+
+    <div class="nav2">
+      <div class="nav21">
+        <p><a href="mensection.html"> NEW IN</a></p>
+        <p><a href="womensection.html">TREND</a></p>
+        <p class="colred"><a href="">SALE</a></p>
+        <p class="colred"><SHEIN href="">SHEIN X DESIGNER</a></p>
+        <p><CLOTHING href="">CLOTHING</a></p>
+        <p><DRESSES href="">DRESSES</a></p>
+        <p><TOPS href="">TOPS</a></p>
+        <p><LINGERIE href="">LINGERIE & LOUNGE</a></p>
+        <p><ACTIVEWEAR href="">ACTIVEWEAR</a></p>
+        <p><SHOES href="">SHOES $ ACCS</a></p>
+        <p><EXPLORE href="">EXPLORE</a></p>
+      </div>
+      <div class="nav212">
+        <input type="text" />
+
+        <a href=""><i class="fas fa-search"></i></a>
+      </div>
+    </div>
+    <div class="con">
+      <div id="leftimg"></div>
+      <div id="center"></div>
+      <div id="right">
+        <div class="name"></div>
+        <div class="size">
+          <h4>Size <span>(US)</span></h4>
+          <div class="btn">
+            <button>S(30)</button><button>M(32)</button><button>L(34)</button
+            ><button>XL(38)</button><button>XXL(40)</button>
+          </div>
+        </div>
+        <button class="addbag">ADD TO BAG</button>
+        <div class="details">
+          <h3>
+            Description
+
+            <div class="description">
+              <div class="desleft">
+                <p>Name :</p>
+                <p>Color :</p>
+                <p>Pattern :</p>
+                <p>Type :</p>
+                <p>Material :</p>
+                <p>for :</p>
+                <p>category :</p>
+              </div>
+              <div class="desright"></div>
+            </div>
+          </h3>
+        </div>
+      </div>
+    </div>
+    <h2 class="cv">Customers Also Viewed</h2>
+    <div class="relateddata"></div>
+  </body>
+</html>
+<script>
+  var arr = JSON.parse(localStorage.getItem("carddata"));
+  /////////////////////left and center//////////////////////////////////////////////
+  var imgmain = document.createElement("img");
+  var img1 = document.createElement("img");
+  var img2 = document.createElement("img");
+  var img3 = document.createElement("img");
+  var img4 = document.createElement("img");
+  var img4 = document.createElement("img");
+  var img5 = document.createElement("img");
+
+  img1.setAttribute("src", arr.img1);
+  img2.setAttribute("src", arr.img2);
+  img3.setAttribute("src", arr.img3);
+  img4.setAttribute("src", arr.img4);
+  img5.setAttribute("src", arr.img5);
+  imgmain.setAttribute("src", arr.imgUrl);
+
+  img1.addEventListener("mouseenter", img1call);
+  function img1call() {
+    imgmain.setAttribute("src", arr.img1);
+  }
+
+  img2.addEventListener("mouseenter", img2call);
+  function img2call() {
+    imgmain.setAttribute("src", arr.img2);
+  }
+  img3.addEventListener("mouseenter", img3call);
+  function img3call() {
+    imgmain.setAttribute("src", arr.img3);
+  }
+  img4.addEventListener("mouseenter", img4call);
+  function img4call() {
+    imgmain.setAttribute("src", arr.img4);
+  }
+  img5.addEventListener("mouseenter", img5call);
+  function img5call() {
+    imgmain.setAttribute("src", arr.img5);
+  }
+
+  document.querySelector("#leftimg").append(img1, img2, img3, img4, img5);
+  document.querySelector("#center").append(imgmain);
+  //////////////////////////right//////////////////////////////////////
+
+  var pname = document.createElement("p");
+  var price = document.createElement("h2");
+  var hr = document.createElement("hr");
+  var size = document.createElement("h4");
+  pname.textContent = arr.name;
+  price.textContent = "US$" + arr.price + ".00";
+
+  document.querySelector(".name").append(pname, price, hr);
+
+  var p1 = document.createElement("p");
+  var p2 = document.createElement("p");
+  var p3 = document.createElement("p");
+  var p4 = document.createElement("p");
+  var p5 = document.createElement("p");
+  var p6 = document.createElement("p");
+  var p7 = document.createElement("p");
+  p1.textContent = arr.name;
+  p2.textContent = arr.color;
+  p3.textContent = arr.pattern;
+  p4.textContent = arr.type;
+  p5.textContent = arr.material;
+  p6.textContent = arr.gender;
+  p7.textContent = arr.category;
+  document.querySelector(".desright").append(p1, p2, p3, p4, p5, p6, p7);
+
+  ///////////////////addbag function////////////////
+
+  document.querySelector(".addbag").addEventListener("click", addtobag);
+  arr2 = JSON.parse(localStorage.getItem("bagitm")) || [];
+  function addtobag() {
+    arr2.push(arr);
+
+    localStorage.setItem("bagitm", JSON.stringify(arr2));
+  }
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  var alldata = JSON.parse(localStorage.getItem("alldata"));
+  var initialcategory = arr.category;
+  console.log(initialcategory);
+
+  var filterdata = alldata.filter(function (elem) {
+    return elem.category == initialcategory;
+  });
+
+  filterdata.map(function (elem) {
+    var img = document.createElement("img");
+    var price = document.createElement("h4");
+    var div = document.createElement("div");
+    img.setAttribute("src", elem.imgUrl);
+    price.textContent = "US$" + elem.price + ".00";
+
+    div.append(img, price);
+    document.querySelector(".relateddata").append(div);
+  });
+
+  var arr2 = JSON.parse(localStorage.getItem("bagitm"));
+  document.querySelector("#bagcount").textContent=arr2.length
+</script>

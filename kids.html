@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/49e440d78e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .con {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 85%;
+        height: 100vh;
+        overflow: scroll;
+        overflow-x: hidden;
+      }
+      .con > div {
+        width: 280px;
+        margin: 10px;
+      }
+      .con > div > img {
+        width: 280px;
+      }
+      .con > div > p {
+        color: #a39fa0;
+        font-size: 12px;
+        margin-bottom: 0px;
+        /* font-weight: bold; */
+      }
+      .con > div > h4 {
+        margin-top: 2px;
+      }
+      .main {
+        display: flex;
+        box-sizing: border-box;
+      }
+      .side {
+        height: 100vh;
+
+        width: 15%;
+        position: sticky;
+        box-sizing: border-box;
+        padding-left: 40px;
+        overflow-y: scroll;
+      }
+      .side > input {
+        border-radius: 50%;
+        border: 1px solid red;
+        background-color: aqua;
+      }
+      .red {
+        background-color: red;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .black {
+        background-color: rgb(7, 7, 7);
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .green {
+        background-color: green;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .grey {
+        background-color: grey;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .yellow {
+        background-color: rgb(225, 236, 65);
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .orange {
+        background-color: orange;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .khaki {
+        background-color: khaki;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .blue {
+        background-color: blue;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .brown {
+        background-color: brown;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .filterdiv {
+        width: 91%;
+        padding: 20px;
+        background-color: #f6f6f6;
+        margin-bottom: 20px;
+        margin-left: 40px;
+        padding-top: 10px;
+      }
+      .trend > button {
+        background-color: white;
+        border: 1px solid #dfdfdf;
+        color: #666666;
+        margin-right: 10px;
+
+        padding: 5px 10px;
+      }
+      .trend > button:hover {
+        border: 1px solid #666666;
+      }
+      .length {
+        color: #666666;
+        font-size: 12px;
+      }
+      label {
+        color: #666666;
+        font-size: 14px;
+      }
+      /* ///////////////////////header/////////////////////// */
+
+      .nav1 {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f7f8fa;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+        color: #8f9091;
+      }
+      .nav1 > div {
+        display: flex;
+        /* width: 33.33%; */
+        flex-wrap: wrap;
+      }
+
+      .nav1 > div > a {
+        text-decoration: none;
+        margin: 10px;
+        font-size: 18px;
+        color: #8f9091;
+      }
+      .nav1 > div > a:hover {
+        color: black;
+      }
+      .n3 > a > img {
+        width: 17px;
+        margin: 10px;
+      }
+      .n3 > a:hover {
+        color: black;
+        background-color: white;
+      }
+      .n2 {
+        font-weight: bold;
+        font-size: 40px;
+        font-family: "Mulish', sans-serif";
+        justify-content: center;
+      }
+      .rightlog {
+        /* margin-right: 0px; */
+      }
+      .logo {
+        color: black;
+      }
+      .n4 {
+        font-size: 12px;
+        color: red;
+      }
+      .colgrey {
+        color: #8f9091;
+        margin-left: 5px;
+      }
+      .nav2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+        margin: auto;
+        padding: 15px;
+        flex-wrap: wrap;
+        background-color: white;
+        /* margin-bottom: 50px; */
+      }
+      .nav21 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .nav21 > p {
+        margin: 10px 10px 10px 0px;
+        font-size: 12px;
+        font-weight: 600;
+        padding-bottom: 10px;
+      }
+      i {
+        background-color: black;
+        color: white;
+        padding: 11px;
+        height: 100%;
+      }
+      input {
+        padding: 8px 10px 7px 10px;
+        margin-right: 0px;
+        border: none;
+      }
+      .nav212 {
+        align-items: center;
+        margin-top: 5px;
+        border: 1px solid gray;
+        padding: 0px;
+      }
+      .nav21 > p:hover {
+        border-bottom: 2px solid black;
+      }
+      .colred {
+        color: red;
+      }
+      @media screen and (max-width: 700px) {
+        .nav1 > div,
+        .nav21,
+        .nav212 {
+          justify-content: center;
+          text-align: center;
+          /* width: 33.33%; */
+        }
+        .logo,
+        .n4,
+        .n3,
+        .nav21 {
+          width: 100%;
+          text-align: center;
+        }
+        .nav212 {
+          display: flex;
+          justify-content: center;
+          margin: auto;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      /* //////////////////////header end///////////////////// */
+      @media screen and (min-width: 1001px) and (max-width: 1200px) {
+        .side {
+          width: 20%;
+        }
+        .con {
+          width: 80%;
+        }
+      }
+      @media screen and (min-width: 601px) and (max-width: 1000px) {
+        .side {
+          width: 30%;
+        }
+        .con {
+          width: 70%;
+        }
+        .filterdiv {
+          margin-left: 0px;
+          width: 100%;
+        }
+      }
+      @media screen and (min-width: 0px) and (max-width: 600px) {
+        .side {
+          display: none;
+        }
+        .con {
+          width: 100%;
+        }
+        .filterdiv {
+          margin-left: 0px;
+          width: 100%;
+        }
+      }
+       /* -------------------------footer----------------------------------- */
+       footer .main_div{
+            width: 99.8%;
+            height: 470px;
+            /* border: 1px solid green; */
+            background-color: #fafafa;
+            display: flex;
+            justify-content: space-evenly;
+            box-sizing: border-box;
+            padding-top: 4.5%;
+            padding-bottom: 2.5%;
+        }
+
+        .main_div > .left{
+            width: 35%;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .main_div > .right{
+            width: 40%;
+            /* border: 1px solid black; */
+        }
+        .main_div > .left > .upper{
+            /* border: 1px solid red; */
+            height: 45%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .main_div > .left > .lower{
+            /* border: 1px solid red; */
+            height: 35%;
+        }
+        .main_div > .left > .upper > *{
+            width: 25%;
+            /* border: 1px solid green; */
+        }
+        .main_div > .left > .upper > * > *{
+            /* border: 1px solid black; */
+            margin-bottom: 0.8%;
+        }
+        .main_div > .left > .upper > * > div > a{
+            text-decoration: none;
+            color: grey;
+            font-size: 75%;
+        }
+        .main_div > .left > .lower{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .main_div > .left > .lower > div{
+            color: grey;
+            font-size: 75%;
+            margin-bottom: 1.1%;
+        }
+        .main_div > .left > .lower > div > a{
+            color: grey;
+            border-right: 1px solid grey;
+            padding-right: 2%;
+        }
+        .not_first{
+            margin-left: 2%;
+        }
+        .main_div > .left > .lower > div:last-child{
+            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+            margin-bottom: 0px;
+        }
+        .main_div > .left > .lower > div:last-child > img{
+            width: 2%;
+            /* border: 1px solid red; */
+        }
+        .main_div > .left > .lower > div:last-child > span{
+            /* border: 1px solid red; */
+            text-decoration: underline;
+        }
+
+        .main_div > .right > .top{
+            /* border: 1px solid green; */
+            display: flex;
+            justify-content: space-between;
+        }
+        .main_div > .right > .top > .left{
+            /* border: 1px solid red; */
+            width: 55%;
+        }
+        .main_div > .right > .top >.left > div img{
+            width: 8%;
+            margin-top: 6%;
+            margin-right: 5%;
+        }
+        .main_div > .right > .top > .right{
+            /* border: 1px solid red; */
+            width: 30%;
+        }
+        .main_div > .right > .top > .right > div img{
+            width: 15%;
+            margin-top: 11%;
+            margin-right: 7%;
+            /* border: 1px solid red; */
+        }
+        .main_div > .right > .center{
+            /* border: 1px solid green; */
+            height: 25%;
+            margin-top: 3%;
+        }
+        .main_div > .right > .center > div{
+            /* border: 1px solid black; */
+            display: flex;
+            margin-top: 1.1%;
+        }
+        .main_div > .right > .center > div > input{
+            width: 75%;
+            padding: 1.3%;
+            border: 1px solid rgb(192, 189, 189);
+            font-size: 85%;
+        }
+        .main_div > .right > .center > div > input:hover{
+            border: 1px solid rgb(136, 135, 135);
+        }
+        .main_div > .right > .center > div > button{
+            width: 25%;
+            border: none;
+            background-color: black;
+            color: white;
+            font-size: 100%;
+            box-sizing: border-box;
+        }
+        .main_div > .right > .center > div > button:hover{
+            background-color:rgb(100, 90, 90);
+        }
+        .main_div > .right > .center > div > button:active{
+            border: 2px solid grey;
+            background-color: black;
+            border-radius: 3px;
+        }
+        .main_div > .right > .bottom{
+            /* border: 1px solid black; */
+        }
+        .main_div > .right > .bottom > div{
+            /* border: 1px solid red; */
+            margin-top: 2%;
+        }
+        .main_div > .right > .bottom > div img{
+            width: 6%;
+            margin-right: 1.8%;
+        }
+
+ /* -------------responsive design for footer------------- */
+
+        /* ------------medium size--------- */
+        @media only screen and (min-width : 0px) and (max-width : 1000px){
+            footer .main_div{
+                height: auto;
+                /* border: 1px solid green; */
+                box-sizing: border-box;
+                /* width: 90%; */
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(2,minmax(300px, auto));
+                grid-template-areas: 
+                "right"
+                "left";
+                /* align-content: flex-start; */
+                /* justify-content: center; */
+                align-items: center;
+                justify-items: center;
+                grid-row-gap: 45px;
+            }
+            footer .main_div > div.left{
+                grid-area: left;
+                width: 95%;
+            }
+            footer .main_div > div.right{
+                grid-area: right;
+                width: 95%;
+            }
+            footer > .main_div > div.right > div.bottom{
+                margin-top: 4%;
+            }
+            footer > .main_div > div.left > div.lower{
+                margin-top: 9%;
+            }
+        }
+
+        /* ------------for small size screen------------------------------------------- */
+        @media only screen and (max-width : 499px){
+            footer .main_div{
+                height: auto;
+                /* border: 1px solid green; */
+                box-sizing: border-box;
+                /* width: 90%; */
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(2,minmax(300px, auto));
+                grid-template-areas: 
+                "right"
+                "left";
+                /* align-content: flex-start; */
+                /* justify-content: center; */
+                align-items: center;
+                justify-items: center;
+                grid-row-gap: 45px;
+            }
+            footer .main_div > div.left{
+                grid-area: left;
+                width: 95%;
+            }
+            footer .main_div > div.right{
+                grid-area: right;
+                width: 95%;
+            }
+            footer > div.main_div > div.left > div.upper{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            } 
+            footer > div.main_div > div.left > div.upper > div{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 4%;
+            }
+
+            footer > div.main_div > div.right > div.top{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            footer > div.main_div > div.right > div.top > div.left{
+                width: 100%;
+            }
+            footer > div.main_div > div.right > div.top > div.left > div img{
+                margin-top: 4%;
+                /* border: 1px solid black; */
+            }
+            footer > div.main_div > div.right > div.top > div.right {
+                width: 100%;
+                margin: 6% 0%;
+            }
+            footer > div.main_div > div.right > div.top > div.right > div{
+                width: 100%;
+                /* border: 1px solid green; */
+            }
+            footer > div.main_div > div.right > div.top > div.right > div img{
+                margin-top: 4%;
+                width: 8%;
+                margin-right: 4%;
+            }
+            footer > div.main_div > div.right > div.center{
+                margin-bottom: 6%;
+            }
+            footer > div.main_div > div.right > div.center > div{
+                display: flex;
+                flex-direction: column;
+            }
+            footer > div.main_div > div.right > div.center > div > *{
+                width: 100%;
+                box-sizing: border-box;
+                height: 30px;
+                margin-top: 3%;
+            }
+
+        }
+        #abc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .classy{
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <img class="classy" src="head.png" alt="">
+    <div class="nav1">
+      <div class="n1">
+        <a href="mainpage.html">WOMEN</a>
+        <a href="mainpage.html">CURVE + PLUS</a>
+        <a href="mainpage.html">KIDS</a>
+        <a href="mainpage.html">MEN</a>
+        <a href="beauty.html">BEAUTY</a>
+        <a href="mainpage.html">HOME</a>
+      </div>
+      <div class="n2 logo">SHEIN</div>
+      <div class="n4">
+        Free Standard Shipping
+        <span class="colgrey">on order over US$49.00</span>
+      </div>
+      <div class="n3 rightlogo">
+        <a href="newlogin.html"
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/709/709579.png"
+            alt=""
+        /></a>
+        <a id="abc" href="bag.html"
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/687/687259.png"
+            alt=""
+        /><span id="bagcount"></span></a>
+        <a href="">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/1077/1077035.png"
+            alt=""
+        /></a>
+        <a href=""
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/862/862909.png"
+            alt=""
+        /></a>
+        <a href=""
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/1006/1006771.png"
+            alt=""
+        /></a>
+      </div>
+    </div>
+
+    <div class="nav2">
+      <div class="nav21">
+        <p><a href="mensection.html"> NEW IN</a></p>
+        <p><a href="womensection.html">TREND</a></p>
+        <p class="colred"><a href="">SALE</a></p>
+        <p class="colred"><SHEIN href="">SHEIN X DESIGNER</a></p>
+        <p><CLOTHING href="">CLOTHING</a></p>
+        <p><DRESSES href="">DRESSES</a></p>
+        <p><TOPS href="">TOPS</a></p>
+        <p><LINGERIE href="">LINGERIE & LOUNGE</a></p>
+        <p><ACTIVEWEAR href="">ACTIVEWEAR</a></p>
+        <p><SHOES href="">SHOES $ ACCS</a></p>
+        <p><EXPLORE href="">EXPLORE</a></p>
+      </div>
+      <div class="nav212">
+        <input type="text" />
+
+        <a href=""><i class="fas fa-search"></i></a>
+      </div>
+    </div>
+    <div class="filterdiv">
+      <h3>New in Trends <span class="length"></span></h3>
+      <div class="trend">
+        <button onclick="black()">Black</button
+        ><button onclick="plain()">Plain</button
+        ><button onclick="khaki()">Khaki</button
+        ><button onclick="block()">ColorBlock</button
+        ><button onclick="denim()">Denim</button>
+        <button onclick="cotton()">Cotton</button>
+        <button onclick="orange()">Orange</button>
+      </div>
+    </div>
+    <div class="main">
+      <div class="side">
+        <h3>Category</h3>
+        <input type="checkbox" id="men" onchange="men()" />
+        <label for="">Men Clothes</label><br />
+        <input type="checkbox" id="women" onchange="women()" />
+        <label for="">Women Clothes</label><br />
+        <input type="checkbox" id="kids" onchange="kids()" />
+        <label for="">Kids Clothes</label><br />
+
+        <h3>Size</h3>
+        <input type="checkbox" id="xs" onchange="changexs()" />
+        <label for="">XS</label>
+        <input type="checkbox" id="s" onchange="changes()" />
+        <label for="">S</label><br />
+        <input type="checkbox" id="m" onchange="changem()" />
+        <label for="">M</label>
+        <input type="checkbox" id="l" onchange="changel()" />
+        <label for="">L</label><br />
+        <input type="checkbox" id="xl" onchange="changexl()" />
+        <label for="">XL</label>
+        <input type="checkbox" id="xll" onchange="changexxl()" />
+        <label for="">XXL</label>
+
+        <h3>Color</h3>
+        <button class="red"></button>
+        <button class="blue"></button>
+        <button class="black"></button>
+        <button class="orange"></button>
+        <button class="green"></button>
+        <button class="khaki"></button>
+        <button class="brown"></button>
+        <button class="yellow"></button>
+        <button class="grey"></button>
+
+        <h3>Pattern Type</h3>
+        <input type="checkbox" id="plain" onchange="plain()" />
+        <label for="">Plain</label><br />
+        <input type="checkbox" id="letter" onchange="letter()" />
+        <label for="">Letter</label><br />
+        <input type="checkbox" id="plaid" onchange="plaid()" />
+        <label for="">Plaid</label><br />
+        <input type="checkbox" id="block" onchange="block()" />
+        <label for="">ColorBlock</label>
+
+        <h3>Material</h3>
+        <input type="checkbox" id="polyster" onchange="polyster()" />
+        <label for="">Polyster</label><br />
+        <input type="checkbox" id="cotton" onchange="cotton()" />
+        <label for="">Cotton</label><br />
+        <input type="checkbox" id="denim" onchange="denim()" />
+        <label for="">Denim</label><br />
+        <input type="checkbox" id="silk" onchange="silk()" />
+        <label for="">Silk</label><br />
+        <h3>Price Range</h3>
+        <input type="checkbox" id="low" onchange="low()" />
+        <label for="">Low to High</label><br />
+        <input type="checkbox" id="high" onchange="high()" />
+        <label for="">High to Low</label><br />
+      </div>
+
+      <div class="con"></div>
+    </div>
+      <!-- ///////////////////////////////////////////////////footer/////////////////////////////////// -->
+
+      <footer>
+        <div class="main_div">
+            <!-- left container -->
+            <div class="left">
+                <div class="upper">
+                    <div class="start">
+                        <h5>COMPANY INFO</h5>
+                        <div><a href="#">About SHEIN</a></div>
+                        <div><a href="#">Social Responsibility</a></div>
+                        <div><a href="#">Affiliate</a></div>
+                        <div><a href="#">Fashion Blogger</a></div>
+                        <div><a href="#">Supply Chain</a></div>
+                    </div>
+                    <div class="center">
+                        <h5>HELP & SUPPORT</h5>
+                        <div><a href="#">Shipping Info</a></div>
+                        <div><a href="#">Returns</a></div>
+                        <div><a href="#">How To Order</a></div>
+                        <div><a href="#">How To Track</a></div>
+                        <div><a href="#">Size Guide</a></div>
+                    </div>
+                    <div class="end">
+                        <h5>CUSTOMER CARE</h5>
+                        <div><a href="#">Contact Us</a></div>
+                        <div><a href="#">Payment & Tax</a></div>
+                        <div><a href="#">Bonus Point</a></div>
+                        <div><a href="#">Klarna</a></div>
+                        <div><a href="#">Afterpay</a></div>
+                        <div><a href="#">Zip</a></div>
+                        <div><a href="#">Recall Notice</a></div>
+                    </div>
+                </div>
+                <div class="lower">
+                    <div>
+                        2009-2021 SHEIN All Rights Reserved
+                    </div>
+                    <div>
+                        <a href="#">Privacy Center</a>
+                        <a class="not_first" href="#">Privacy & Cookie Policy</a>
+                    </div>
+                    <div>
+                        <a href="#">Manage Cookies / Do Not Sell My Personal Information</a>
+                        <a class="not_first" href="">Terms & Conditions</a>
+                    </div>
+                    <div>
+                        <a href="#">Do Not Sell My Personal Information</a>
+                        <a class="not_first" href="#">Copyright Notice</a>
+                        <a class="not_first" href="#">Accessibility</a>
+                        <a class="not_first" href="#">Imprint</a>
+                    </div>
+                    <div class="cursor_pointer">
+                        <img src="https://cdn-icons-png.flaticon.com/128/484/484167.png" alt="">
+                        <span>United States</span>
+                    </div>
+                </div>
+            </div>
+  
+            <!-- right container  -->
+            <div class="right">
+                <div class="top">
+                    <div class="left">
+                        <h5>FIND US ON</h5>
+                        <div>
+                            <a href="#"><img src="https://cdn-icons.flaticon.com/png/128/3128/premium/3128208.png?token=exp=1639558341~hmac=2029758bfc97cead7da597279170092f" alt=""></a>
+                            <a href="#"><img src="https://cdn-icons.flaticon.com/png/128/717/premium/717392.png?token=exp=1639558418~hmac=a4ca4f3bc2b75037e7e78d2bb58a771e" alt=""></a>
+                            <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/733/733635.png" alt=""></a>
+                            <a href="#"><img src="https://cdn-icons.flaticon.com/png/128/717/premium/717426.png?token=exp=1639558477~hmac=164232d5c37c896c18c44dacaeb0aff1" alt=""></a>
+                            <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/2111/2111601.png" alt=""></a>
+                            <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/2111/2111678.png" alt=""></a>
+                            <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/3046/3046120.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <h5>
+                            DOWNLOAD SHEIN APP TO SAVE MORE!
+                        </h5>
+                        <div>
+                            <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/731/731985.png" alt=""></a>
+                            <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/154/154871.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <h5>SIGN UP FOR SHEIN STYLE NEWS</h5>
+                    <div>
+                        <input type="email" name="" id="" placeholder="Your Email Address">
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <h5>WE ACCEPT</h5>
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/128/196/196565.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/5968/5968299.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/825/825464.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/217/217424.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/196/196548.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/825/825454.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/6124/6124998.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/174/174861.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/61/61537.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/196/196550.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/217/217445.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/39/39200.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/5968/5968140.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
+<script>
+  var data = [
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/06/28/16248465451a93419e55e2dcc8de106eb8d4d89c8a_thumbnail_900x.webp",
+      name: "Baby Girl Schiffy Bardot Ruffle Hem Blouse",
+      price: 5.0,
+      color: "white",
+      size: "M",
+      category: "baby top",
+      pattern: "plain",
+
+      gender: "baby",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/06/28/16248465463bad5f5de96c814b95f03361e6e617dc_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/06/28/1624846548c05d7034ac497cd03185720cafa45c8a_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/06/28/1624846549ec0aadc40118fcea315e7d7874ad6fb0_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/06/28/1624846549ec0aadc40118fcea315e7d7874ad6fb0_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/06/28/1624846549ec0aadc40118fcea315e7d7874ad6fb0_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/22/1637549942260999df68b3de4236184aedb6604953_thumbnail_900x.webp",
+      name: "Baby 3pcs Ribbed Knit High Neck Top",
+      price: 11.0,
+      color: "blue white",
+      size: "S",
+      category: "baby top",
+      pattern: "plain",
+
+      gender: "baby",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/22/1637549942260999df68b3de4236184aedb6604953_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/22/16375499486bfe46e63e648a03e6c627dac5990372_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/22/16375499486bfe46e63e648a03e6c627dac5990372_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/22/163754995224af9a9ebdf71c13308c0e36c2cfd261_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/22/1637549954115334944170aa255c7cc720c5ef1e00_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/04/163073398622bec65dd27109cb7c218556f944db30_thumbnail_900x.webp",
+      name: "Baby Solid Funnel Neck Top",
+      price: 4.0,
+      color: "brown",
+      size: "M",
+      category: "baby tops",
+      pattern: "plain",
+
+      gender: "baby",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/04/163073398877cd61bd1fc8d4200d2ea283fed6f813_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/04/163073398958390cb6f1cb76aa081cc38b5d94a497_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/04/1630733991562ac68e36787d8d65cd68cde34fa4f1_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/04/1630733993c05e0fa65b4d4d54ef57875b61c1796b_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/04/1630733993c05e0fa65b4d4d54ef57875b61c1796b_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/03/16359196006ee580713896d4197e8aed656f33f164_thumbnail_900x.webp",
+      name: "Baby Turtleneck Cable Textured Top",
+      price: 9.0,
+      color: "black",
+      size: "S",
+      category: "baby tops",
+      pattern: "",
+
+      gender: "baby",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/03/1635919602c30ac75f57f3b84d7aaaec583dc9fe5b_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/03/1635919604d5677a8b6d38efb17a4ea9e24447cd62_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/03/163591960731775eeca614f8ae2163352a7b0a414c_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/03/1635919609f405ffaa61995f34691ac060ee2019b1_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/03/1635919609f405ffaa61995f34691ac060ee2019b1_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/16/16370345070d1f7f646863b84eed9ccaf66fd15b9e_thumbnail_900x.webp",
+      name: "Baby Ruffle Trim Cable Textured Top",
+      price: 8.0,
+      color: "red",
+      size: "M",
+      category: "baby tops",
+      pattern: "plain",
+
+      gender: "baby",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/16/16370345095008320525243a79e9c18e858d0aeace_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/16/16370345095008320525243a79e9c18e858d0aeace_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/16/16370345095008320525243a79e9c18e858d0aeace_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/16/163703451683face89a930f08bdb824e713b29bb70_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/16/163703451683face89a930f08bdb824e713b29bb70_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/10/20/16347346005bed72033b193ba8c75b6cdb5de45512_thumbnail_900x.webp",
+      name: "Baby 2pcs Leopard And Letter Graphic Ruffle Trim Top",
+      price: 9.0,
+      color: "red",
+      size: "S",
+      category: "baby tops",
+      pattern: "",
+
+      gender: "baby",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/20/1634734602319e862f7f14e8951de9a3de450bb55d_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/20/16347346054a57e40768d4d5a8545e60e53138aef8_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/20/1634734608872f8f78a56795a1bca16633a9a3aad5_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/20/1634734608872f8f78a56795a1bca16633a9a3aad5_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/20/1634734616bd08242215d96e688cee262594999d5b_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/20/1637387965ccf05ad328f5d35a23d0d26621ef8484_thumbnail_900x.webp",
+      name: "Baby Mock Neck Gigot Sleeve Top",
+      price: 6.0,
+      color: "white",
+      size: "M",
+      category: "baby tops",
+      pattern: "plain",
+
+      gender: "baby",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/20/1637387967409eda9b7019a7b2fac987b2607b8786_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/20/16373879698d55ce01675d3850c24aa498fef3b3d1_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/20/16373879698d55ce01675d3850c24aa498fef3b3d1_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/20/16373879698d55ce01675d3850c24aa498fef3b3d1_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/20/1637387970dab10344a3597bb8498de12763799003_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/20/1637387970dab10344a3597bb8498de12763799003_thumbnail_900x.webp",
+      name: "Baby 2pack Lettuce Trim Mock Neck Tee",
+      price: 7.0,
+      color: "black",
+      size: "S",
+      category: "baby tops",
+      pattern: "plain",
+
+      gender: "baby",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/01/163047461509786b2ed9492a249c902c0e790d1330_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/01/16304746183143818188d06bec5efe8ef651b410ab_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/01/1630474620f1ee2a133d1d363b7a977418c7080f65_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/01/1630474620f1ee2a133d1d363b7a977418c7080f65_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/01/16304746248823a35d38f4b186da48673451da0640_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/10/15/1634292856b5995809a6044ea095719960ec932262_thumbnail_900x.webp",
+      name: "Baby Shirred Bodice Frill Trim Top",
+      price: 5.59,
+      color: "khaki",
+      size: "L",
+      category: "baby tops",
+      pattern: "plain",
+
+      gender: "baby",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/15/1634292858fe1acf2848de982d1fa2105d95ef6741_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/15/1634292858fe1acf2848de982d1fa2105d95ef6741_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/15/1634292858fe1acf2848de982d1fa2105d95ef6741_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/15/1634292872d887b81350d99e9abc93907922d1538f_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/15/1634292872d887b81350d99e9abc93907922d1538f_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/10/27/1635299250b982d24e8b489c304d0de674b5ae456c_thumbnail_900x.webp",
+      name: "Baby Mock Neck Ribbed Knit Top",
+      price: 4.0,
+      color: "white",
+      size: "L",
+      category: "baby tops",
+      pattern: "plain",
+
+      gender: "baby",
+
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/27/16352992527da14de48d67455e681843e254f0752f_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/27/16352992527da14de48d67455e681843e254f0752f_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/27/16352992552717ba6304a3c66098ff3359f645e739_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/27/16352992552717ba6304a3c66098ff3359f645e739_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/27/1635299263f42c3a9ea5f243b88848bc0a68d77744_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/07/16/16264401585274d9d6e3187a7afc3fb44ba11edb95_thumbnail_900x.webp",
+      name: "Baby Girl Lettuce Trim Tee",
+      price: 4.0,
+      color: "khaki",
+      size: "L",
+      category: "baby tops",
+      pattern: "plain",
+
+      gender: "baby",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/06/21/16242146010ad79cc19ea85ff093ff7cf512d0d7cf_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/06/21/16242146010ad79cc19ea85ff093ff7cf512d0d7cf_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/06/21/16242146010ad79cc19ea85ff093ff7cf512d0d7cf_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/06/21/1624214598b077fec8bd20c76ca6f437030e6d2053_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/06/21/1624214603766c53363a95320694cd40442e4ea402_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/10/27/1635318551d76c5052a51a43a8c9e1031c642cd010_thumbnail_900x.webp",
+      name: "Baby Twist Front High Low Textured Top",
+      price: 6.0,
+      color: "black",
+      size: "L",
+      category: "baby tops",
+      pattern: "",
+
+      gender: "baby",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/27/1635318606211983d7febfbb60f3ab406ddf8fe7e2_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/27/1635318606211983d7febfbb60f3ab406ddf8fe7e2_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/27/163531874596fd37b2aad9adfd1e0d0dfda8563de6_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/27/1635318751d421a7712cc288ca83942cbaa14d4e98_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/27/1635318751d421a7712cc288ca83942cbaa14d4e98_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/29/16328878982c9760d957c6d89cbc566d0af88787d5_thumbnail_900x.webp",
+      name: "Baby 2pcs Ruffle Trim Rib Knit Tee",
+      price: 10.0,
+      color: "red",
+      size: "M",
+      category: "baby tops",
+      pattern: "plain",
+
+      gender: "baby",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/29/1632887900322adddc2627d1e30a73bf90bade701f_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/29/1632887902b73383189deceb6f844986a51eb7be0f_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/29/1632887902b73383189deceb6f844986a51eb7be0f_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/29/163288790608e1bd35e2cf7abe3d09b3ab276de17f_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/29/163288790608e1bd35e2cf7abe3d09b3ab276de17f_thumbnail_900x.webp",
+    },
+  ];
+  var arr = JSON.parse(localStorage.getItem("carddata")) || [];
+  function displayitem(data) {
+    document.querySelector(".con").textContent = "";
+    data.map(function (elem) {
+      var img = document.createElement("img");
+      var name = document.createElement("p");
+      var price = document.createElement("h4");
+      var div = document.createElement("div");
+
+      img.setAttribute("src", elem.imgUrl);
+      img.addEventListener("click", function () {
+        localStorage.setItem("carddata", JSON.stringify(elem));
+        window.location.href = "exactcarddata.html";
+      });
+      name.textContent = elem.name;
+      price.textContent = "USD$" + elem.price + ".00";
+
+      div.append(img, name, price);
+      document.querySelector(".con").append(div);
+    });
+  }
+
+  displayitem(data);
+
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ////////////////////////-------TRIAL----------////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  function local1() {
+    var alldata = JSON.parse(localStorage.getItem("alldata")) || [];
+    data.map(function (elem) {
+      alldata.push(elem);
+
+      localStorage.setItem("alldata", JSON.stringify(alldata));
+    });
+  }
+  local1();
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////size function////////////////////////////////////////////////////////////
+  document.querySelector("#m").addEventListener("click", changexs);
+  function changexs() {
+    var data1 = data.filter(function (elem) {
+      return elem.size == "XS";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#m").addEventListener("click", changes);
+  function changes() {
+    var data1 = data.filter(function (elem) {
+      return elem.size == "S";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#m").addEventListener("click", changel);
+  function changel() {
+    var data1 = data.filter(function (elem) {
+      return elem.size == "L";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#m").addEventListener("click", changem);
+  function changem() {
+    var data1 = data.filter(function (elem) {
+      return elem.size == "M";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#m").addEventListener("click", changexl);
+  function changexl() {
+    var data1 = data.filter(function (elem) {
+      return elem.size == "XL";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#m").addEventListener("click", changexxl);
+  function changexxl() {
+    var data1 = data.filter(function (elem) {
+      return elem.size == "XXL";
+    });
+
+    displayitem(data1);
+  }
+  /////////////////////////////////////////// material filter////////////////////////////////////////////////////////////////////////
+
+  document.querySelector("#polyster").addEventListener("click", polyster);
+  function polyster() {
+    var data1 = data.filter(function (elem) {
+      return elem.material == "polyster";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#cotton").addEventListener("click", cotton);
+  function cotton() {
+    var data1 = data.filter(function (elem) {
+      return elem.material == "cotton";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#denim").addEventListener("click", denim);
+  function denim() {
+    var data1 = data.filter(function (elem) {
+      return elem.material == "denim";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#silk").addEventListener("click", silk);
+  function silk() {
+    var data1 = data.filter(function (elem) {
+      return elem.material == "silk";
+    });
+
+    displayitem(data1);
+  }
+
+  //////////////////////////////////color//////////////////
+
+  document.querySelector(".black").addEventListener("click", black);
+  function black() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "black";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".grey").addEventListener("click", grey);
+  function grey() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "grey";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".khaki").addEventListener("click", khaki);
+  function khaki() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "khaki";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".orange").addEventListener("click", orange);
+  function orange() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "orange";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".red").addEventListener("click", red);
+  function red() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "red";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".yellow").addEventListener("click", yellow);
+  function yellow() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "yellow";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".brown").addEventListener("click", brown);
+  function brown() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "brown";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".blue").addEventListener("click", blue);
+  function blue() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "blue";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".green").addEventListener("click", green);
+  function green() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "green";
+    });
+
+    displayitem(data1);
+  }
+
+  ///////////////////pattern ///////////////////////
+
+  document.querySelector("#plain").addEventListener("click", plain);
+  function plain() {
+    var data1 = data.filter(function (elem) {
+      return elem.pattern == "plain";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#plaid").addEventListener("click", plaid);
+  function plaid() {
+    var data1 = data.filter(function (elem) {
+      return elem.pattern == "plaid";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#letter").addEventListener("click", letter);
+  function letter() {
+    var data1 = data.filter(function (elem) {
+      return elem.pattern == "letter";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#block").addEventListener("click", block);
+  function block() {
+    var data1 = data.filter(function (elem) {
+      return elem.pattern == "block";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".length").textContent = data.length + " Product's"; //////////////price///////////////////////////////////////
+  //////////////////////category/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  document.querySelector("#men").addEventListener("click", men);
+  function men() {
+    window.location.href = "mensection.html";
+  }
+
+  document.querySelector("#women").addEventListener("click", women);
+  function women() {
+    window.location.href = "womensection.html";
+  }
+
+  document.querySelector("#kids").addEventListener("click", kids);
+  function kids() {
+    window.location.href = "kids.html";
+  }
+
+  //////////////price///////////////////////////////////////
+  document.querySelector("#high").addEventListener("click", low);
+  function high() {
+    data.sort(function (a, b) {
+      return b.price - a.price;
+    });
+    displayitem(data);
+  }
+
+  document.querySelector("#low").addEventListener("click", low);
+  function low() {
+    data.sort(function (a, b) {
+      return a.price - b.price;
+    });
+    displayitem(data);
+  }
+
+  var arr2 = JSON.parse(localStorage.getItem("bagitm"));
+  document.querySelector("#bagcount").textContent=arr2.length
+</script>

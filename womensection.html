@@ -1,0 +1,3145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/49e440d78e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .con {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 85%;
+        height: 100vh;
+        overflow: scroll;
+        overflow-x: hidden;
+      }
+      .con > div {
+        width: 280px;
+        margin: 10px;
+      }
+      .con > div > img {
+        width: 280px;
+      }
+      .con > div > p {
+        color: #a39fa0;
+        font-size: 12px;
+        margin-bottom: 0px;
+        /* font-weight: bold; */
+      }
+      .con > div > h4 {
+        margin-top: 2px;
+      }
+      .main {
+        display: flex;
+        box-sizing: border-box;
+      }
+      .side {
+        height: 100vh;
+
+        width: 15%;
+        position: sticky;
+        box-sizing: border-box;
+        padding-left: 40px;
+        overflow-y: scroll;
+      }
+      .side > input {
+        border-radius: 50%;
+        border: 1px solid red;
+        background-color: aqua;
+      }
+      .red {
+        background-color: red;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .black {
+        background-color: rgb(7, 7, 7);
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .green {
+        background-color: green;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .grey {
+        background-color: grey;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .yellow {
+        background-color: rgb(225, 236, 65);
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .orange {
+        background-color: orange;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .khaki {
+        background-color: khaki;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .blue {
+        background-color: blue;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .brown {
+        background-color: brown;
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+      .filterdiv {
+        width: 91%;
+        padding: 20px;
+        background-color: #f6f6f6;
+        margin-bottom: 20px;
+        margin-left: 40px;
+        padding-top: 10px;
+      }
+      .trend > button {
+        background-color: white;
+        border: 1px solid #dfdfdf;
+        color: #666666;
+        margin-right: 10px;
+
+        padding: 5px 10px;
+      }
+      .trend > button:hover {
+        border: 1px solid #666666;
+      }
+      .filterdiv > h3 {
+      }
+      .length {
+        color: #666666;
+        font-size: 12px;
+      }
+      label {
+        color: #666666;
+        font-size: 14px;
+      }
+
+      #tops,
+      #sweatshirts,
+      #pants {
+        margin-left: 30px;
+      }
+      /* ///////////////////////header/////////////////////// */
+
+      .nav1 {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f7f8fa;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+        color: #8f9091;
+      }
+      .nav1 > div {
+        display: flex;
+        /* width: 33.33%; */
+        flex-wrap: wrap;
+      }
+
+      .nav1 > div > a {
+        text-decoration: none;
+        margin: 10px;
+        font-size: 18px;
+        color: #8f9091;
+      }
+      .nav1 > div > a:hover {
+        color: black;
+      }
+      .n3 > a > img {
+        width: 17px;
+        margin: 10px;
+      }
+      .n3 > a:hover {
+        color: black;
+        background-color: white;
+      }
+      .n2 {
+        font-weight: bold;
+        font-size: 40px;
+        font-family: "Mulish', sans-serif";
+        justify-content: center;
+      }
+      .rightlog {
+        /* margin-right: 0px; */
+      }
+      .logo {
+        color: black;
+      }
+      .n4 {
+        font-size: 12px;
+        color: red;
+      }
+      .colgrey {
+        color: #8f9091;
+        margin-left: 5px;
+      }
+      .nav2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+        margin: auto;
+        padding: 15px;
+        flex-wrap: wrap;
+        background-color: white;
+        /* margin-bottom: 50px; */
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .nav21 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .nav21 > p {
+        margin: 10px;
+        font-size: 12px;
+        font-weight: 600;
+        padding-bottom: 10px;
+      }
+      i {
+        background-color: black;
+        color: white;
+        padding: 11px;
+        height: 100%;
+      }
+      input {
+        padding: 8px 10px 7px 10px;
+        margin-right: 0px;
+        border: none;
+      }
+      .nav212 {
+        align-items: center;
+        margin-top: 5px;
+        border: 1px solid gray;
+        padding: 0px;
+        margin-right: 20px;
+      }
+      .nav21 > p:hover {
+        border-bottom: 2px solid black;
+      }
+      .colred {
+        color: red;
+      }
+      @media screen and (max-width: 700px) {
+        .nav1 > div,
+        .nav21 {
+          justify-content: center;
+          text-align: center;
+          /* width: 33.33%; */
+        }
+        .nav212 {
+          display: flex;
+          justify-content: center;
+          margin: auto;
+        }
+        .logo,
+        .n4,
+        .n3,
+        .nav21 {
+          width: 100%;
+          text-align: center;
+        }
+        .nav212 {
+          display: flex;
+          justify-content: center;
+          margin: auto;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      /* //////////////////////header end///////////////////// */
+      @media screen and (min-width: 1001px) and (max-width: 1200px) {
+        .side {
+          width: 20%;
+        }
+        .con {
+          width: 80%;
+        }
+      }
+      @media screen and (min-width: 1001px) and (max-width: 1200px) {
+        .side {
+          width: 20%;
+        }
+        .con {
+          width: 80%;
+        }
+      }
+      @media screen and (min-width: 601px) and (max-width: 1000px) {
+        .side {
+          width: 30%;
+        }
+        .con {
+          width: 70%;
+        }
+        .filterdiv {
+          margin-left: 0px;
+          width: 100%;
+        }
+      }
+      @media screen and (min-width: 0px) and (max-width: 600px) {
+        .side {
+          display: none;
+        }
+        .con {
+          width: 100%;
+        }
+        .filterdiv {
+          margin-left: 0px;
+          width: 100%;
+        }
+      }
+       /* -------------------------footer----------------------------------- */
+       footer .main_div{
+            width: 99.8%;
+            height: 470px;
+            /* border: 1px solid green; */
+            background-color: #fafafa;
+            display: flex;
+            justify-content: space-evenly;
+            box-sizing: border-box;
+            padding-top: 4.5%;
+            padding-bottom: 2.5%;
+        }
+
+        .main_div > .left{
+            width: 35%;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .main_div > .right{
+            width: 40%;
+            /* border: 1px solid black; */
+        }
+        .main_div > .left > .upper{
+            /* border: 1px solid red; */
+            height: 45%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .main_div > .left > .lower{
+            /* border: 1px solid red; */
+            height: 35%;
+        }
+        .main_div > .left > .upper > *{
+            width: 25%;
+            /* border: 1px solid green; */
+        }
+        .main_div > .left > .upper > * > *{
+            /* border: 1px solid black; */
+            margin-bottom: 0.8%;
+        }
+        .main_div > .left > .upper > * > div > a{
+            text-decoration: none;
+            color: grey;
+            font-size: 75%;
+        }
+        .main_div > .left > .lower{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .main_div > .left > .lower > div{
+            color: grey;
+            font-size: 75%;
+            margin-bottom: 1.1%;
+        }
+        .main_div > .left > .lower > div > a{
+            color: grey;
+            border-right: 1px solid grey;
+            padding-right: 2%;
+        }
+        .not_first{
+            margin-left: 2%;
+        }
+        .main_div > .left > .lower > div:last-child{
+            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+            margin-bottom: 0px;
+        }
+        .main_div > .left > .lower > div:last-child > img{
+            width: 2%;
+            /* border: 1px solid red; */
+        }
+        .main_div > .left > .lower > div:last-child > span{
+            /* border: 1px solid red; */
+            text-decoration: underline;
+        }
+
+        .main_div > .right > .top{
+            /* border: 1px solid green; */
+            display: flex;
+            justify-content: space-between;
+        }
+        .main_div > .right > .top > .left{
+            /* border: 1px solid red; */
+            width: 55%;
+        }
+        .main_div > .right > .top >.left > div img{
+            width: 8%;
+            margin-top: 6%;
+            margin-right: 5%;
+        }
+        .main_div > .right > .top > .right{
+            /* border: 1px solid red; */
+            width: 30%;
+        }
+        .main_div > .right > .top > .right > div img{
+            width: 15%;
+            margin-top: 11%;
+            margin-right: 7%;
+            /* border: 1px solid red; */
+        }
+        .main_div > .right > .center{
+            /* border: 1px solid green; */
+            height: 25%;
+            margin-top: 3%;
+        }
+        .main_div > .right > .center > div{
+            /* border: 1px solid black; */
+            display: flex;
+            margin-top: 1.1%;
+        }
+        .main_div > .right > .center > div > input{
+            width: 75%;
+            padding: 1.3%;
+            border: 1px solid rgb(192, 189, 189);
+            font-size: 85%;
+        }
+        .main_div > .right > .center > div > input:hover{
+            border: 1px solid rgb(136, 135, 135);
+        }
+        .main_div > .right > .center > div > button{
+            width: 25%;
+            border: none;
+            background-color: black;
+            color: white;
+            font-size: 100%;
+            box-sizing: border-box;
+        }
+        .main_div > .right > .center > div > button:hover{
+            background-color:rgb(100, 90, 90);
+        }
+        .main_div > .right > .center > div > button:active{
+            border: 2px solid grey;
+            background-color: black;
+            border-radius: 3px;
+        }
+        .main_div > .right > .bottom{
+            /* border: 1px solid black; */
+        }
+        .main_div > .right > .bottom > div{
+            /* border: 1px solid red; */
+            margin-top: 2%;
+        }
+        .main_div > .right > .bottom > div img{
+            width: 6%;
+            margin-right: 1.8%;
+        }
+
+ /* -------------responsive design for footer------------- */
+
+        /* ------------medium size--------- */
+        @media only screen and (min-width : 0px) and (max-width : 1000px){
+            footer .main_div{
+                height: auto;
+                /* border: 1px solid green; */
+                box-sizing: border-box;
+                /* width: 90%; */
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(2,minmax(300px, auto));
+                grid-template-areas: 
+                "right"
+                "left";
+                /* align-content: flex-start; */
+                /* justify-content: center; */
+                align-items: center;
+                justify-items: center;
+                grid-row-gap: 45px;
+            }
+            footer .main_div > div.left{
+                grid-area: left;
+                width: 95%;
+            }
+            footer .main_div > div.right{
+                grid-area: right;
+                width: 95%;
+            }
+            footer > .main_div > div.right > div.bottom{
+                margin-top: 4%;
+            }
+            footer > .main_div > div.left > div.lower{
+                margin-top: 9%;
+            }
+        }
+
+        /* ------------for small size screen------------------------------------------- */
+        @media only screen and (max-width : 499px){
+            footer .main_div{
+                height: auto;
+                /* border: 1px solid green; */
+                box-sizing: border-box;
+                /* width: 90%; */
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(2,minmax(300px, auto));
+                grid-template-areas: 
+                "right"
+                "left";
+                /* align-content: flex-start; */
+                /* justify-content: center; */
+                align-items: center;
+                justify-items: center;
+                grid-row-gap: 45px;
+            }
+            footer .main_div > div.left{
+                grid-area: left;
+                width: 95%;
+            }
+            footer .main_div > div.right{
+                grid-area: right;
+                width: 95%;
+            }
+            footer > div.main_div > div.left > div.upper{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            } 
+            footer > div.main_div > div.left > div.upper > div{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 4%;
+            }
+
+            footer > div.main_div > div.right > div.top{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            footer > div.main_div > div.right > div.top > div.left{
+                width: 100%;
+            }
+            footer > div.main_div > div.right > div.top > div.left > div img{
+                margin-top: 4%;
+                /* border: 1px solid black; */
+            }
+            footer > div.main_div > div.right > div.top > div.right {
+                width: 100%;
+                margin: 6% 0%;
+            }
+            footer > div.main_div > div.right > div.top > div.right > div{
+                width: 100%;
+                /* border: 1px solid green; */
+            }
+            footer > div.main_div > div.right > div.top > div.right > div img{
+                margin-top: 4%;
+                width: 8%;
+                margin-right: 4%;
+            }
+            footer > div.main_div > div.right > div.center{
+                margin-bottom: 6%;
+            }
+            footer > div.main_div > div.right > div.center > div{
+                display: flex;
+                flex-direction: column;
+            }
+            footer > div.main_div > div.right > div.center > div > *{
+                width: 100%;
+                box-sizing: border-box;
+                height: 30px;
+                margin-top: 3%;
+            }
+
+        }
+        #abc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .classy{
+        width: 100%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <img class="classy" src="head.png" alt="">
+    <div class="nav1">
+      <div class="n1">
+        <a href="mainpage.html">WOMEN</a>
+        <a href="mainpage.html">CURVE + PLUS</a>
+        <a href="mainpage.html">KIDS</a>
+        <a href="mainpage.html">MEN</a>
+        <a href="beauty.html">BEAUTY</a>
+        <a href="mainpage.html">HOME</a>
+      </div>
+      <div class="n2 logo">SHEIN</div>
+      <div class="n4">
+        Free Standard Shipping
+        <span class="colgrey">on order over US$49.00</span>
+      </div>
+      <div class="n3 rightlogo">
+        <a href="newlogin.html"
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/709/709579.png"
+            alt=""
+        /></a>
+        <a id="abc" href="bag.html"
+        ><img
+          src="https://cdn-icons-png.flaticon.com/128/687/687259.png"
+          alt=""
+      /><span id="bagcount"></span></a>
+        <a href="">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/1077/1077035.png"
+            alt=""
+        /></a>
+        <a href=""
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/862/862909.png"
+            alt=""
+        /></a>
+        <a href=""
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/1006/1006771.png"
+            alt=""
+        /></a>
+      </div>
+    </div>
+
+    <div class="nav2">
+      <div class="nav21">
+        <p><a href="mensection.html"> NEW IN</a></p>
+        <p><a href="womensection.html">TREND</a></p>
+        <p class="colred"><a href="">SALE</a></p>
+        <p class="colred"><SHEIN href="">SHEIN X DESIGNER</a></p>
+        <p><CLOTHING href="">CLOTHING</a></p>
+        <p><DRESSES href="">DRESSES</a></p>
+        <p><TOPS href="">TOPS</a></p>
+        <p><LINGERIE href="">LINGERIE & LOUNGE</a></p>
+        <p><ACTIVEWEAR href="">ACTIVEWEAR</a></p>
+        <p><SHOES href="">SHOES $ ACCS</a></p>
+        <p><EXPLORE href="">EXPLORE</a></p>
+      </div>
+      <div class="nav212">
+        <input type="text" />
+
+        <a href=""><i class="fas fa-search"></i></a>
+      </div>
+    </div>
+    <div class="filterdiv">
+      <h3>New in Trends <span class="length"></span></h3>
+      <div class="trend">
+        <button onclick="black()">Black</button
+        ><button onclick="plain()">Plain</button
+        ><button onclick="khaki()">Khaki</button
+        ><button onclick="block()">ColorBlock</button
+        ><button onclick="denim()">Denim</button>
+        <button onclick="cotton()">Cotton</button>
+        <button onclick="orange()">Orange</button>
+      </div>
+    </div>
+    <div class="main">
+      <div class="side">
+        <h3>Category</h3>
+        <input type="checkbox" id="men" onchange="men()" />
+        <label for="">Men Clothes</label><br />
+        <input type="checkbox" id="women" onchange="women()" />
+        <label for="">Women Clothes</label><br />
+        <!-- /////////////////////////////// -->
+        <input type="checkbox" id="sweatshirts" onchange="sweatshirts()" />
+        <label for="">Sweatshirts</label><br />
+        <input type="checkbox" id="pants" onchange="pants()" />
+        <label for="">Pants</label><br />
+        <input type="checkbox" id="tops" onchange="tops()" />
+        <label for="">Knit Tops</label><br />
+
+        <!-- //////////////////////////// -->
+
+        <input type="checkbox" id="kids" onchange="kids()" />
+        <label for="">Kids Clothes</label><br />
+
+        <h3>Size</h3>
+        <input type="checkbox" id="xs" onchange="changexs()" />
+        <label for="">XS</label>
+        <input type="checkbox" id="s" onchange="changes()" />
+        <label for="">S</label><br />
+        <input type="checkbox" id="m" onchange="changem()" />
+        <label for="">M</label>
+        <input type="checkbox" id="l" onchange="changel()" />
+        <label for="">L</label><br />
+        <input type="checkbox" id="xl" onchange="changexl()" />
+        <label for="">XL</label>
+        <input type="checkbox" id="xll" onchange="changexxl()" />
+        <label for="">XXL</label>
+
+        <h3>Color</h3>
+        <button class="red"></button>
+        <button class="blue"></button>
+        <button class="black"></button>
+        <button class="orange"></button>
+        <button class="green"></button>
+        <button class="khaki"></button>
+        <button class="brown"></button>
+        <button class="yellow"></button>
+        <button class="grey"></button>
+
+        <h3>Pattern Type</h3>
+        <input type="checkbox" id="plain" onchange="plain()" />
+        <label for="">Plain</label><br />
+        <input type="checkbox" id="letter" onchange="letter()" />
+        <label for="">Letter</label><br />
+        <input type="checkbox" id="plaid" onchange="plaid()" />
+        <label for="">Plaid</label><br />
+        <input type="checkbox" id="block" onchange="block()" />
+        <label for="">ColorBlock</label>
+
+        <h3>Material</h3>
+        <input type="checkbox" id="polyster" onchange="polyster()" />
+        <label for="">Polyster</label><br />
+        <input type="checkbox" id="cotton" onchange="cotton()" />
+        <label for="">Cotton</label><br />
+        <input type="checkbox" id="denim" onchange="denim()" />
+        <label for="">Denim</label><br />
+        <input type="checkbox" id="silk" onchange="silk()" />
+        <label for="">Silk</label><br />
+        <h3>Price Range</h3>
+        <input type="checkbox" id="low" onchange="low()" />
+        <label for="">Low to High</label><br />
+        <input type="checkbox" id="high" onchange="high()" />
+        <label for="">High to Low</label><br />
+      </div>
+
+      <div class="con"></div>
+    </div>
+    <!-- ///////////////////////////////////////////////////footer/////////////////////////////////// -->
+
+    <footer>
+      <div class="main_div">
+          <!-- left container -->
+          <div class="left">
+              <div class="upper">
+                  <div class="start">
+                      <h5>COMPANY INFO</h5>
+                      <div><a href="#">About SHEIN</a></div>
+                      <div><a href="#">Social Responsibility</a></div>
+                      <div><a href="#">Affiliate</a></div>
+                      <div><a href="#">Fashion Blogger</a></div>
+                      <div><a href="#">Supply Chain</a></div>
+                  </div>
+                  <div class="center">
+                      <h5>HELP & SUPPORT</h5>
+                      <div><a href="#">Shipping Info</a></div>
+                      <div><a href="#">Returns</a></div>
+                      <div><a href="#">How To Order</a></div>
+                      <div><a href="#">How To Track</a></div>
+                      <div><a href="#">Size Guide</a></div>
+                  </div>
+                  <div class="end">
+                      <h5>CUSTOMER CARE</h5>
+                      <div><a href="#">Contact Us</a></div>
+                      <div><a href="#">Payment & Tax</a></div>
+                      <div><a href="#">Bonus Point</a></div>
+                      <div><a href="#">Klarna</a></div>
+                      <div><a href="#">Afterpay</a></div>
+                      <div><a href="#">Zip</a></div>
+                      <div><a href="#">Recall Notice</a></div>
+                  </div>
+              </div>
+              <div class="lower">
+                  <div>
+                      2009-2021 SHEIN All Rights Reserved
+                  </div>
+                  <div>
+                      <a href="#">Privacy Center</a>
+                      <a class="not_first" href="#">Privacy & Cookie Policy</a>
+                  </div>
+                  <div>
+                      <a href="#">Manage Cookies / Do Not Sell My Personal Information</a>
+                      <a class="not_first" href="">Terms & Conditions</a>
+                  </div>
+                  <div>
+                      <a href="#">Do Not Sell My Personal Information</a>
+                      <a class="not_first" href="#">Copyright Notice</a>
+                      <a class="not_first" href="#">Accessibility</a>
+                      <a class="not_first" href="#">Imprint</a>
+                  </div>
+                  <div class="cursor_pointer">
+                      <img src="https://cdn-icons-png.flaticon.com/128/484/484167.png" alt="">
+                      <span>United States</span>
+                  </div>
+              </div>
+          </div>
+
+          <!-- right container  -->
+          <div class="right">
+              <div class="top">
+                  <div class="left">
+                      <h5>FIND US ON</h5>
+                      <div>
+                          <a href="#"><img src="https://cdn-icons.flaticon.com/png/128/3128/premium/3128208.png?token=exp=1639558341~hmac=2029758bfc97cead7da597279170092f" alt=""></a>
+                          <a href="#"><img src="https://cdn-icons.flaticon.com/png/128/717/premium/717392.png?token=exp=1639558418~hmac=a4ca4f3bc2b75037e7e78d2bb58a771e" alt=""></a>
+                          <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/733/733635.png" alt=""></a>
+                          <a href="#"><img src="https://cdn-icons.flaticon.com/png/128/717/premium/717426.png?token=exp=1639558477~hmac=164232d5c37c896c18c44dacaeb0aff1" alt=""></a>
+                          <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/2111/2111601.png" alt=""></a>
+                          <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/2111/2111678.png" alt=""></a>
+                          <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/3046/3046120.png" alt=""></a>
+                      </div>
+                  </div>
+                  <div class="right">
+                      <h5>
+                          DOWNLOAD SHEIN APP TO SAVE MORE!
+                      </h5>
+                      <div>
+                          <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/731/731985.png" alt=""></a>
+                          <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/154/154871.png" alt=""></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="center">
+                  <h5>SIGN UP FOR SHEIN STYLE NEWS</h5>
+                  <div>
+                      <input type="email" name="" id="" placeholder="Your Email Address">
+                      <button>SUBSCRIBE</button>
+                  </div>
+              </div>
+              <div class="bottom">
+                  <h5>WE ACCEPT</h5>
+                  <div>
+                      <img src="https://cdn-icons-png.flaticon.com/128/196/196565.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/5968/5968299.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/825/825464.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/217/217424.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/196/196548.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/825/825454.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/6124/6124998.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/174/174861.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/61/61537.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/196/196550.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/217/217445.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/39/39200.png" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/128/5968/5968140.png" alt="">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  </body>
+</html>
+<script>
+  var data = [
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/07/06/162555122826e4487ae3d76e76dbf9008b261f5c55_thumbnail_900x.webp",
+      name: "SHEIN Zipper Back Solid Palazzo Pants",
+      price: 14.0,
+      color: "black",
+      size: "XS",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "wideleg",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/07/06/1625551231d7f047196c2961aa9fba88656c1f09c2_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/07/06/16255512336874a45a2b432d9b5b6350064d9621e2_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/07/06/162555123486dd9df3c93cb6a4f5f4622675e88be5_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/07/06/162555123568fa45634dbbf726006bbc8c38510be3_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/07/06/162555123568fa45634dbbf726006bbc8c38510be3_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/08/17/16291785761f9ed8e9e1c83db120182faf4d81bd8e_thumbnail_900x.webp",
+      name: "SHEIN Button Front Wide Waistband Palazzo Pants",
+      price: 16.0,
+      color: "blue",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/08/17/16291785776c420bd7f5526a9ca05c916dedaaab15_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/08/17/1629178580ef62c7008aa68b023b019e0de23ea36b_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/08/17/1629178582c40cb47f6f48b3cc712a011729909bb8_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/08/17/162917858414eb88b422f5207637de5241028c741b_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/08/17/162917858414eb88b422f5207637de5241028c741b_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/10/09/1633751923c34d0cdc72fdde3b20d179973336c903_thumbnail_900x.webp",
+      name: "SHEIN PETITE Solid Rib-knit Wide Leg Pants",
+      price: 13.0,
+      color: "blue",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/09/163375192444d79c10f5acc4c9a997c45539126092_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/09/16337519257566f57352e31f1e1771f964a543c353_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/09/1633751926c6ddcea9d5958b8d556f6a5aaf140e20_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/09/16337519284b7ccadd3fff67a6b395f8fdd5c662fa_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/09/16337519284b7ccadd3fff67a6b395f8fdd5c662fa_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/09/1636471319b722f13250e35aff846291708204ec73_thumbnail_900x.webp",
+      name: "Solid High Waist Flap Pocket Cargo Pants",
+      price: 17.0,
+      color: "black",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/09/163647132363274039b3864aa7bf16262c07f34c25_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/09/16364713325ffcde2fb46f262f22f59ee0085eb734_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/12/1636649794556eafd02b9da7a06dea3038e7fbe705_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/12/16366497965d8a1431ae83dc56aef6a7134c958a34_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/12/16366497986f03f8332d2ddd804466933bd74cf918_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/09/16364729133ab5694026289a5c5ee27624e4f64447_thumbnail_900x.webp",
+      name: "Leopard Print Wide Leg Pants",
+      price: 13.0,
+      color: "black",
+      size: "XXL",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "silk",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/09/1636472915696294dada28c6ae70edffd056c01ed4_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/09/1636472918cdb0296caafcd884ba59504c1159aa58_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/09/163647292043cbe2b0a8b7435576e05125e21a5fcb_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/09/1636472923a6171851e0afcfb2cc21cb42dae20f86_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/09/16364729252dd042b2d4d204d977188f37d3327a46_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/07/15/16263170529b50b862e4fde5eff505350665848a0e_thumbnail_900x.webp",
+      name: "SHEIN Flare Leg Solid Pants",
+      price: 10.0,
+      color: "BLACK",
+      size: "XL",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/07/15/1626317056895f736b04ff8a150e3d268f4023d065_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/07/15/1626317063e2651c7d208273dfd7643ff513ff8515_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/07/15/1626317063e2651c7d208273dfd7643ff513ff8515_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/07/15/1626317063e2651c7d208273dfd7643ff513ff8515_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/07/15/1626317063e2651c7d208273dfd7643ff513ff8515_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/05/1636077136f4cf44041c79dd1f6096dd6b445dfedf_thumbnail_900x.webp",
+      name: "Geo Print Ribbed Knit Tee",
+      price: 8.0,
+      color: "women",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "cotton",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/05/16360771385c2fe0e674daf6f18b115b9b362dcee0_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/05/1636077141668c5ff36fb881aab141a1ffe25a3e23_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/05/16360771432f95d189b43cbc661810d83827bb7593_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/05/16360771432f95d189b43cbc661810d83827bb7593_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/05/16360771432f95d189b43cbc661810d83827bb7593_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/25/1637805723129040bb6585d3f3e1085aa90ff6b5c5_thumbnail_900x.webp",
+      name: "SHEIN Tall Geo Print Mock Neck Mesh Top Without Bra",
+      price: 8.0,
+      color: "women",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "cotton",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/25/1637805723129040bb6585d3f3e1085aa90ff6b5c5_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/25/1637805725cdb89cc3a216d5dffb8e87814476b1c5_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/25/1637805729fd9092826fc5dc7cb6a9a64245b4b923_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/25/16378057337d1e45f4281ff3a72ad74bfc84a66617_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/25/1637805735dc02c587489f83c25a1c1698656f78bd_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/06/25/162459145349a6e1a85965c7cc84f1f2307f8ff89f_thumbnail_900x.webp",
+      name: "SHEIN Tall Zipper Back Solid Palazzo Pants",
+      price: 14.0,
+      color: "green",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "cotton",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/06/25/1624591455ec056ea6246a2ecf5b34d9e0d826be63_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/06/25/1624591456e12b834e37b9e3a091e1640ab9f449a0_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/06/25/1624591461b5bebf97093646d9d2c5cf4e155eb7f1_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/06/25/162459146201855eec91007427100060de16676e57_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/06/25/162459146201855eec91007427100060de16676e57_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/12/1636706637dc1b262decfa7294d59288f240212e7f_thumbnail_900x.webp",
+      name: "High Waist Seam Detail Pants",
+      price: 15.0,
+      color: "black",
+      size: "XL",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/12/1636706640a39d5285620e60208b7d36b13662560f_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/12/16367066425f3ac0ece686108dea986a217453c1d2_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/12/1636706644f1a05feae85bccbc7aca97d9d2dfeacc_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/12/1636706647f52fcd559afc4bb5b21d3078ef2a5f25_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/12/1636706647f52fcd559afc4bb5b21d3078ef2a5f25_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/19/1632031844a2c805ae55fc51faf0e2b78c171dcf89_thumbnail_900x.webp",
+      name: "SHEIN PETITE Solid Rib-knit Wide Leg Pants",
+      price: 12.0,
+      color: "green",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "cotton",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/19/1632031845d3e69f0a988051ad3cfb0e0143731278_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/19/1632031846cf52dfa623ee73a5c85dbbacdcbd5abb_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/19/16320318484b6b78b982949038f9f0696de4bbf22f_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/19/163203184913ef309ab6d223f777b8f08c3dcb9d21_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/19/163203184913ef309ab6d223f777b8f08c3dcb9d21_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/10/19/16346071824e9cb11718194f322ee789b6e2fa5098_thumbnail_900x.webp",
+      name: "SHEIN Solid Zip Up Straight Leg Pants",
+      price: 16.0,
+      color: "black",
+      size: "XL",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "silk",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/19/163460718042e1e708b91b2af3b6cf37ee2a54f1c8_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/19/16346071824e9cb11718194f322ee789b6e2fa5098_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/19/1634607185adc613c1d3056723aa696bae5887d665_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/19/1634607185adc613c1d3056723aa696bae5887d665_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/19/1634607185adc613c1d3056723aa696bae5887d665_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/01/163834230939df4c0299a8188a3e68020d528cf294_thumbnail_900x.webp",
+      name: "SHEIN PETITE Slant Pocket PU Pants",
+      price: 19.0,
+      color: "brown",
+      size: "XS",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "cotton",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/01/163834231309496b37d7644d792fa2107553f5300f_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/01/163834231309496b37d7644d792fa2107553f5300f_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638342318aa580c5590e5e12458cd6f73e939cbf5_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638342321246dc797f83daf320f6000edddf4ffdb_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638342321246dc797f83daf320f6000edddf4ffdb_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/01/16357470651e86c3225d3db2aa23c083dc53a38d81_thumbnail_900x.webp",
+      name: "SHEIN High Waist Corduroy Pants",
+      price: 21.0,
+      color: "black",
+      size: "XS",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "silk",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/01/1635747067deda762f6ec7852278396d88267fb1dd_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/01/1635747067deda762f6ec7852278396d88267fb1dd_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/01/1635747069a14a181748188e7244bb3394509b7bce_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/01/1635747069a14a181748188e7244bb3394509b7bce_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/01/1635747072f7f48917750cd094bcebeb86e5eaecb1_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images2_pi/2019/09/03/15674979381843542003_thumbnail_900x1199.webp",
+      name: "SHEIN High-Rise Vented Ankle Cut Pants",
+      price: 1.0,
+      color: "black",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "cotton",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images2_pi/2019/09/03/15674979343602933184_thumbnail_900x1199.webp",
+      img2: "https://img.ltwebstatic.com/images2_pi/2019/09/03/15674979343602933184_thumbnail_900x1199.webp",
+      img3: "https://img.ltwebstatic.com/images2_pi/2019/09/03/15674979343602933184_thumbnail_900x1199.webp",
+      img4: "https://img.ltwebstatic.com/images2_pi/2019/09/03/15674979343602933184_thumbnail_900x1199.webp",
+      img5: "https://img.ltwebstatic.com/images2_pi/2019/09/03/15674979373141900903_thumbnail_900x1199.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/30/1638245322ba4d287b483f918ec5df4ee4ab20cb79_thumbnail_900x.webp",
+      name: "SHEIN Zip Up Pocket Side Cargo Pants",
+      price: 19.0,
+      color: "green",
+      size: "XS",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "cotton",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/30/1638245323175df4a1a739ad6f04235cb97bacda7d_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/30/1638245325f3e6dec8e5e778466d51d57a8f517a18_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/30/1638245325f3e6dec8e5e778466d51d57a8f517a18_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/30/163824532771fca55c4f855b8d9adda618f66df93c_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/30/1638245325f3e6dec8e5e778466d51d57a8f517a18_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/07/19/1626672997e0f28981b9dfe00292b1b8d6a8df6417_thumbnail_900x.webp",
+      name: "SHEIN Single Button Split Hem Skinny Pants",
+      price: 16.0,
+      color: "blue",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "silk",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/07/19/16266729983595b5dea228ed9bd471f89e7a264816_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/07/19/162667299980ac26ccaf250e2ee6af3c3a8a8523e9_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/07/19/16266730010c355e2b87588beb518f65ae455a9787_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/07/19/16266730033d10ae8d3962c1182548057c14c90209_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/07/19/16266730033d10ae8d3962c1182548057c14c90209_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/06/17/1623897246ebace9c3d560f9bc8350c1a48a873016_thumbnail_900x.webp",
+      name: "SHEIN Knot Waist PU Leather Pants",
+      price: 19.0,
+      color: "red",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/06/17/16238972493affd9fb2837c92909e94a8644e63a63_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/06/17/1623897252d9e1b6e08c14001ca387d927bb4cd170_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/06/17/1623897255e2485d42f956ca3e19bf7b7ddc754565_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/06/17/1623897259529f1d7fd89b771880a1c40317638411_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/06/17/1623897259529f1d7fd89b771880a1c40317638411_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2020/08/31/159883750295fbec2e4822966c0cc5b64fa57a75c6_thumbnail_900x.webp",
+      name: "Solid Flare Leg Velvet Pants",
+      price: 15.0,
+      color: "green",
+      size: "XL",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2020/08/31/1598837505cab4be0a2197de332751bb8da101dac6_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2020/08/31/1598837505cab4be0a2197de332751bb8da101dac6_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2020/08/31/1598837505cab4be0a2197de332751bb8da101dac6_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2020/08/31/159883751764cd4da359b1bd8518c4ff61cb9705ec_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2020/08/31/159883751764cd4da359b1bd8518c4ff61cb9705ec_thumbnail_900x.webp",
+    },
+
+    //   women sweatshirt
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/15/1636965051ce9b4d6853a8715ec0445cd66d425eda_thumbnail_900x.webp",
+      name: "Letter Graphic Mock Neck Pullover",
+      price: 11.0,
+      color: "green",
+      size: "M",
+      category: "women swaetshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "silk",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/15/1636965059a31f5aad6c89aa9af38319c349069ea3_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/15/1636965073553f9513376cacc6ce49a9d016b770b2_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/15/1636965057b726651c78116eab3a256aaa76f22d6c_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/15/1636965057b726651c78116eab3a256aaa76f22d6c_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/15/1636965057b726651c78116eab3a256aaa76f22d6c_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/02/1635841435818f3786edd1dca1d5eef55537963e25_thumbnail_900x.webp",
+      name: "Letter Graphic Drop Shoulder Thermal Lined Sweatshirt",
+      price: 11.0,
+      color: "green",
+      size: "XL",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/19/1634608164de2d403f20ef22c6eef0ec848917a73d_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/19/1634608164de2d403f20ef22c6eef0ec848917a73d_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/19/16346081679f20696a89cbc9392270cd430c45b32e_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/19/16346082091d87674f8dfb6b8ade9ec5e0376446df_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/19/1634608205ceaaeaeb697e687b01d0f88aa99afb81_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/22/1632274261c311a909c0912144e63b48f7b4688b0e_thumbnail_900x.webp",
+      name: "Kangaroo Pocket Drawstring Thermal Hoodie",
+      price: 8.49,
+      color: "white",
+      size: "XS",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/22/16322742620c568b186a854b17b89c7b3701e00c9f_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/22/16322742620c568b186a854b17b89c7b3701e00c9f_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/22/16322742620c568b186a854b17b89c7b3701e00c9f_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/22/16322742736ea46aae608df32691aa8cf3d2d886cd_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/22/1632274277d7aeb890a49a3cfafedd4a497e533291_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/08/24/162979644851d4d5a94aeec94d75079499409bf8ea_thumbnail_900x.webp",
+      name: "Solid Round Neck Drop Shoulder Sweatshirt",
+      price: 9.0,
+      color: "white",
+      size: "M",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/08/24/1629796450c9d41b80d706acd3280221ff89fade4b_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/08/24/16297964514eb460c20584a25e6e1666717d053b90_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/08/24/16297964514eb460c20584a25e6e1666717d053b90_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/08/24/16297964514eb460c20584a25e6e1666717d053b90_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/08/24/16297964514eb460c20584a25e6e1666717d053b90_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/15/163694253234c7cc60b40cda37c8823bcb273ccac6_thumbnail_900x.webp",
+      name: "SHEIN Drop Shoulder Cross Wrap Teddy Pullover",
+      price: 8.0,
+      color: "white",
+      size: "XS",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/15/163694253418f1de838ef73b2c4b7cf4ee4fe9cd42_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/15/163694253596178db6fbc6f16c6cc49d3a06bb676f_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/15/1636942537f015eae4ebe87e8a762b10015a806103_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/15/1636942537f015eae4ebe87e8a762b10015a806103_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/15/1636942537f015eae4ebe87e8a762b10015a806103_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/08/03/1627980422b033c91e2fa51ba21a29517569abb6f4_thumbnail_900x.webp",
+      name: "Slogan Graphic Drop Shoulder Hoodie",
+      price: 13.0,
+      color: "white",
+      size: "XL",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/08/03/162798042560e3682f4fa8e7ff3194815b890b6de7_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/08/03/162798042560e3682f4fa8e7ff3194815b890b6de7_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/08/03/16279804321d2e3c150c25b4ff39047ec45918adc6_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/08/03/1627980435f5a2692255fc4ae0d6bac89862bd0114_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/08/03/16279804387bfcabd866c6dbc728eb55e5fde1c782_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "http://img.ltwebstatic.com/images3_pi/2021/07/30/1627617395ae054099b7beccfa60c20dcaccac6640.png",
+      name: "MOTF PREMIUM VELVET RAGLAN SLEEVE SWEATSHIRT",
+      price: 12.99,
+      color: "red",
+      size: "M",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "http://img.ltwebstatic.com/images3_pi/2021/07/30/1627617395ae054099b7beccfa60c20dcaccac6640.png",
+      img2: "http://img.ltwebstatic.com/images3_pi/2021/07/30/1627617395ae054099b7beccfa60c20dcaccac6640.png",
+      img3: "http://img.ltwebstatic.com/images3_pi/2021/07/30/1627617395ae054099b7beccfa60c20dcaccac6640.png",
+      img4: "http://img.ltwebstatic.com/images3_pi/2021/07/30/1627617395ae054099b7beccfa60c20dcaccac6640.png",
+      img5: "http://img.ltwebstatic.com/images3_pi/2021/07/30/1627617395ae054099b7beccfa60c20dcaccac6640.png",
+    },
+
+    {
+      imgUrl:
+        "http://img.ltwebstatic.com/images3_pi/2021/07/30/1627617395ae054099b7beccfa60c20dcaccac6640.png",
+      name: "Colorblock Half Zip Drop Shoulder Sweatshirt",
+      price: 13.49,
+      color: "black",
+      size: "M",
+      category: "women sweetshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/30/16329871501d59684cff9cbe74fd00185b58b61ec7_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/30/1632987152b4066e92ea513d330b8742ffc14c806f_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/30/1632987152b4066e92ea513d330b8742ffc14c806f_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/30/1632987152b4066e92ea513d330b8742ffc14c806f_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/30/1632987152b4066e92ea513d330b8742ffc14c806f_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/30/1632987152b4066e92ea513d330b8742ffc14c806f_thumbnail_900x.webp",
+      name: "SHEIN Shawl Collar Open Front Blazer and Slant Pocket Pants Set",
+      price: 22.99,
+      color: "green",
+      size: "XL",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/07/26/16272733497d5cbe31a66c4f8ad85f31a263f2dae5_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/07/26/16272733497d5cbe31a66c4f8ad85f31a263f2dae5_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/07/26/16272733497d5cbe31a66c4f8ad85f31a263f2dae5_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/07/26/16272733497d5cbe31a66c4f8ad85f31a263f2dae5_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/07/26/16272733497d5cbe31a66c4f8ad85f31a263f2dae5_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/07/26/16272733497d5cbe31a66c4f8ad85f31a263f2dae5_thumbnail_900x.webp",
+      name: "SHEIN SXY Shawl Neck Open Front Blazer & Pants Suit",
+      price: 40.0,
+      color: "green",
+      size: "XL",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/26/163262197693890ae86a9b07a7f30039f3ca8a8a9b_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/26/163262197693890ae86a9b07a7f30039f3ca8a8a9b_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/26/163262197693890ae86a9b07a7f30039f3ca8a8a9b_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/26/163262197693890ae86a9b07a7f30039f3ca8a8a9b_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/26/163262197693890ae86a9b07a7f30039f3ca8a8a9b_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/30/1632987174e66df9c096e883538e4b312447942ef0_thumbnail_900x.webp",
+      name: "Drop Shoulder Letter Graphic Sweatshirt",
+      price: 16.0,
+      color: "brown",
+      size: "M",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/30/16329871769456d7b50f43e8aee1ac4c9b4bbd4134_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/30/16329871769456d7b50f43e8aee1ac4c9b4bbd4134_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/30/16329871769456d7b50f43e8aee1ac4c9b4bbd4134_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/30/163298718505bd2d153a542c08bff1a6a46d5f24bd_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/30/163298718505bd2d153a542c08bff1a6a46d5f24bd_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/30/163298718505bd2d153a542c08bff1a6a46d5f24bd_thumbnail_900x.webp",
+      name: "Letter Graphic Drop Shoulder Sweatshirt",
+      price: 15.0,
+      color: "red",
+      size: "XL",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/22/1632282006747f237da166529646400f330e63e917_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/22/1632282006747f237da166529646400f330e63e917_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/22/1632282006747f237da166529646400f330e63e917_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/22/163228201445dc133e036ddc174fcc778734246bfd_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/22/1632282022f6be23aa62a38a1a932354494a850733_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/26/1637892816d5bcc17155c3f02b3a78c75a8d5fd08b_thumbnail_900x.webp",
+      name: "Fuzzy Trim Pom Pom Drawstring Crop Velvet Hoodie",
+      price: 17.0,
+      color: "red",
+      size: "XL",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/26/16378928188f9985906b1389d9a8c082a0e0eaed8f_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/26/1637892820527a3746cc57d37c2668b726457527b0_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/26/1637892820527a3746cc57d37c2668b726457527b0_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/26/1637892820527a3746cc57d37c2668b726457527b0_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/26/1637892820527a3746cc57d37c2668b726457527b0_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/08/02/162790183472855db0b4795d7cd74745908df4c514_thumbnail_900x.webp",
+      name: "Solid Zip Up Drawstring Crop Hoodie",
+      price: 13.0,
+      color: "white",
+      size: "M",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/08/02/1627901835cc041f1a88336e7c095e56588c6990eb_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/08/02/162790183777fda3202d3952514b61f0cba48916ac_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/08/02/162790183777fda3202d3952514b61f0cba48916ac_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/08/02/162790183777fda3202d3952514b61f0cba48916ac_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/08/02/162790183777fda3202d3952514b61f0cba48916ac_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/08/163634233180fc608f3fb206955516a5bd480e7bbc_thumbnail_900x.webp",
+      name: "Heart & Slogan Graphic Drop Shoulder Hoodie",
+      price: 15.0,
+      color: "brown",
+      size: "XS",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/08/163634233599c4558e2c810290139239beb4616d1a_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/08/163634233599c4558e2c810290139239beb4616d1a_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/08/163634233599c4558e2c810290139239beb4616d1a_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/08/163634233599c4558e2c810290139239beb4616d1a_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/08/16363423553e14faf92bde61bb72d0e11b002c13af_thumbnail_900x.webp",
+    },
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // knit tops
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/05/11/16207103473557bf898b6efd05aa53be813c2c7fba_thumbnail_900x.webp",
+      name: "Solid Ruffle Hem Knit Top",
+      price: 10.4,
+      color: "green",
+      size: "M",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/05/11/1620710350103777fe67a414bba0479736bf774ba9_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/05/11/1620710350103777fe67a414bba0479736bf774ba9_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/05/11/1620710350103777fe67a414bba0479736bf774ba9_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/05/11/1620710350103777fe67a414bba0479736bf774ba9_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/05/11/1620710350103777fe67a414bba0479736bf774ba9_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/05/11/1620710350103777fe67a414bba0479736bf774ba9_thumbnail_900x.webp",
+      name: "Solid Scoop Neck Knit Top",
+      price: 4.49,
+      color: "blue",
+      size: "XS",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/04/14/1618407063328635ae9fb7f04aeeb49f1853d8cfb0_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/04/14/1618407073424cd0c31c2445afe2523b6ea7e09fbd_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/04/14/16184070878ba73a1469ec118bd16e86d96fa05cc8_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/04/14/16184070878ba73a1469ec118bd16e86d96fa05cc8_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/04/14/16184070878ba73a1469ec118bd16e86d96fa05cc8_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/24/163774285955fffb0574397ba3ae38a69cd22e7061_thumbnail_900x.webp",
+      name: "Solid High Low Crop Knit Top",
+      price: 15.0,
+      color: "brown",
+      size: "M",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/24/16377428705e4687b0909a1fed50f93bf36ffbe640_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/24/163774289165cea4e46e288ef5d8937aa8f0175ece_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/24/163774289165cea4e46e288ef5d8937aa8f0175ece_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/24/163774290976c4310656fb72f0b884f685a15d5476_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/24/16377429294aaf195e4bad4686eaf1f1cd179b0124_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/01/08/16100764295877caec6e5e783a4fcc7e601b0682f2_thumbnail_900x.webp",
+      name: "Solid Cami Knit Top",
+      price: 4.49,
+      color: "white",
+      size: "XL",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/01/08/1610076432b1ccab1add3e01ddc94045110e41d15e_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/01/08/16100764357bc016a52e3378922c522d8b7cbd7dbe_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/01/08/161007643874ceec1e9b9f38639bd0a4164171ca6a_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/01/08/161007643874ceec1e9b9f38639bd0a4164171ca6a_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/01/08/161007643874ceec1e9b9f38639bd0a4164171ca6a_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/05/17/16212662755dbd6728c75f31eb87e2515926e1fd18_thumbnail_900x.webp",
+      name: "Crisscross Tie Backless Colorblock Knit Halter Top",
+      price: 5.5,
+      color: "blue",
+      size: "XL",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/05/17/1621266278a9edecd9c5251a19e77d269840186b8d_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/05/17/1621266281d5a647de140d9a7936d07545bd0758f7_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/05/17/1621266281d5a647de140d9a7936d07545bd0758f7_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/05/17/16212662875a740337fa55606d91383bd95dead2f8_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/05/17/1621266290722b91ac7c0f0a637fb17905be3f0f2e_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/08/16310868713c22f67be05267dd76c5111d1b410936_thumbnail_900x.webp",
+      name: "Cable Knit Split Hem Sweater Vest",
+      price: 16.0,
+      color: "black",
+      size: "M",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/08/1631086875d99eeae41126a0bf51e1aab4c6754619_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/08/1631086878e29e84f7cca49fbc8f147a43a397d124_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/08/1631086878e29e84f7cca49fbc8f147a43a397d124_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/08/163108688320e08ebed552f5f63cb9799b70cfc63a_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/08/1631086886b92e40bee5c03ad689d664aed8ebbeda_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/10/16365438779e917c5873e883821234e3226df62269_thumbnail_900x.webp",
+      name: "Cut Out Wrap Back Crop Cable Knit Top",
+      price: 13.0,
+      color: "black",
+      size: "M",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/10/16365438809273a76275526e70bb3a394cc023017b_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/10/1636543885b93c4c67c6a3748f962db535a6316ed8_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/10/1636543889fdf6a8dad9d727a93fa1a17c347eb00a_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/10/163654389423958039a73e292049b6d858c5f96089_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/10/163654389423958039a73e292049b6d858c5f96089_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/07/12/1626061032806afa8ab83078a6630bd08ff2fa0306_thumbnail_900x.webp",
+      name: "Flower Pattern Fuzzy Knit Top",
+      price: 14.0,
+      color: "red",
+      size: "XL",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/07/12/1626061034ff2264de0ebbfceeaa58f557fe7b3354_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/07/12/16260610379d5d65df12b309ff01f2608ae540132c_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/07/12/16260610392580f3d7caea0300e40764ba4ea2b18f_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/07/12/1626061041d1cb4565e8f997bc1458eb7f9bcb9aca_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/07/12/1626061044b7d4154deb792e63e5622aa8cefc0756_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638934032c43b9ff1ff51f6fff17fee9771bffac7_thumbnail_900x.webp",
+      name: "SHEIN Tied Backless Plaid Halter Knit Top",
+      price: 13.0,
+      color: "black",
+      size: "XL",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638934029b57260c710a381a9753fc9787e2326d5_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638934026ae7192f89d67408013f36d03af1ef0a7_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638934035455b0762cf898e73d30a23089925c9bd_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638934037e3bdd5df7dc7b73343ed6099c61acc5f_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/08/16389340409293bc382fad713dc784450fcf9ec261_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/30/1638276304411073280bc14e7d93341e27240fcbe7_thumbnail_900x.webp",
+      name: "Pearls Beaded Chain Detail Cami Knit Top",
+      price: 8.0,
+      color: "black",
+      size: "XL",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/30/16382763068e96eccca943e749599d60acd39c172b_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/30/16382763068e96eccca943e749599d60acd39c172b_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/30/16382763068e96eccca943e749599d60acd39c172b_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/30/1638276307481e353f088a63bafe3af852403d842b_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/30/1638276309c9635bd254d11b69e82e4b4287ccefd4_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/08/18/1629259119a30823195a8da1276e385a57f7051260_thumbnail_900x.webp",
+      name: "SHEIN SXY Solid Ribbed Knit Top",
+      price: 5.0,
+      color: "white",
+      size: "M",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/08/18/162925912185cef02666e7d6d6e91ec985d6694ca1_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/08/18/162925912185cef02666e7d6d6e91ec985d6694ca1_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/08/18/162925912185cef02666e7d6d6e91ec985d6694ca1_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/08/18/162925912307f84bbdacf99dc5950aa6534cd70086_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/08/18/162925912307f84bbdacf99dc5950aa6534cd70086_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/01/20/161114279775d33cb27f166f22f01192cb8ae440ce_thumbnail_900x.webp",
+      name: "Pearls Beaded Chain Detail Cami Knit Top",
+      price: 8.0,
+      color: "black",
+      size: "XXL",
+      category: "knit tops ",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/01/20/1611142802218c14687e466aa30e0dcd01617a9b4d_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/01/20/1611142807c1e58a716cebec66ea32b0ffd73c6cab_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/01/20/16111428115ffd673e2f63a7aeb112c0c433c79ce1_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/01/20/16111428115ffd673e2f63a7aeb112c0c433c79ce1_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/01/20/1611142816a2756e1cdbffc5bf9abdf72e741ade97_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/01/22/161127948478533f59b44ec08ff8bc7e986caa87af_thumbnail_900x.webp",
+      name: "Fringe Hem Rib-knit Top With Two Detachable Strap",
+      price: 4.49,
+      color: "black",
+      size: "XL",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/01/22/16112794888a164f219b0638f89d153cfca5a290da_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/01/22/16112794922658dba0317cef3fc274cc51f56b6be1_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/01/22/16112794922658dba0317cef3fc274cc51f56b6be1_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/01/22/16112794922658dba0317cef3fc274cc51f56b6be1_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/01/22/16112795024ba0933bd3b80e4c8cc055de2431a777_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/05/20/1621479957f86cb7b74c958998376cee0d3321c592_thumbnail_900x.webp",
+      name: "Appliques Solid Knit Top",
+      price: 5.49,
+      color: "blue",
+      size: "XL",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/05/20/1621479961f57312f49f8157c89eda02fca665e503_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/05/20/1621479961f57312f49f8157c89eda02fca665e503_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/05/20/16214799672ac97cb0beb07ddea924f744d42ed646_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/05/20/162147997049653dceed4cfdfd673ff0d44df0ec72_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/05/20/162147997049653dceed4cfdfd673ff0d44df0ec72_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/05/20/162147997049653dceed4cfdfd673ff0d44df0ec72_thumbnail_900x.webp",
+      name: "Tied Backless Crop Halter Knit Top",
+      price: 11.0,
+      color: "red",
+      size: "M",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "male",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/18/16345411950aa583786ab79540feb042ebba5017bc_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/18/1634541202039dabbb5e46c471379930cc175e0cad_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/18/1634541202039dabbb5e46c471379930cc175e0cad_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/18/1634541202039dabbb5e46c471379930cc175e0cad_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/18/16345412080c96288ed0e5344e4a6506edc0804d20_thumbnail_900x.webp",
+    },
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/07/06/162555122826e4487ae3d76e76dbf9008b261f5c55_thumbnail_900x.webp",
+      name: "SHEIN Zipper Back Solid Palazzo Pants",
+      price: 14.0,
+      color: "black",
+      size: "XS",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "wideleg",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/07/06/1625551231d7f047196c2961aa9fba88656c1f09c2_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/07/06/16255512336874a45a2b432d9b5b6350064d9621e2_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/07/06/162555123486dd9df3c93cb6a4f5f4622675e88be5_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/07/06/162555123568fa45634dbbf726006bbc8c38510be3_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/07/06/162555123568fa45634dbbf726006bbc8c38510be3_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/08/17/16291785761f9ed8e9e1c83db120182faf4d81bd8e_thumbnail_900x.webp",
+      name: "SHEIN Button Front Wide Waistband Palazzo Pants",
+      price: 16.0,
+      color: "blue",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/08/17/16291785776c420bd7f5526a9ca05c916dedaaab15_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/08/17/1629178580ef62c7008aa68b023b019e0de23ea36b_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/08/17/1629178582c40cb47f6f48b3cc712a011729909bb8_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/08/17/162917858414eb88b422f5207637de5241028c741b_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/08/17/162917858414eb88b422f5207637de5241028c741b_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/10/09/1633751923c34d0cdc72fdde3b20d179973336c903_thumbnail_900x.webp",
+      name: "SHEIN PETITE Solid Rib-knit Wide Leg Pants",
+      price: 13.0,
+      color: "blue",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/09/163375192444d79c10f5acc4c9a997c45539126092_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/09/16337519257566f57352e31f1e1771f964a543c353_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/09/1633751926c6ddcea9d5958b8d556f6a5aaf140e20_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/09/16337519284b7ccadd3fff67a6b395f8fdd5c662fa_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/09/16337519284b7ccadd3fff67a6b395f8fdd5c662fa_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/09/1636471319b722f13250e35aff846291708204ec73_thumbnail_900x.webp",
+      name: "Solid High Waist Flap Pocket Cargo Pants",
+      price: 17.0,
+      color: "black",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/09/163647132363274039b3864aa7bf16262c07f34c25_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/09/16364713325ffcde2fb46f262f22f59ee0085eb734_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/12/1636649794556eafd02b9da7a06dea3038e7fbe705_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/12/16366497965d8a1431ae83dc56aef6a7134c958a34_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/12/16366497986f03f8332d2ddd804466933bd74cf918_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/09/16364729133ab5694026289a5c5ee27624e4f64447_thumbnail_900x.webp",
+      name: "Leopard Print Wide Leg Pants",
+      price: 13.0,
+      color: "black",
+      size: "XXL",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "silk",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/09/1636472915696294dada28c6ae70edffd056c01ed4_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/09/1636472918cdb0296caafcd884ba59504c1159aa58_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/09/163647292043cbe2b0a8b7435576e05125e21a5fcb_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/09/1636472923a6171851e0afcfb2cc21cb42dae20f86_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/09/16364729252dd042b2d4d204d977188f37d3327a46_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/07/15/16263170529b50b862e4fde5eff505350665848a0e_thumbnail_900x.webp",
+      name: "SHEIN Flare Leg Solid Pants",
+      price: 10.0,
+      color: "BLACK",
+      size: "XL",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/07/15/1626317056895f736b04ff8a150e3d268f4023d065_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/07/15/1626317063e2651c7d208273dfd7643ff513ff8515_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/07/15/1626317063e2651c7d208273dfd7643ff513ff8515_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/07/15/1626317063e2651c7d208273dfd7643ff513ff8515_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/07/15/1626317063e2651c7d208273dfd7643ff513ff8515_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/05/1636077136f4cf44041c79dd1f6096dd6b445dfedf_thumbnail_900x.webp",
+      name: "Geo Print Ribbed Knit Tee",
+      price: 8.0,
+      color: "women",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "cotton",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/05/16360771385c2fe0e674daf6f18b115b9b362dcee0_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/05/1636077141668c5ff36fb881aab141a1ffe25a3e23_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/05/16360771432f95d189b43cbc661810d83827bb7593_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/05/16360771432f95d189b43cbc661810d83827bb7593_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/05/16360771432f95d189b43cbc661810d83827bb7593_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/25/1637805723129040bb6585d3f3e1085aa90ff6b5c5_thumbnail_900x.webp",
+      name: "SHEIN Tall Geo Print Mock Neck Mesh Top Without Bra",
+      price: 8.0,
+      color: "women",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "cotton",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/25/1637805723129040bb6585d3f3e1085aa90ff6b5c5_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/25/1637805725cdb89cc3a216d5dffb8e87814476b1c5_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/25/1637805729fd9092826fc5dc7cb6a9a64245b4b923_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/25/16378057337d1e45f4281ff3a72ad74bfc84a66617_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/25/1637805735dc02c587489f83c25a1c1698656f78bd_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/06/25/162459145349a6e1a85965c7cc84f1f2307f8ff89f_thumbnail_900x.webp",
+      name: "SHEIN Tall Zipper Back Solid Palazzo Pants",
+      price: 14.0,
+      color: "green",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "cotton",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/06/25/1624591455ec056ea6246a2ecf5b34d9e0d826be63_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/06/25/1624591456e12b834e37b9e3a091e1640ab9f449a0_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/06/25/1624591461b5bebf97093646d9d2c5cf4e155eb7f1_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/06/25/162459146201855eec91007427100060de16676e57_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/06/25/162459146201855eec91007427100060de16676e57_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/12/1636706637dc1b262decfa7294d59288f240212e7f_thumbnail_900x.webp",
+      name: "High Waist Seam Detail Pants",
+      price: 15.0,
+      color: "black",
+      size: "XL",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/12/1636706640a39d5285620e60208b7d36b13662560f_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/12/16367066425f3ac0ece686108dea986a217453c1d2_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/12/1636706644f1a05feae85bccbc7aca97d9d2dfeacc_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/12/1636706647f52fcd559afc4bb5b21d3078ef2a5f25_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/12/1636706647f52fcd559afc4bb5b21d3078ef2a5f25_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/19/1632031844a2c805ae55fc51faf0e2b78c171dcf89_thumbnail_900x.webp",
+      name: "SHEIN PETITE Solid Rib-knit Wide Leg Pants",
+      price: 12.0,
+      color: "green",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "cotton",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/19/1632031845d3e69f0a988051ad3cfb0e0143731278_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/19/1632031846cf52dfa623ee73a5c85dbbacdcbd5abb_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/19/16320318484b6b78b982949038f9f0696de4bbf22f_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/19/163203184913ef309ab6d223f777b8f08c3dcb9d21_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/19/163203184913ef309ab6d223f777b8f08c3dcb9d21_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/10/19/16346071824e9cb11718194f322ee789b6e2fa5098_thumbnail_900x.webp",
+      name: "SHEIN Solid Zip Up Straight Leg Pants",
+      price: 16.0,
+      color: "black",
+      size: "XL",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "silk",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/19/163460718042e1e708b91b2af3b6cf37ee2a54f1c8_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/19/16346071824e9cb11718194f322ee789b6e2fa5098_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/19/1634607185adc613c1d3056723aa696bae5887d665_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/19/1634607185adc613c1d3056723aa696bae5887d665_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/19/1634607185adc613c1d3056723aa696bae5887d665_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/01/163834230939df4c0299a8188a3e68020d528cf294_thumbnail_900x.webp",
+      name: "SHEIN PETITE Slant Pocket PU Pants",
+      price: 19.0,
+      color: "brown",
+      size: "XS",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "cotton",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/01/163834231309496b37d7644d792fa2107553f5300f_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/01/163834231309496b37d7644d792fa2107553f5300f_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638342318aa580c5590e5e12458cd6f73e939cbf5_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638342321246dc797f83daf320f6000edddf4ffdb_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/01/1638342321246dc797f83daf320f6000edddf4ffdb_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/01/16357470651e86c3225d3db2aa23c083dc53a38d81_thumbnail_900x.webp",
+      name: "SHEIN High Waist Corduroy Pants",
+      price: 21.0,
+      color: "black",
+      size: "XS",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "silk",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/01/1635747067deda762f6ec7852278396d88267fb1dd_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/01/1635747067deda762f6ec7852278396d88267fb1dd_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/01/1635747069a14a181748188e7244bb3394509b7bce_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/01/1635747069a14a181748188e7244bb3394509b7bce_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/01/1635747072f7f48917750cd094bcebeb86e5eaecb1_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images2_pi/2019/09/03/15674979381843542003_thumbnail_900x1199.webp",
+      name: "SHEIN High-Rise Vented Ankle Cut Pants",
+      price: 1.0,
+      color: "black",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "cotton",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images2_pi/2019/09/03/15674979343602933184_thumbnail_900x1199.webp",
+      img2: "https://img.ltwebstatic.com/images2_pi/2019/09/03/15674979343602933184_thumbnail_900x1199.webp",
+      img3: "https://img.ltwebstatic.com/images2_pi/2019/09/03/15674979343602933184_thumbnail_900x1199.webp",
+      img4: "https://img.ltwebstatic.com/images2_pi/2019/09/03/15674979343602933184_thumbnail_900x1199.webp",
+      img5: "https://img.ltwebstatic.com/images2_pi/2019/09/03/15674979373141900903_thumbnail_900x1199.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/30/1638245322ba4d287b483f918ec5df4ee4ab20cb79_thumbnail_900x.webp",
+      name: "SHEIN Zip Up Pocket Side Cargo Pants",
+      price: 19.0,
+      color: "green",
+      size: "XS",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "cotton",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/30/1638245323175df4a1a739ad6f04235cb97bacda7d_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/30/1638245325f3e6dec8e5e778466d51d57a8f517a18_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/30/1638245325f3e6dec8e5e778466d51d57a8f517a18_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/30/163824532771fca55c4f855b8d9adda618f66df93c_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/30/1638245325f3e6dec8e5e778466d51d57a8f517a18_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/07/19/1626672997e0f28981b9dfe00292b1b8d6a8df6417_thumbnail_900x.webp",
+      name: "SHEIN Single Button Split Hem Skinny Pants",
+      price: 16.0,
+      color: "blue",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "silk",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/07/19/16266729983595b5dea228ed9bd471f89e7a264816_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/07/19/162667299980ac26ccaf250e2ee6af3c3a8a8523e9_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/07/19/16266730010c355e2b87588beb518f65ae455a9787_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/07/19/16266730033d10ae8d3962c1182548057c14c90209_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/07/19/16266730033d10ae8d3962c1182548057c14c90209_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/06/17/1623897246ebace9c3d560f9bc8350c1a48a873016_thumbnail_900x.webp",
+      name: "SHEIN Knot Waist PU Leather Pants",
+      price: 19.0,
+      color: "red",
+      size: "M",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/06/17/16238972493affd9fb2837c92909e94a8644e63a63_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/06/17/1623897252d9e1b6e08c14001ca387d927bb4cd170_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/06/17/1623897255e2485d42f956ca3e19bf7b7ddc754565_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/06/17/1623897259529f1d7fd89b771880a1c40317638411_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/06/17/1623897259529f1d7fd89b771880a1c40317638411_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2020/08/31/159883750295fbec2e4822966c0cc5b64fa57a75c6_thumbnail_900x.webp",
+      name: "Solid Flare Leg Velvet Pants",
+      price: 15.0,
+      color: "green",
+      size: "XL",
+      category: "women pants",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2020/08/31/1598837505cab4be0a2197de332751bb8da101dac6_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2020/08/31/1598837505cab4be0a2197de332751bb8da101dac6_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2020/08/31/1598837505cab4be0a2197de332751bb8da101dac6_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2020/08/31/159883751764cd4da359b1bd8518c4ff61cb9705ec_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2020/08/31/159883751764cd4da359b1bd8518c4ff61cb9705ec_thumbnail_900x.webp",
+    },
+
+    //   women sweatshirt
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/15/1636965051ce9b4d6853a8715ec0445cd66d425eda_thumbnail_900x.webp",
+      name: "Letter Graphic Mock Neck Pullover",
+      price: 11.0,
+      color: "green",
+      size: "M",
+      category: "women swaetshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "silk",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/15/1636965059a31f5aad6c89aa9af38319c349069ea3_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/15/1636965073553f9513376cacc6ce49a9d016b770b2_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/15/1636965057b726651c78116eab3a256aaa76f22d6c_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/15/1636965057b726651c78116eab3a256aaa76f22d6c_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/15/1636965057b726651c78116eab3a256aaa76f22d6c_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/02/1635841435818f3786edd1dca1d5eef55537963e25_thumbnail_900x.webp",
+      name: "Letter Graphic Drop Shoulder Thermal Lined Sweatshirt",
+      price: 11.0,
+      color: "green",
+      size: "XL",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/19/1634608164de2d403f20ef22c6eef0ec848917a73d_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/19/1634608164de2d403f20ef22c6eef0ec848917a73d_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/19/16346081679f20696a89cbc9392270cd430c45b32e_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/19/16346082091d87674f8dfb6b8ade9ec5e0376446df_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/19/1634608205ceaaeaeb697e687b01d0f88aa99afb81_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/22/1632274261c311a909c0912144e63b48f7b4688b0e_thumbnail_900x.webp",
+      name: "Kangaroo Pocket Drawstring Thermal Hoodie",
+      price: 8.49,
+      color: "white",
+      size: "XS",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/22/16322742620c568b186a854b17b89c7b3701e00c9f_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/22/16322742620c568b186a854b17b89c7b3701e00c9f_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/22/16322742620c568b186a854b17b89c7b3701e00c9f_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/22/16322742736ea46aae608df32691aa8cf3d2d886cd_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/22/1632274277d7aeb890a49a3cfafedd4a497e533291_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/08/24/162979644851d4d5a94aeec94d75079499409bf8ea_thumbnail_900x.webp",
+      name: "Solid Round Neck Drop Shoulder Sweatshirt",
+      price: 9.0,
+      color: "white",
+      size: "M",
+      category: "women sweatshirt",
+      pattern: "plaim",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/08/24/1629796450c9d41b80d706acd3280221ff89fade4b_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/08/24/16297964514eb460c20584a25e6e1666717d053b90_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/08/24/16297964514eb460c20584a25e6e1666717d053b90_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/08/24/16297964514eb460c20584a25e6e1666717d053b90_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/08/24/16297964514eb460c20584a25e6e1666717d053b90_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/15/163694253234c7cc60b40cda37c8823bcb273ccac6_thumbnail_900x.webp",
+      name: "SHEIN Drop Shoulder Cross Wrap Teddy Pullover",
+      price: 8.0,
+      color: "white",
+      size: "XS",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/15/163694253418f1de838ef73b2c4b7cf4ee4fe9cd42_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/15/163694253596178db6fbc6f16c6cc49d3a06bb676f_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/15/1636942537f015eae4ebe87e8a762b10015a806103_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/15/1636942537f015eae4ebe87e8a762b10015a806103_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/15/1636942537f015eae4ebe87e8a762b10015a806103_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/08/03/1627980422b033c91e2fa51ba21a29517569abb6f4_thumbnail_900x.webp",
+      name: "Slogan Graphic Drop Shoulder Hoodie",
+      price: 13.0,
+      color: "white",
+      size: "XL",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/08/03/162798042560e3682f4fa8e7ff3194815b890b6de7_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/08/03/162798042560e3682f4fa8e7ff3194815b890b6de7_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/08/03/16279804321d2e3c150c25b4ff39047ec45918adc6_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/08/03/1627980435f5a2692255fc4ae0d6bac89862bd0114_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/08/03/16279804387bfcabd866c6dbc728eb55e5fde1c782_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "http://img.ltwebstatic.com/images3_pi/2021/07/30/1627617395ae054099b7beccfa60c20dcaccac6640.png",
+      name: "MOTF PREMIUM VELVET RAGLAN SLEEVE SWEATSHIRT",
+      price: 12.99,
+      color: "red",
+      size: "M",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "http://img.ltwebstatic.com/images3_pi/2021/07/30/1627617395ae054099b7beccfa60c20dcaccac6640.png",
+      img2: "http://img.ltwebstatic.com/images3_pi/2021/07/30/1627617395ae054099b7beccfa60c20dcaccac6640.png",
+      img3: "http://img.ltwebstatic.com/images3_pi/2021/07/30/1627617395ae054099b7beccfa60c20dcaccac6640.png",
+      img4: "http://img.ltwebstatic.com/images3_pi/2021/07/30/1627617395ae054099b7beccfa60c20dcaccac6640.png",
+      img5: "http://img.ltwebstatic.com/images3_pi/2021/07/30/1627617395ae054099b7beccfa60c20dcaccac6640.png",
+    },
+
+    {
+      imgUrl:
+        "http://img.ltwebstatic.com/images3_pi/2021/07/30/1627617395ae054099b7beccfa60c20dcaccac6640.png",
+      name: "Colorblock Half Zip Drop Shoulder Sweatshirt",
+      price: 13.49,
+      color: "black",
+      size: "M",
+      category: "women sweetshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/30/16329871501d59684cff9cbe74fd00185b58b61ec7_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/30/1632987152b4066e92ea513d330b8742ffc14c806f_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/30/1632987152b4066e92ea513d330b8742ffc14c806f_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/30/1632987152b4066e92ea513d330b8742ffc14c806f_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/30/1632987152b4066e92ea513d330b8742ffc14c806f_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/30/1632987152b4066e92ea513d330b8742ffc14c806f_thumbnail_900x.webp",
+      name: "SHEIN Shawl Collar Open Front Blazer and Slant Pocket Pants Set",
+      price: 22.99,
+      color: "green",
+      size: "XL",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/07/26/16272733497d5cbe31a66c4f8ad85f31a263f2dae5_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/07/26/16272733497d5cbe31a66c4f8ad85f31a263f2dae5_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/07/26/16272733497d5cbe31a66c4f8ad85f31a263f2dae5_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/07/26/16272733497d5cbe31a66c4f8ad85f31a263f2dae5_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/07/26/16272733497d5cbe31a66c4f8ad85f31a263f2dae5_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/07/26/16272733497d5cbe31a66c4f8ad85f31a263f2dae5_thumbnail_900x.webp",
+      name: "SHEIN SXY Shawl Neck Open Front Blazer & Pants Suit",
+      price: 40.0,
+      color: "green",
+      size: "XL",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/26/163262197693890ae86a9b07a7f30039f3ca8a8a9b_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/26/163262197693890ae86a9b07a7f30039f3ca8a8a9b_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/26/163262197693890ae86a9b07a7f30039f3ca8a8a9b_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/26/163262197693890ae86a9b07a7f30039f3ca8a8a9b_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/26/163262197693890ae86a9b07a7f30039f3ca8a8a9b_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/30/1632987174e66df9c096e883538e4b312447942ef0_thumbnail_900x.webp",
+      name: "Drop Shoulder Letter Graphic Sweatshirt",
+      price: 16.0,
+      color: "brown",
+      size: "M",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/30/16329871769456d7b50f43e8aee1ac4c9b4bbd4134_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/30/16329871769456d7b50f43e8aee1ac4c9b4bbd4134_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/30/16329871769456d7b50f43e8aee1ac4c9b4bbd4134_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/30/163298718505bd2d153a542c08bff1a6a46d5f24bd_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/30/163298718505bd2d153a542c08bff1a6a46d5f24bd_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/30/163298718505bd2d153a542c08bff1a6a46d5f24bd_thumbnail_900x.webp",
+      name: "Letter Graphic Drop Shoulder Sweatshirt",
+      price: 15.0,
+      color: "red",
+      size: "XL",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/22/1632282006747f237da166529646400f330e63e917_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/22/1632282006747f237da166529646400f330e63e917_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/22/1632282006747f237da166529646400f330e63e917_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/22/163228201445dc133e036ddc174fcc778734246bfd_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/22/1632282022f6be23aa62a38a1a932354494a850733_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/26/1637892816d5bcc17155c3f02b3a78c75a8d5fd08b_thumbnail_900x.webp",
+      name: "Fuzzy Trim Pom Pom Drawstring Crop Velvet Hoodie",
+      price: 17.0,
+      color: "red",
+      size: "XL",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/26/16378928188f9985906b1389d9a8c082a0e0eaed8f_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/26/1637892820527a3746cc57d37c2668b726457527b0_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/26/1637892820527a3746cc57d37c2668b726457527b0_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/26/1637892820527a3746cc57d37c2668b726457527b0_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/26/1637892820527a3746cc57d37c2668b726457527b0_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/08/02/162790183472855db0b4795d7cd74745908df4c514_thumbnail_900x.webp",
+      name: "Solid Zip Up Drawstring Crop Hoodie",
+      price: 13.0,
+      color: "white",
+      size: "M",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/08/02/1627901835cc041f1a88336e7c095e56588c6990eb_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/08/02/162790183777fda3202d3952514b61f0cba48916ac_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/08/02/162790183777fda3202d3952514b61f0cba48916ac_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/08/02/162790183777fda3202d3952514b61f0cba48916ac_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/08/02/162790183777fda3202d3952514b61f0cba48916ac_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/08/163634233180fc608f3fb206955516a5bd480e7bbc_thumbnail_900x.webp",
+      name: "Heart & Slogan Graphic Drop Shoulder Hoodie",
+      price: 15.0,
+      color: "brown",
+      size: "XS",
+      category: "women sweatshirt",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/08/163634233599c4558e2c810290139239beb4616d1a_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/08/163634233599c4558e2c810290139239beb4616d1a_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/08/163634233599c4558e2c810290139239beb4616d1a_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/08/163634233599c4558e2c810290139239beb4616d1a_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/08/16363423553e14faf92bde61bb72d0e11b002c13af_thumbnail_900x.webp",
+    },
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // knit tops
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/05/11/16207103473557bf898b6efd05aa53be813c2c7fba_thumbnail_900x.webp",
+      name: "Solid Ruffle Hem Knit Top",
+      price: 10.4,
+      color: "green",
+      size: "M",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/05/11/1620710350103777fe67a414bba0479736bf774ba9_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/05/11/1620710350103777fe67a414bba0479736bf774ba9_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/05/11/1620710350103777fe67a414bba0479736bf774ba9_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/05/11/1620710350103777fe67a414bba0479736bf774ba9_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/05/11/1620710350103777fe67a414bba0479736bf774ba9_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/05/11/1620710350103777fe67a414bba0479736bf774ba9_thumbnail_900x.webp",
+      name: "Solid Scoop Neck Knit Top",
+      price: 4.49,
+      color: "blue",
+      size: "XS",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/04/14/1618407063328635ae9fb7f04aeeb49f1853d8cfb0_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/04/14/1618407073424cd0c31c2445afe2523b6ea7e09fbd_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/04/14/16184070878ba73a1469ec118bd16e86d96fa05cc8_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/04/14/16184070878ba73a1469ec118bd16e86d96fa05cc8_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/04/14/16184070878ba73a1469ec118bd16e86d96fa05cc8_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/24/163774285955fffb0574397ba3ae38a69cd22e7061_thumbnail_900x.webp",
+      name: "Solid High Low Crop Knit Top",
+      price: 15.0,
+      color: "brown",
+      size: "M",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/24/16377428705e4687b0909a1fed50f93bf36ffbe640_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/24/163774289165cea4e46e288ef5d8937aa8f0175ece_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/24/163774289165cea4e46e288ef5d8937aa8f0175ece_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/24/163774290976c4310656fb72f0b884f685a15d5476_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/24/16377429294aaf195e4bad4686eaf1f1cd179b0124_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/01/08/16100764295877caec6e5e783a4fcc7e601b0682f2_thumbnail_900x.webp",
+      name: "Solid Cami Knit Top",
+      price: 4.49,
+      color: "white",
+      size: "XL",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/01/08/1610076432b1ccab1add3e01ddc94045110e41d15e_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/01/08/16100764357bc016a52e3378922c522d8b7cbd7dbe_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/01/08/161007643874ceec1e9b9f38639bd0a4164171ca6a_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/01/08/161007643874ceec1e9b9f38639bd0a4164171ca6a_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/01/08/161007643874ceec1e9b9f38639bd0a4164171ca6a_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/05/17/16212662755dbd6728c75f31eb87e2515926e1fd18_thumbnail_900x.webp",
+      name: "Crisscross Tie Backless Colorblock Knit Halter Top",
+      price: 5.5,
+      color: "blue",
+      size: "XL",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/05/17/1621266278a9edecd9c5251a19e77d269840186b8d_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/05/17/1621266281d5a647de140d9a7936d07545bd0758f7_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/05/17/1621266281d5a647de140d9a7936d07545bd0758f7_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/05/17/16212662875a740337fa55606d91383bd95dead2f8_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/05/17/1621266290722b91ac7c0f0a637fb17905be3f0f2e_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/09/08/16310868713c22f67be05267dd76c5111d1b410936_thumbnail_900x.webp",
+      name: "Cable Knit Split Hem Sweater Vest",
+      price: 16.0,
+      color: "black",
+      size: "M",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/09/08/1631086875d99eeae41126a0bf51e1aab4c6754619_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/09/08/1631086878e29e84f7cca49fbc8f147a43a397d124_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/09/08/1631086878e29e84f7cca49fbc8f147a43a397d124_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/09/08/163108688320e08ebed552f5f63cb9799b70cfc63a_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/09/08/1631086886b92e40bee5c03ad689d664aed8ebbeda_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/10/16365438779e917c5873e883821234e3226df62269_thumbnail_900x.webp",
+      name: "Cut Out Wrap Back Crop Cable Knit Top",
+      price: 13.0,
+      color: "black",
+      size: "M",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/10/16365438809273a76275526e70bb3a394cc023017b_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/10/1636543885b93c4c67c6a3748f962db535a6316ed8_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/10/1636543889fdf6a8dad9d727a93fa1a17c347eb00a_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/10/163654389423958039a73e292049b6d858c5f96089_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/10/163654389423958039a73e292049b6d858c5f96089_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/07/12/1626061032806afa8ab83078a6630bd08ff2fa0306_thumbnail_900x.webp",
+      name: "Flower Pattern Fuzzy Knit Top",
+      price: 14.0,
+      color: "red",
+      size: "XL",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/07/12/1626061034ff2264de0ebbfceeaa58f557fe7b3354_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/07/12/16260610379d5d65df12b309ff01f2608ae540132c_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/07/12/16260610392580f3d7caea0300e40764ba4ea2b18f_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/07/12/1626061041d1cb4565e8f997bc1458eb7f9bcb9aca_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/07/12/1626061044b7d4154deb792e63e5622aa8cefc0756_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638934032c43b9ff1ff51f6fff17fee9771bffac7_thumbnail_900x.webp",
+      name: "SHEIN Tied Backless Plaid Halter Knit Top",
+      price: 13.0,
+      color: "black",
+      size: "XL",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638934029b57260c710a381a9753fc9787e2326d5_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638934026ae7192f89d67408013f36d03af1ef0a7_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638934035455b0762cf898e73d30a23089925c9bd_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/12/08/1638934037e3bdd5df7dc7b73343ed6099c61acc5f_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/12/08/16389340409293bc382fad713dc784450fcf9ec261_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/11/30/1638276304411073280bc14e7d93341e27240fcbe7_thumbnail_900x.webp",
+      name: "Pearls Beaded Chain Detail Cami Knit Top",
+      price: 8.0,
+      color: "black",
+      size: "XL",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/11/30/16382763068e96eccca943e749599d60acd39c172b_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/11/30/16382763068e96eccca943e749599d60acd39c172b_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/11/30/16382763068e96eccca943e749599d60acd39c172b_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/11/30/1638276307481e353f088a63bafe3af852403d842b_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/11/30/1638276309c9635bd254d11b69e82e4b4287ccefd4_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/08/18/1629259119a30823195a8da1276e385a57f7051260_thumbnail_900x.webp",
+      name: "SHEIN SXY Solid Ribbed Knit Top",
+      price: 5.0,
+      color: "white",
+      size: "M",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/08/18/162925912185cef02666e7d6d6e91ec985d6694ca1_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/08/18/162925912185cef02666e7d6d6e91ec985d6694ca1_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/08/18/162925912185cef02666e7d6d6e91ec985d6694ca1_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/08/18/162925912307f84bbdacf99dc5950aa6534cd70086_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/08/18/162925912307f84bbdacf99dc5950aa6534cd70086_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/01/20/161114279775d33cb27f166f22f01192cb8ae440ce_thumbnail_900x.webp",
+      name: "Pearls Beaded Chain Detail Cami Knit Top",
+      price: 8.0,
+      color: "black",
+      size: "XXL",
+      category: "knit tops ",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/01/20/1611142802218c14687e466aa30e0dcd01617a9b4d_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/01/20/1611142807c1e58a716cebec66ea32b0ffd73c6cab_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/01/20/16111428115ffd673e2f63a7aeb112c0c433c79ce1_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/01/20/16111428115ffd673e2f63a7aeb112c0c433c79ce1_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/01/20/1611142816a2756e1cdbffc5bf9abdf72e741ade97_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/01/22/161127948478533f59b44ec08ff8bc7e986caa87af_thumbnail_900x.webp",
+      name: "Fringe Hem Rib-knit Top With Two Detachable Strap",
+      price: 4.49,
+      color: "black",
+      size: "XL",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/01/22/16112794888a164f219b0638f89d153cfca5a290da_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/01/22/16112794922658dba0317cef3fc274cc51f56b6be1_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/01/22/16112794922658dba0317cef3fc274cc51f56b6be1_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/01/22/16112794922658dba0317cef3fc274cc51f56b6be1_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/01/22/16112795024ba0933bd3b80e4c8cc055de2431a777_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/05/20/1621479957f86cb7b74c958998376cee0d3321c592_thumbnail_900x.webp",
+      name: "Appliques Solid Knit Top",
+      price: 5.49,
+      color: "blue",
+      size: "XL",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "female",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/05/20/1621479961f57312f49f8157c89eda02fca665e503_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/05/20/1621479961f57312f49f8157c89eda02fca665e503_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/05/20/16214799672ac97cb0beb07ddea924f744d42ed646_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/05/20/162147997049653dceed4cfdfd673ff0d44df0ec72_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/05/20/162147997049653dceed4cfdfd673ff0d44df0ec72_thumbnail_900x.webp",
+    },
+
+    {
+      imgUrl:
+        "https://img.ltwebstatic.com/images3_pi/2021/05/20/162147997049653dceed4cfdfd673ff0d44df0ec72_thumbnail_900x.webp",
+      name: "Tied Backless Crop Halter Knit Top",
+      price: 11.0,
+      color: "red",
+      size: "M",
+      category: "knit tops",
+      pattern: "plain",
+
+      gender: "male",
+      material: "polyster",
+      type: "straight",
+      img1: "https://img.ltwebstatic.com/images3_pi/2021/10/18/16345411950aa583786ab79540feb042ebba5017bc_thumbnail_900x.webp",
+      img2: "https://img.ltwebstatic.com/images3_pi/2021/10/18/1634541202039dabbb5e46c471379930cc175e0cad_thumbnail_900x.webp",
+      img3: "https://img.ltwebstatic.com/images3_pi/2021/10/18/1634541202039dabbb5e46c471379930cc175e0cad_thumbnail_900x.webp",
+      img4: "https://img.ltwebstatic.com/images3_pi/2021/10/18/1634541202039dabbb5e46c471379930cc175e0cad_thumbnail_900x.webp",
+      img5: "https://img.ltwebstatic.com/images3_pi/2021/10/18/16345412080c96288ed0e5344e4a6506edc0804d20_thumbnail_900x.webp",
+    },
+  ];
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ////////////////////////-------TRIAL----------////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  function local1() {
+    var alldata = JSON.parse(localStorage.getItem("alldata"));
+    data.map(function (elem) {
+      alldata.push(elem);
+
+      localStorage.setItem("alldata", JSON.stringify(alldata));
+    });
+  }
+  local1();
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  var arr = JSON.parse(localStorage.getItem("carddata")) || [];
+  function displayitem(data) {
+    document.querySelector(".con").textContent = "";
+    data.map(function (elem) {
+      var img = document.createElement("img");
+      var name = document.createElement("p");
+      var price = document.createElement("h4");
+      var div = document.createElement("div");
+
+      img.setAttribute("src", elem.imgUrl);
+      img.addEventListener("click", function () {
+        localStorage.setItem("carddata", JSON.stringify(elem));
+        window.location.href = "exactcarddata.html";
+      });
+      name.textContent = elem.name;
+      price.textContent = "USD$" + elem.price;
+
+      div.append(img, name, price);
+      document.querySelector(".con").append(div);
+    });
+  }
+
+  displayitem(data);
+  ////////////////////////////////////////////////size function////////////////////////////////////////////////////////////
+  document.querySelector("#m").addEventListener("click", changexs);
+  function changexs() {
+    var data1 = data.filter(function (elem) {
+      return elem.size == "XS";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#m").addEventListener("click", changes);
+  function changes() {
+    var data1 = data.filter(function (elem) {
+      return elem.size == "S";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#m").addEventListener("click", changel);
+  function changel() {
+    var data1 = data.filter(function (elem) {
+      return elem.size == "L";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#m").addEventListener("click", changem);
+  function changem() {
+    var data1 = data.filter(function (elem) {
+      return elem.size == "M";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#m").addEventListener("click", changexl);
+  function changexl() {
+    var data1 = data.filter(function (elem) {
+      return elem.size == "XL";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#m").addEventListener("click", changexxl);
+  function changexxl() {
+    var data1 = data.filter(function (elem) {
+      return elem.size == "XXL";
+    });
+
+    displayitem(data1);
+  }
+  /////////////////////////////////////////// material filter////////////////////////////////////////////////////////////////////////
+
+  document.querySelector("#polyster").addEventListener("click", polyster);
+  function polyster() {
+    var data1 = data.filter(function (elem) {
+      return elem.material == "polyster";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#cotton").addEventListener("click", cotton);
+  function cotton() {
+    var data1 = data.filter(function (elem) {
+      return elem.material == "cotton";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#denim").addEventListener("click", denim);
+  function denim() {
+    var data1 = data.filter(function (elem) {
+      return elem.material == "denim";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#silk").addEventListener("click", silk);
+  function silk() {
+    var data1 = data.filter(function (elem) {
+      return elem.material == "silk";
+    });
+
+    displayitem(data1);
+  }
+
+  //////////////////////////////////color//////////////////
+
+  document.querySelector(".black").addEventListener("click", black);
+  function black() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "black";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".grey").addEventListener("click", grey);
+  function grey() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "grey";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".khaki").addEventListener("click", khaki);
+  function khaki() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "khaki";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".orange").addEventListener("click", orange);
+  function orange() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "orange";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".red").addEventListener("click", red);
+  function red() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "red";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".yellow").addEventListener("click", yellow);
+  function yellow() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "yellow";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".brown").addEventListener("click", brown);
+  function brown() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "brown";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".blue").addEventListener("click", blue);
+  function blue() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "blue";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector(".green").addEventListener("click", green);
+  function green() {
+    var data1 = data.filter(function (elem) {
+      return elem.color == "green";
+    });
+
+    displayitem(data1);
+  }
+
+  ///////////////////pattern ///////////////////////
+
+  document.querySelector("#plain").addEventListener("click", plain);
+  function plain() {
+    var data1 = data.filter(function (elem) {
+      return elem.pattern == "plain";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#plaid").addEventListener("click", plaid);
+  function plaid() {
+    var data1 = data.filter(function (elem) {
+      return elem.pattern == "plaid";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#letter").addEventListener("click", letter);
+  function letter() {
+    var data1 = data.filter(function (elem) {
+      return elem.pattern == "letter";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#block").addEventListener("click", block);
+  function block() {
+    var data1 = data.filter(function (elem) {
+      return elem.pattern == "block";
+    });
+
+    displayitem(data1);
+  }
+
+  document.querySelector(".length").textContent = data.length + " Product's"; //////////////price///////////////////////////////////////
+  //////////////////////category/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  document.querySelector("#men").addEventListener("click", men);
+  function men() {
+    window.location.href = "mensection.html";
+  }
+
+  document.querySelector("#women").addEventListener("click", women);
+  function women() {
+    window.location.href = "womensection.html";
+  }
+
+  document.querySelector("#kids").addEventListener("click", kids);
+  function kids() {
+    window.location.href = "kids.html";
+  }
+
+  //////////////price///////////////////////////////////////
+  document.querySelector("#high").addEventListener("click", low);
+  function high() {
+    data.sort(function (a, b) {
+      return b.price - a.price;
+    });
+    displayitem(data);
+  }
+
+  document.querySelector("#low").addEventListener("click", low);
+  function low() {
+    data.sort(function (a, b) {
+      return a.price - b.price;
+    });
+    displayitem(data);
+  }
+
+  ///////////////tops pants sweatshirts/////////////////
+
+  document.querySelector("#tops").addEventListener("click", tops);
+  function tops() {
+    var data1 = data.filter(function (elem) {
+      return elem.category == "knit tops";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#sweatshirts").addEventListener("click", sweatshirts);
+  function sweatshirts() {
+    var data1 = data.filter(function (elem) {
+      return elem.category == "women sweatshirt";
+    });
+
+    displayitem(data1);
+  }
+  document.querySelector("#pants").addEventListener("click", pants);
+  function pants() {
+    var data1 = data.filter(function (elem) {
+      return elem.category == "women pants";
+    });
+
+    displayitem(data1);
+  }
+
+  var arr2 = JSON.parse(localStorage.getItem("bagitm"));
+  document.querySelector("#bagcount").textContent=arr2.length
+</script>

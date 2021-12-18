@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+    src="https://kit.fontawesome.com/49e440d78e.js"
+    crossorigin="anonymous"
+  ></script>
+    <style>
+     .lowercontainer{
+            height: 600px;
+            overflow: scroll;
+        }
+        .container{
+            display: flex;
+            
+            justify-content: center;
+            /* margin-top: 80px;
+            margin-bottom: 100px; */
+            color: #666;
+            font-family: Arial,Helvetica,sans-serif!important;
+            
+            
+
+        }
+        .signin{
+            width: 320px;
+            margin-left: 100px;
+
+        }
+        .signup{
+            width: 320px;
+            margin-right: 100px;
+        }
+        .signup>p{
+            color: #222;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .last>p{
+            color: #222;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .last>p:last-child{
+            color: #666;
+            text-align: center;
+            margin-top: 1px;
+        }
+        .last>p:hover{
+          cursor: pointer;
+        }
+        
+        .gap{
+            width: 0.25px;
+            background-color: #E5E5E5;
+            height: 500px;
+            margin-right: 100px;
+            margin-left: 80px;
+            margin-top: 40px;
+        }
+        label{
+            display: block;
+            
+            font-family: Arial,Helvetica,sans-serif!important;
+            font-size: 12px;
+        }
+        .region{
+            display: inline;
+            
+        }
+        .line{
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+            color: #ccc;
+        }
+        .line:before{
+            left: 0;
+            background: #e5e5e5;
+            position: absolute;
+            content: "";
+            width: 45%;
+            height: 1px;
+            box-sizing: border-box;
+            top: 47%;
+        }
+        .line:after{
+            right: 0;
+            background: #e5e5e5;
+            position: absolute;
+            content: "";
+            width: 45%;
+            height: 1px;
+            box-sizing: border-box;
+            top: 47%;
+        }
+        .buttongoogle{
+            padding-left: 50px;
+            border: 1px  #ccc;
+            margin-bottom: 20px;
+            color: rgba(0,0,0,.54);
+            position: relative;
+            font-family: Arial,Helvetica,sans-serif!important;
+            font-weight: 550;
+            text-transform: capitalize;
+            min-width: 240px;
+            height: 44px;
+            padding: 5px;
+            font-size: 16px;
+            background-color: #fff;
+            display: inline-block;
+            text-align: center;
+            
+        }
+        .buttongoogle>img{
+            background: no-repeat 50%;
+            background-size: 18px;
+            left: 16px;
+            width: 18px;
+            height: 18px;
+            display: block;
+            font-size: 30px;
+            position: absolute;
+            
+        }
+        .buttonfb{
+            padding-left: 50px;
+            border: 1px #ccc;
+            margin-bottom: 20px;
+            color: rgba(0,0,0,.54);
+            position: relative;
+            font-family: Arial,Helvetica,sans-serif!important;
+            font-weight: 550;
+            text-transform: capitalize;
+            min-width: 240px;
+            height: 44px;
+            padding: 5px;
+            font-size: 16px;
+            background-color: #fff;
+            display: inline-block;
+            text-align: center;
+            
+        }
+        .buttonfb>img{
+            background: no-repeat 50%;
+            background-size: 18px;
+            left: 16px;
+            width: 18px;
+            height: 18px;
+            display: block;
+            font-size: 30px;
+            position: absolute;
+            
+        }
+        .loginbottom{
+            padding: 20px;
+            box-sizing: border-box;
+            display: block;
+            font-size: 12px;
+            font-family: Arial,Helvetica,sans-serif!important;
+            color: #222;
+            line-height: 1.2;
+            text-align: center;
+        }
+        .sign_in_discount>p>strong{
+            color:#d53333;
+            font-weight: bolder;
+
+        }
+        .sign_in_discount>p{
+            color:rgb(138, 138, 151);
+        }
+        .chkbox{
+            display: inline;
+        }
+        hr{
+            width: 250px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            margin-right: 45px;
+        }
+        h4{
+            text-align: center;
+            font-family: Arial,Helvetica,sans-serif!important;
+            color: #222;
+            font-weight: 700;
+            font-size: 18px;
+            text-transform: capitalize;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .email1{
+            width: 290px;
+            height: 30px;
+            border: 1px solid #E5E5E5;
+            padding-left: 15px;
+        }
+        .email1:hover{
+            border: 1px solid #222;
+        }
+        .email2{
+            width: 290px;
+            height: 30px;
+            border: 1px solid #E5E5E5;
+            padding-left: 15px;
+        }
+        .email2:hover{
+            border: 1px solid #222;
+        }
+        .password1{
+            width: 290px;
+            height: 30px;
+            border: 1px solid #E5E5E5;
+            padding-left: 15px;
+        }
+        .password2{
+            width: 290px;
+            height: 30px;
+            border: 1px solid #E5E5E5;
+            padding-left: 15px;
+        }
+        .password1:hover{
+            border: 1px solid #222;
+        }
+        .password2:hover{
+            border: 1px solid #222;
+        }
+        .divemail{
+            margin-top: 25px;
+        }
+        .confirmpassword{
+            width: 290px;
+            height: 30px;
+            border: 1px solid #E5E5E5;
+            padding-left: 15px;
+        }
+        .confirmpassword:hover{
+            border: 1px solid #222;
+        }
+        .confirm_password{
+            margin-top: 25px;
+        }
+        .divpassword{
+            margin-top: 25px;
+        }
+        .divsignin{
+            margin-top: 25px;
+            
+        }
+        .divsignin>p{
+           text-align: center;
+           color: rgba(0,0,0,.54);
+           
+        }
+        .divsignin>p:hover{
+           cursor: pointer;
+           text-decoration: underline;
+        }
+        button{
+            width: 310px;
+            height: 45px;
+            padding: 5px;
+            color: white;
+            font-weight: bolder;
+            background-color: #222;
+            font-size: 17px;
+        }
+        button:hover{
+            background-color: #ccc;
+            cursor: pointer;
+        }
+        .sign_in:hover{
+            background-color: #666;
+        }
+        .register_button:hover{
+            background-color: #666;
+        }
+        .divregister{
+            margin-top: 25px;
+
+        }
+        p{
+            color: #959595;
+            line-height: 1.1;
+            font-size: 13px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .style{
+            display: grid;
+            grid-template-columns: repeat(2 , 1fr);
+            
+        }
+        .checkbox{
+            width: 17px;
+            height: 17px;
+        }
+        .checkbox:hover{
+            border: 2px solid #222;
+            cursor: pointer;
+        }
+        .tccheckbox{
+            width: 17px;
+            height: 17px;
+        }
+        .tccheckbox:hover{
+            border: 2px solid #222;
+            cursor: pointer;
+        }
+        .chkbox{
+            font-size: 16px; 
+            color: #767676;
+        }
+        .chkboxtc{
+            font-size: 16px;
+            display:inline; 
+            text-align: left;
+            
+            
+        }
+        #region{
+            border-color: transparent;
+            color: rgb(70, 66, 66);
+        }
+        
+         @media only screen and (min-width: 0px) and (max-width: 375px){
+             .container{
+                 display: block;
+                 
+                 
+            }
+            .signin{
+              margin: auto;
+            }
+            .gap{
+                height: 1px;
+                width: auto;
+            }
+            .signup{
+                margin: auto;
+            }
+         }
+         @media only screen and (min-width: 375px) and (max-width: 768px){
+            .container{
+                 display: block;
+                
+                 
+            }
+            .signin{
+              margin: auto;
+            }
+            .gap{
+                height: 1px;
+                width: auto;
+            }
+            .signup{
+                margin: auto;
+            }
+         }
+
+      .nav1 {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f7f8fa;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+        color: #8f9091;
+        position: sticky;
+      }
+      .nav1 > div {
+        display: flex;
+        /* width: 33.33%; */
+        flex-wrap: wrap;
+      }
+
+      .nav1 > div > a {
+        text-decoration: none;
+        margin: 10px;
+        font-size: 18px;
+        color: #8f9091;
+      }
+      .nav1 > div > a:hover {
+        color: black;
+      }
+      .n3 > a > img {
+        width: 17px;
+        margin: 10px;
+      }
+      .n3 > a:hover {
+        color: black;
+        background-color: white;
+      }
+      .n2 {
+        font-weight: bold;
+        font-size: 40px;
+        font-family: "Mulish', sans-serif";
+        justify-content: center;
+        
+      }
+    
+      .logo {
+        color: black;
+      }
+      .n4 {
+        font-size: 12px;
+        color: red;
+      }
+      .colgrey {
+        color: #8f9091;
+        margin-left: 5px;
+      }
+      .nav2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+        margin: auto;
+        padding: 15px;
+    
+        flex-wrap: wrap;
+        background-color: white;
+        /* margin-bottom: 50px; */
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+        width: 100%;
+        position: sticky;
+      }
+      .nav21 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .nav21 > p {
+        margin: 10px;
+        font-size: 12px;
+        font-weight: 600;
+        padding-bottom: 10px;
+      }
+      i {
+        background-color: black;
+        color: white;
+        padding: 11px;
+        height: 100%;
+      }
+      input {
+        padding: 8px 10px 7px 10px;
+        margin-right: 0px;
+        border: none;
+      }
+      .nav212 {
+        align-items: center;
+        margin-top: 5px;
+        border: 1px solid gray;
+        padding: 0px;
+        margin-right: 20px;
+      }
+      .nav21 > p:hover {
+        border-bottom: 2px solid black;
+      }
+      .colred {
+        color: red;
+      }
+      @media screen and (max-width: 700px) {
+        .nav1 > div,
+        .nav21,
+        .nav212 {
+          justify-content: center;
+          text-align: center;
+          /* width: 33.33%; */
+        }
+        .logo,
+        .n4,
+        .n3,
+        .nav21 {
+          width: 100%;
+          text-align: center;
+        }
+        .nav212 {
+          display: flex;
+          justify-content: center;
+          margin: auto;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      /* //////////////////////header end///////////////////// */
+
+
+      @media only screen and (min-width: 0px) and (max-width: 375px) {
+        .container {
+          display: block;
+        }
+        .signin {
+          margin: auto;
+        }
+        .gap {
+          height: 1px;
+          width: auto;
+        }
+        .signup {
+          margin: auto;
+        }
+      }
+      @media only screen and (min-width: 375px) and (max-width: 768px) {
+        .container {
+          display: block;
+        }
+        .signin {
+          margin: auto;
+        }
+        .gap {
+          height: 1px;
+          width: auto;
+        }
+        .signup {
+          margin: auto;
+        }
+      }
+        /* -------------------------footer----------------------------------- */
+        footer .main_div{
+            width: 99.8%;
+            height: 470px;
+            /* border: 1px solid green; */
+            background-color: #fafafa;
+            display: flex;
+            justify-content: space-evenly;
+            box-sizing: border-box;
+            padding-top: 4.5%;
+            padding-bottom: 2.5%;
+        }
+
+        .main_div > .left{
+            width: 35%;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .main_div > .right{
+            width: 40%;
+            /* border: 1px solid black; */
+        }
+        .main_div > .left > .upper{
+            /* border: 1px solid red; */
+            height: 45%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .main_div > .left > .lower{
+            /* border: 1px solid red; */
+            height: 35%;
+        }
+        .main_div > .left > .upper > *{
+            width: 25%;
+            /* border: 1px solid green; */
+        }
+        .main_div > .left > .upper > * > *{
+            /* border: 1px solid black; */
+            margin-bottom: 0.8%;
+        }
+        .main_div > .left > .upper > * > div > a{
+            text-decoration: none;
+            color: grey;
+            font-size: 75%;
+        }
+        .main_div > .left > .lower{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .main_div > .left > .lower > div{
+            color: grey;
+            font-size: 75%;
+            margin-bottom: 1.1%;
+        }
+        .main_div > .left > .lower > div > a{
+            color: grey;
+            border-right: 1px solid grey;
+            padding-right: 2%;
+        }
+        .not_first{
+            margin-left: 2%;
+        }
+        .main_div > .left > .lower > div:last-child{
+            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+            margin-bottom: 0px;
+        }
+        .main_div > .left > .lower > div:last-child > img{
+            width: 2%;
+            /* border: 1px solid red; */
+        }
+        .main_div > .left > .lower > div:last-child > span{
+            /* border: 1px solid red; */
+            text-decoration: underline;
+        }
+
+        .main_div > .right > .top{
+            /* border: 1px solid green; */
+            display: flex;
+            justify-content: space-between;
+        }
+        .main_div > .right > .top > .left{
+            /* border: 1px solid red; */
+            width: 55%;
+        }
+        .main_div > .right > .top >.left > div img{
+            width: 8%;
+            margin-top: 6%;
+            margin-right: 5%;
+        }
+        .main_div > .right > .top > .right{
+            /* border: 1px solid red; */
+            width: 30%;
+        }
+        .main_div > .right > .top > .right > div img{
+            width: 15%;
+            margin-top: 11%;
+            margin-right: 7%;
+            /* border: 1px solid red; */
+        }
+        .main_div > .right > .center{
+            /* border: 1px solid green; */
+            height: 25%;
+            margin-top: 3%;
+        }
+        .main_div > .right > .center > div{
+            /* border: 1px solid black; */
+            display: flex;
+            margin-top: 1.1%;
+        }
+        .main_div > .right > .center > div > input{
+            width: 75%;
+            padding: 1.3%;
+            border: 1px solid rgb(192, 189, 189);
+            font-size: 85%;
+        }
+        .main_div > .right > .center > div > input:hover{
+            border: 1px solid rgb(136, 135, 135);
+        }
+        .main_div > .right > .center > div > button{
+            width: 25%;
+            border: none;
+            background-color: black;
+            color: white;
+            font-size: 100%;
+            box-sizing: border-box;
+        }
+        .main_div > .right > .center > div > button:hover{
+            background-color:rgb(100, 90, 90);
+        }
+        .main_div > .right > .center > div > button:active{
+            border: 2px solid grey;
+            background-color: black;
+            border-radius: 3px;
+        }
+       
+        .main_div > .right > .bottom > div{
+            /* border: 1px solid red; */
+            margin-top: 2%;
+        }
+        .main_div > .right > .bottom > div img{
+            width: 6%;
+            margin-right: 1.8%;
+        }
+
+ /* -------------responsive design for footer------------- */
+
+        /* ------------medium size--------- */
+        @media only screen and (min-width : 0px) and (max-width : 1000px){
+            footer .main_div{
+                height: auto;
+                /* border: 1px solid green; */
+                box-sizing: border-box;
+                /* width: 90%; */
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(2,minmax(300px, auto));
+                grid-template-areas: 
+                "right"
+                "left";
+                /* align-content: flex-start; */
+                /* justify-content: center; */
+                align-items: center;
+                justify-items: center;
+                grid-row-gap: 45px;
+            }
+            footer .main_div > div.left{
+                grid-area: left;
+                width: 95%;
+            }
+            footer .main_div > div.right{
+                grid-area: right;
+                width: 95%;
+            }
+            footer > .main_div > div.right > div.bottom{
+                margin-top: 4%;
+            }
+            footer > .main_div > div.left > div.lower{
+                margin-top: 9%;
+            }
+        }
+
+        /* ------------for small size screen------------------------------------------- */
+        @media only screen and (max-width : 499px){
+            footer .main_div{
+                height: auto;
+                /* border: 1px solid green; */
+                box-sizing: border-box;
+                /* width: 90%; */
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(2,minmax(300px, auto));
+                grid-template-areas: 
+                "right"
+                "left";
+                /* align-content: flex-start; */
+                /* justify-content: center; */
+                align-items: center;
+                justify-items: center;
+                grid-row-gap: 45px;
+            }
+            footer .main_div > div.left{
+                grid-area: left;
+                width: 95%;
+            }
+            footer .main_div > div.right{
+                grid-area: right;
+                width: 95%;
+            }
+            footer > div.main_div > div.left > div.upper{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            } 
+            footer > div.main_div > div.left > div.upper > div{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 4%;
+            }
+
+            footer > div.main_div > div.right > div.top{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            footer > div.main_div > div.right > div.top > div.left{
+                width: 100%;
+            }
+            footer > div.main_div > div.right > div.top > div.left > div img{
+                margin-top: 4%;
+                /* border: 1px solid black; */
+            }
+            footer > div.main_div > div.right > div.top > div.right {
+                width: 100%;
+                margin: 6% 0%;
+            }
+            footer > div.main_div > div.right > div.top > div.right > div{
+                width: 100%;
+                /* border: 1px solid green; */
+            }
+            footer > div.main_div > div.right > div.top > div.right > div img{
+                margin-top: 4%;
+                width: 8%;
+                margin-right: 4%;
+            }
+            footer > div.main_div > div.right > div.center{
+                margin-bottom: 6%;
+            }
+            footer > div.main_div > div.right > div.center > div{
+                display: flex;
+                flex-direction: column;
+            }
+            footer > div.main_div > div.right > div.center > div > *{
+                width: 100%;
+                box-sizing: border-box;
+                height: 30px;
+                margin-top: 3%;
+            }
+
+        }
+        #abc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="nav1">
+      <div class="n1">
+        <a href="mainpage.html">WOMEN</a>
+        <a href="mainpage.html">CURVE + PLUS</a>
+        <a href="mainpage.html">KIDS</a>
+        <a href="mainpage.html">MEN</a>
+        <a href="beauty.html">BEAUTY</a>
+        <a href="mainpage.html">HOME</a>
+      </div>
+      <div class="n2 logo">SHEIN</div>
+      <div class="n4">
+        Free Standard Shipping
+        <span class="colgrey">on order over US$49.00</span>
+      </div>
+      <div class="n3 rightlogo">
+        <a href="newlogin.html"
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/709/709579.png"
+            alt=""
+        /></a>
+        <a id="abc" href="bag.html"
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/687/687259.png"
+            alt=""
+        /><span id="bagcount"></span></a>
+        <a href="">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/1077/1077035.png"
+            alt=""
+        /></a>
+        <a href=""
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/862/862909.png"
+            alt=""
+        /></a>
+        <a href=""
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/1006/1006771.png"
+            alt=""
+        /></a>
+      </div>
+    </div>
+
+    <div class="nav2">
+      <div class="nav21">
+        <p><a href="mensection.html"> NEW IN</a></p>
+        <p><a href="womensection.html">TREND</a></p>
+        <p class="colred"><a href="">SALE</a></p>
+        <p class="colred"><SHEIN href="">SHEIN X DESIGNER</a></p>
+        <p><CLOTHING href="">CLOTHING</a></p>
+        <p><DRESSES href="">DRESSES</a></p>
+        <p><TOPS href="">TOPS</a></p>
+        <p><LINGERIE href="">LINGERIE & LOUNGE</a></p>
+        <p><ACTIVEWEAR href="">ACTIVEWEAR</a></p>
+        <p><SHOES href="">SHOES $ ACCS</a></p>
+        <p><EXPLORE href="">EXPLORE</a></p>
+      </div>
+      <div class="nav212">
+        <input type="text" />
+
+        <a href=""><i class="fas fa-search"></i></a>
+      </div>
+    </div>
+    <div class="lowercontainer">
+      <div class="container">
+        <div class="signin">
+          <h4>Sign In</h4>
+          <div class="divregion">
+            <label class="region">Country/Region:</label>
+            <select id="region">
+              <option value="">United States</option>
+              <option value="">India</option>
+              <option value="">Brazil</option>
+              <option value="">Canada</option>
+              <option value="">United Kingdom</option>
+              <option value="">Australia</option>
+              <option value="">France</option>
+            </select>
+          </div>
+          <div class="divemail">
+            <label for="Email Address">Email Address:</label>
+            <input type="email" class="email1" />
+          </div>
+          <div class="divpassword">
+            <label>Password:</label>
+            <input type="password" class="password1" />
+          </div>
+          <div class="divsignin">
+            <button class="sign_in">SIGN IN</button>
+            <p class="FYP">Forget your password?</p>
+          </div>
+          <div class="login_second">
+            <div class="line">
+              <span>Or</span>
+            </div>
+            <button class="buttongoogle">
+              <img
+                src="https://us.shein.com/she_dist/images/google-icon-f9951633cf.png"
+                alt=""
+              />
+              <span>Sign in With Google</span>
+            </button>
+            <button class="buttonfb">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAaVBMVEX///87WZggSJD5+vzz9PcsT5MyU5W3v9WGlbqzvNMwUZSapsSWo8IiSZApTZI3VpdBXpvq7fPc4OulsMvByNvT2eZedKfGzd6tt8+CkrgAPIrDytxwg69qfq3M0uEaRI5MZqBXb6SOnL46koy5AAAC/UlEQVR4nO3c7W7aMBiG4ZKQAIGE8l06WlrO/yA3bdImDAjHNvLzsvv+38qXktrBDn15ISIiIiIiIiIiIiJSqFwsN7v1aDS50VvuAUY0/Fztt4Oibbuuq272XuYeZ1jlj/Gg7ap6PrhXYVK4PrSdB86qcDitOk+dSWE5axt/nkHhqOrnsyYsP9qePmPC5bzuDTQl3BU9JhiLwnUR4LMk/DwGAe0IF/3nGGPC15C/QUvCcRUItCLchM0yhoRfofeoFeGoCwYaEQZPM1aEu4hLaEO4jbiEJoTBi70Z4Sp4LbQi/I65SS0Ih4GP3HaE66ib1ILw1Hdnxpww7s/QgLCMu0kNCJdRq6EFYa9HtnldN/V5+icz3uv9vCoG2/3pNDvvJC/0nUq7r8ki91jDOvjtAnfr3AMNzu+DRbvMPc7wvD79Nqvcw4zIayptc48yJp9dtvqQe5Qx+Qgryy9ceAm7Xe5RRlR6CTe5hxmRl9DyWuEpNPo08zuECPVDiFA/hAj1Q/hHOMw9zIgQ/ifCAqF0XkL5nfu/fY7cJj7HFtXbxc/9+wVa13dfuF/q8Tu1uP2loOpda60cB7yqfqcit+m8BwgHuU3npRfOv3ObzksvVNvwTy9sTrlN56UXVmLnbumFamfDDxCKHWmkF6p9OH7ANdR6aHvEapGb5JRcOH/NTXJKL/zITXJKLqzHuUlOyYXNNDfJKbmwmuQmOSUXyr2lkVwo9w5DcqHcLlz6a5hb5JZaKLfgpxduc4vcUgvV9jAeIJzlFrmlFuq9lplcKLaHkV6otoeRXqi2h/FL2Dnf6an9TmaaGx3ljt1Gs4t8rmozm15Pbiq91pOdkF72/KfcCBHqhxChfggR6ocQoX4IEeqHEKF+CBHqhxChfggR6ocQoX4IEeqHEKF+CBHqhxChfggR6ocQoX4IEeqHEKF+CBHqhxChfggR6ocQoX4IEeqHEKF+CBHqhxChfggR6ocQoX4In0B4dP8L35WOpoX78f32loVERERERERERJ79BClnPZRWgmKOAAAAAElFTkSuQmCC"
+                alt=""
+              />
+              <span>Sign in With Facebook</span>
+            </button>
+          </div>
+          <div class="loginbottom">
+            <div class="sign_in_discount">
+              <p>
+                "Verify & earn"
+                <strong>100</strong>
+                "points"
+                <br />
+                "Get"
+                <strong>15% off</strong>
+                "code in"
+                <strong>APP</strong>
+                ", download now!"
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="gap"></div>
+        <div class="signup">
+          <h4>New To SHEIN</h4>
+          <div>
+            <label class="region">Country/Region:</label>
+            <select id="region">
+              <option value="">United States</option>
+              <option value="">India</option>
+              <option value="">Brazil</option>
+              <option value="">Canada</option>
+              <option value="">United Kingdom</option>
+              <option value="">Australia</option>
+              <option value="">France</option>
+            </select>
+            <p>
+              You are now registering into SHEIN-US, please switch country if you
+              want to ship outside the United States.
+            </p>
+          </div>
+          <div class="divemail">
+            <label for="Email Address">Email Address:</label>
+            <input type="email" class="email2" />
+          </div>
+          <div class="divpassword">
+            <label>Password:</label>
+            <input type="password" class="password2" />
+          </div>
+          <div class="confirm_password">
+            <label>Confirm Password:</label>
+            <input type="password" class="confirmpassword" />
+          </div>
+          <p>Style Preference</p>
+          <div class="style">
+            <div>
+              <input type="checkbox" class="checkbox" />
+              <label class="chkbox">Women</label>
+            </div>
+            <div>
+              <input type="checkbox" class="checkbox" />
+              <label class="chkbox">Men</label>
+            </div>
+            <div>
+              <input type="checkbox" class="checkbox" />
+              <label class="chkbox">Plus Size</label>
+            </div>
+            <div>
+              <input type="checkbox" class="checkbox" />
+              <label class="chkbox">Kids</label>
+            </div>
+            <div>
+              <input type="checkbox" class="checkbox" />
+              <label class="chkbox">Home</label>
+            </div>
+            <div>
+              <input type="checkbox" class="checkbox" />
+              <label class="chkbox">Pets Supplies</label>
+            </div>
+          </div>
+          <hr />
+          <div class="t&c">
+            <input type="checkbox" class="tccheckbox" />
+            <label class="chkboxtc">
+              I agree to the
+              <a style=" color: #1860a7;
+              text-decoration: none;" href="https://us.shein.com/Privacy-Security-Policy-a-282.html"
+                >Privacy & Cookie Policy</a
+              >
+              and
+              <a style=" color: #1860a7;
+              text-decoration: none;" href="https://us.shein.com/Terms-and-Conditions-a-399.html"
+                >Terms & Conditions</a
+              >
+            </label>
+          </div>
+          <div class="divregister">
+            <button class="register_button">REGISTER</button>
+          </div>
+          <div class="last">
+            <p>Why Register?</p>
+            <p>(Get 10% off coupon and <a style=" color: #1860a7;
+                text-decoration: none;" href="">more</a> )</p>
+          </div>
+        </div>
+      </div>
+        <!-- ///////////////////////////////////////////////////footer/////////////////////////////////// -->
+  
+        <footer>
+          <div class="main_div">
+              <!-- left container -->
+              <div class="left">
+                  <div class="upper">
+                      <div class="start">
+                          <h5>COMPANY INFO</h5>
+                          <div><a href="#">About SHEIN</a></div>
+                          <div><a href="#">Social Responsibility</a></div>
+                          <div><a href="#">Affiliate</a></div>
+                          <div><a href="#">Fashion Blogger</a></div>
+                          <div><a href="#">Supply Chain</a></div>
+                      </div>
+                      <div class="center">
+                          <h5>HELP & SUPPORT</h5>
+                          <div><a href="#">Shipping Info</a></div>
+                          <div><a href="#">Returns</a></div>
+                          <div><a href="#">How To Order</a></div>
+                          <div><a href="#">How To Track</a></div>
+                          <div><a href="#">Size Guide</a></div>
+                      </div>
+                      <div class="end">
+                          <h5>CUSTOMER CARE</h5>
+                          <div><a href="#">Contact Us</a></div>
+                          <div><a href="#">Payment & Tax</a></div>
+                          <div><a href="#">Bonus Point</a></div>
+                          <div><a href="#">Klarna</a></div>
+                          <div><a href="#">Afterpay</a></div>
+                          <div><a href="#">Zip</a></div>
+                          <div><a href="#">Recall Notice</a></div>
+                      </div>
+                  </div>
+                  <div class="lower">
+                      <div>
+                          2009-2021 SHEIN All Rights Reserved
+                      </div>
+                      <div>
+                          <a href="#">Privacy Center</a>
+                          <a class="not_first" href="#">Privacy & Cookie Policy</a>
+                      </div>
+                      <div>
+                          <a href="#">Manage Cookies / Do Not Sell My Personal Information</a>
+                          <a class="not_first" href="">Terms & Conditions</a>
+                      </div>
+                      <div>
+                          <a href="#">Do Not Sell My Personal Information</a>
+                          <a class="not_first" href="#">Copyright Notice</a>
+                          <a class="not_first" href="#">Accessibility</a>
+                          <a class="not_first" href="#">Imprint</a>
+                      </div>
+                      <div class="cursor_pointer">
+                          <img src="https://cdn-icons-png.flaticon.com/128/484/484167.png" alt="">
+                          <span>United States</span>
+                      </div>
+                  </div>
+              </div>
+    
+              <!-- right container  -->
+              <div class="right">
+                  <div class="top">
+                      <div class="left">
+                          <h5>FIND US ON</h5>
+                          <div>
+                              <a href="#"><img src="https://cdn-icons.flaticon.com/png/128/3128/premium/3128208.png?token=exp=1639558341~hmac=2029758bfc97cead7da597279170092f" alt=""></a>
+                              <a href="#"><img src="https://cdn-icons.flaticon.com/png/128/717/premium/717392.png?token=exp=1639558418~hmac=a4ca4f3bc2b75037e7e78d2bb58a771e" alt=""></a>
+                              <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/733/733635.png" alt=""></a>
+                              <a href="#"><img src="https://cdn-icons.flaticon.com/png/128/717/premium/717426.png?token=exp=1639558477~hmac=164232d5c37c896c18c44dacaeb0aff1" alt=""></a>
+                              <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/2111/2111601.png" alt=""></a>
+                              <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/2111/2111678.png" alt=""></a>
+                              <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/3046/3046120.png" alt=""></a>
+                          </div>
+                      </div>
+                      <div class="right">
+                          <h5>
+                              DOWNLOAD SHEIN APP TO SAVE MORE!
+                          </h5>
+                          <div>
+                              <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/731/731985.png" alt=""></a>
+                              <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/154/154871.png" alt=""></a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="center">
+                      <h5>SIGN UP FOR SHEIN STYLE NEWS</h5>
+                      <div>
+                          <input type="email" name="" id="" placeholder="Your Email Address">
+                          <button>SUBSCRIBE</button>
+                      </div>
+                  </div>
+                  <div class="bottom">
+                      <h5>WE ACCEPT</h5>
+                      <div>
+                          <img src="https://cdn-icons-png.flaticon.com/128/196/196565.png" alt="">
+                          <img src="https://cdn-icons-png.flaticon.com/128/5968/5968299.png" alt="">
+                          <img src="https://cdn-icons-png.flaticon.com/128/825/825464.png" alt="">
+                          <img src="https://cdn-icons-png.flaticon.com/128/217/217424.png" alt="">
+                          <img src="https://cdn-icons-png.flaticon.com/128/196/196548.png" alt="">
+                          <img src="https://cdn-icons-png.flaticon.com/128/825/825454.png" alt="">
+                          <img src="https://cdn-icons-png.flaticon.com/128/6124/6124998.png" alt="">
+                          <img src="https://cdn-icons-png.flaticon.com/128/174/174861.png" alt="">
+                          <img src="https://cdn-icons-png.flaticon.com/128/61/61537.png" alt="">
+                          <img src="https://cdn-icons-png.flaticon.com/128/196/196550.png" alt="">
+                          <img src="https://cdn-icons-png.flaticon.com/128/217/217445.png" alt="">
+                          <img src="https://cdn-icons-png.flaticon.com/128/39/39200.png" alt="">
+                          <img src="https://cdn-icons-png.flaticon.com/128/5968/5968140.png" alt="">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </footer>
+    </div>
+   
+     
+  </body>
+</html>
+
+<script>
+  document.querySelector(".register_button").addEventListener("click", signUp);
+  var signUpData = JSON.parse(localStorage.getItem("signUpDataBase")) || [];
+  function signUp() {
+    var email = document.querySelector(".email2").value;
+    var password = document.querySelector(".password2").value;
+    var confirm = document.querySelector(".confirmpassword").value;
+    document.querySelector(".email2").value = "";
+    document.querySelector(".password2").value = "";
+    document.querySelector(".confirmpassword").value = "";
+
+    if (password == confirm) {
+      var signUpCred = {
+        emailAdd: email,
+        password: password,
+      };
+      signUpData.push(signUpCred);
+      localStorage.setItem("signUpDataBase", JSON.stringify(signUpData));
+    } else {
+      alert("password do not match");
+    }
+  }
+  document.querySelector(".sign_in").addEventListener("click", signIn);
+
+  function signIn() {
+    var email = document.querySelector(".email1").value;
+    var password = document.querySelector(".password1").value;
+
+    var signInCred = {
+      emailAdd: email,
+      password: password,
+    };
+
+    var sign = JSON.parse(localStorage.getItem("signUpDataBase"));
+
+    // console.log(sign)
+    var x = sign.filter(
+      (e) =>
+        e.emailAdd == signInCred.emailAdd && e.password == signInCred.password
+    );
+    if (x.length == 0) {
+      alert("Invalid Credintials");
+    } else {
+      window.location.href =
+        "delivery.html";
+    }
+  }
+  document
+    .querySelector(".buttongoogle")
+    .addEventListener("click", signInWithGoogle);
+  function signInWithGoogle() {
+    window.location.href = "mainpage.html";
+  }
+  document.querySelector(".buttonfb").addEventListener("click", signInWithFb);
+  function signInWithFb() {
+    window.location.href = "mainpage.html";
+  }
+  document.querySelector(".FYP").addEventListener("click", reset);
+  function reset() {
+    window.location.href = "https://us.shein.com/user/auth/login?direction=nav";
+  }
+  var arr2 = JSON.parse(localStorage.getItem("bagitm"));
+  document.querySelector("#bagcount").textContent=arr2.length
+</script>
